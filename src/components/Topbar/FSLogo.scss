@@ -1,0 +1,31 @@
+.frontstack--logo {
+    all: unset;
+    background: white;
+    display: inline-block;
+    border: 2px solid #212121;
+    width: auto;
+    text-align: center;
+    font-size: 30px;
+    display: inline-flex;
+    .text {
+        font-family: "Roboto-Bold";
+        letter-spacing: 1px;
+    }
+    .front {
+        padding: 5px 0px 5px 15px;
+    }
+    .stack {
+        padding: 5px 0px 5px 2px;
+        &::first-letter {
+            font-family: "Roboto-Black";
+            color: #EF5350;
+        }
+        &::after {
+            content: ".";
+            color: #EF5350;
+        }
+    }
+    .pl {
+        padding: 5px 15px 5px 0px;
+    }
+}

@@ -1,0 +1,121 @@
+.contact-wrapper {
+    width: 80%;
+    margin-left: 10%;
+    .contact {
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+        &__links {
+            padding-left: 5%; 
+            box-sizing: border-box;
+            width: 50%;
+            &--slack {
+                padding: 0px 0 50px 0;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 100px;
+                    transition: 0.2s;
+                    &:hover {
+                        transition: 0.2s;
+                        transform: scale(1.2);
+                    }
+                }
+                .slack-desc {
+                    flex-grow: 1; 
+                    padding: 20px;
+                    p {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                    .seeMore {
+                        padding: 10px 0;
+                    }
+                }
+                @include mQ($tablet_portrait) {
+                    padding: 0;
+                }
+            }
+            &--social {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .social--fb, .social--twitter, .email {
+                    padding: 10px 5px 30px 5px;
+                    transition: 0.2s;
+                    &:hover {
+                        transition: 0.2s;
+                        transform: scale(1.2);
+                    }
+                    .mail-ico {
+                        width: 50px;
+                    }
+                }
+            }
+            @include mQ($tablet_portrait) {
+                width: 100%;
+            }
+            @include mQ($phone) {
+                padding: 0;
+            }
+        }
+        &__form {
+            box-sizing: border-box;
+            width: 50%;
+            form {
+                box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.2);
+                padding: 20px 50px;
+                p {
+                    padding: 10px 0;
+                    &:last-child {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                label {
+                    display: block;
+                    font-family: "Roboto-Light";
+                    font-size: 18px;
+                }
+                input, textarea {
+                    border: 1px solid $lighten-grey;
+                    display: block;
+                    width: 100%;
+                }
+                textarea {
+                    height: 150px;
+                    font-size: 18px;
+                }
+                input {
+                    height: 40px;
+                    font-size: 18px;
+                }
+                button {
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-family: "Roboto-Medium";
+                    letter-spacing: 1px;
+                    padding: 10px 10px 30px 10px;
+                    position: relative;
+                    @include underline(4px, $red);
+                }
+            }
+            @include mQ($tablet_portrait) {
+                width: 100%;
+                padding-left: 5%;
+            }
+            @include mQ($phone) {
+                padding: 0;
+            }
+        }
+        @include mQ($tablet_portrait) {
+            flex-direction: column;
+        }
+    }
+    .support {
+        &__desc {
+            line-height: 22px;
+            margin: 20px 0 0 2%;
+        }
+    }
+}

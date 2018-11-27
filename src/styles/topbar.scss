@@ -1,0 +1,222 @@
+.topbar {
+    &--wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 80px;
+        box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.2);
+        margin-bottom: 50px;
+        .left {
+            width: calc(50% - 150px);
+            @include center;
+            .talks {
+                display: flex;
+                align-items: center;
+                &--button {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include mQ($tablet_portrait) {
+                        display: none;
+                    }
+                }
+                &--label {
+                    font-size: 18px;
+                    height: 35px;
+                    display: flex;
+                    align-items: flex-end;
+                    @include mQ($tablet_portrait) {
+                        display: none;
+                    }
+                }
+                &--infoBtn {
+                    padding: 2px 5px;
+                    color: $black;
+                    cursor: pointer;
+                    font-size: 12px;
+                    color: $red;
+                    &:hover {
+                        background: $red;
+                        color: white;
+                    }
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 45px;
+                    height: 45px;
+                    padding: 0 5px;
+                    transition: 0.1s;
+                    @include mQ($phone) {
+                        width: 28px;
+                    }
+                }
+                &:hover {
+                    transition: 0.2s;
+                    transform: scale(1.05);
+                }
+            }
+
+            @include mQ($tablet_portrait) {
+                order: 1;
+                width: auto;
+                margin-left: 10%;
+            }
+            @include mQ($phone) {
+                order: 3;
+                margin-left: 0;
+            }
+        }
+        .center {
+            width: 300px;
+            height: 100%;
+            @include center;
+            @include mQ($tablet_portrait) {
+                order: 2;
+            }
+            @include mQ($phone) {
+                order: 1;
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+            }
+        }
+        .right {
+            width: calc(50% - 150px);
+            display: flex;
+            justify-content: flex-start;
+            font-size: 16px;
+            font-family: "Roboto-Regular";
+            box-sizing: border-box;
+            .links {
+                display: flex;
+                flex-grow: 1;
+                .about {
+                    flex-grow: 1;
+                    @include center;
+                    a {
+                        position: relative;
+                        transition: 0.1s;
+                        &:hover {
+                            font-family: "Roboto-Bold";
+                        }
+                        @include underline(4px, $red);
+                    }
+                    @include mQ($tablet_portrait) {
+                        justify-content: flex-start;
+                        flex-grow: initial;
+                        padding: 2px 0;
+                    }
+                }
+                .contact {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    a {
+                        position: relative;
+                        transition: 0.1s;
+                        &:hover {
+                            font-family: "Roboto-Bold";
+                        }
+                        @include underline(4px, $red);
+                    }
+                    @include mQ($tablet_portrait) {
+                        flex-grow: initial;
+                        padding: 2px 0;
+                    }
+                    @include mQ($phone) {
+                        padding: 0 8px;
+                    }
+                }
+                @include mQ($tablet_portrait) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                @include mQ($phone) {
+                    flex-direction: row;
+                }
+            }
+            .social {
+                flex-grow: 1;
+                @include center;
+                &--fb img, &--twitter img, &--github img {
+                    width: 35px;
+                    padding: 0 5px;
+                    transition: 0.1s;
+                    &:hover {
+                        transition: 0.2s;
+                        transform: scale(1.2);
+                    }
+                    @include mQ($phone) {
+                        width: 25px;
+                    }
+                }
+                &--github img {
+                    width: 30px;
+                    @include mQ($phone) {
+                        width: 22px;
+                    }
+                }
+            }
+            @include mQ($tablet_portrait) {
+                order: 3;
+            }
+            @include mQ($phone) {
+                order: 2;
+                width: auto;
+                flex-wrap: wrap;
+            }
+        }
+        @include mQ($phone) {
+            height: 100px;
+            justify-content: center;
+        }
+    }
+}
+
+.modal {
+    &__slack {
+        &--title {
+            letter-spacing: 2px;
+            &::first-letter {
+                color: $red;
+            }
+        }
+        &--confirm {
+            border: none;
+            background: $grey;
+            a {
+                color: white;
+            }
+        }
+        &--content {
+            p {
+                line-height: 26px;
+                &::first-letter {
+                    color: $red;
+                }
+            }
+            ul {
+                padding: 10px 20px;
+                list-style: none;
+                li {
+                    padding: 5px 0;
+                    line-height: 26px;
+                    &::before {
+                        content: "\2022";
+                        color: $red;
+                        font-weight: 800;
+                        display: inline-block; 
+                        width: 15px;
+                        margin-left: -15px;
+                    }
+                }
+            }
+        }
+    }
+}

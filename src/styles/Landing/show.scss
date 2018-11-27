@@ -1,0 +1,49 @@
+.landing-page__show {
+    margin-top: 100px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    .show {
+        width: 80%;
+        position: relative;
+        margin-left: 10%;
+        display: flex;
+        &--image {
+            position: relative;
+            top: -15%;
+            width: 40%;
+            height: 140%;
+            margin-right: 30px;
+            background: url(./img/graphics/showRoom.jpg);
+            @include background;
+            @include mQ($tablet_portrait) {
+                display: none;
+            }
+        }
+        &--text {
+            width: 45%;
+            @include mQ($tablet_portrait) {
+                width: 100%;
+            }
+        }
+        &--label {
+            position: relative;
+        }
+        &--content {
+            padding: 10px;
+            line-height: 28px;
+            @include mQ($phone) {
+                margin-left: 10%;
+            }
+        }
+        &--seeMore {
+            padding: 20px 0px;
+        }
+        @include mQ($tablet_portrait) {
+            width: 100%;
+        }
+        @include mQ($phone) {
+            margin: 0;
+        }
+    }
+}

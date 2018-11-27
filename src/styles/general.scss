@@ -1,0 +1,113 @@
+// breakpoints
+$desktop: 1800px;
+$tablet_landscape: 1200px;
+$tablet_portrait: 900px;
+$phone: 600px;
+
+html {
+  height: calc(100% + 150px);
+  box-sizing: border-box;
+  body{
+      font-family: "Roboto-Regular", sans-serif;
+      position: relative;
+      min-height: 100%;
+  }
+}
+
+strong {
+  font-weight: 800;
+}
+
+.label-small {
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Roboto-Black";
+  color: $black;
+  height: 40px;
+  padding: 10px 0px 10px 30px;
+  box-sizing: border-box;
+  &::before {
+    content: "";
+    border-bottom: 3px solid $red;
+    width: 20px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
+}
+
+.label-regular {
+  font-size: 36px;
+  font-family: "Roboto-Bold";
+  padding: 20px;
+  position: relative;
+  color: $black;
+  &::after {
+      content: "";
+      border-bottom: 5px solid $red;
+      width: 35px;
+      height: 24px;
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+  }
+}
+
+.seeMore {
+  font-family: "Roboto-Bold";
+  font-size: 16px;
+  letter-spacing: 1px;
+  max-height: 16px;
+  height: 16px;
+  &::after {
+      content: '\25B6';
+      color: $red;
+      margin-left: 5px;
+  }
+  &:hover {
+    font-size: 17px;
+  }
+}
+
+.letter-red {
+  color: $red;
+  font-family: "Roboto-Medium";
+}
+
+.under-construction {
+  width: 100%;
+  height: 100%;
+  @include background;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), url(./img/graphics/UnderConstruction.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {    
+    border: 5px solid black;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30%;
+    background: #FDD835;
+    padding: 10px 30px;
+    border-radius: 15px;
+    p {
+      text-transform: uppercase;
+      display: inline-block;
+      font-family: 'Roboto-Bold';
+      font-size: 5vw;
+      &:first-child {
+        letter-spacing: 20px;
+        border: 1px solid $black;
+        border-radius: 15px;
+        background: $black;
+        color: #FDD835;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

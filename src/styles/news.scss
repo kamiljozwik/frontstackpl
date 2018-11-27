@@ -1,0 +1,50 @@
+.news-wrapper {
+    display: flex;
+    justify-content: center;
+    .news {
+        width: 75vw;
+        @include mQ($phone) {
+            width: 100vw;
+            padding-left: 5%;
+            box-sizing: border-box;
+        }
+    }
+    .news__list {
+        &--item {
+            min-height: 80px;
+            display: flex;
+            align-items: flex-start;
+            margin: 50px 0px;
+
+            .news__data {
+                font-size: 24px;
+                font-family: "Roboto-Bold";
+                .date {
+                    padding: 5px 15px;
+                }
+                .day {
+                    border: 1px solid $black;
+                    border-radius: 7px 7px 0 0;
+                }
+                .month {
+                    color: white;
+                    background: $black;
+                    border: 1px solid $black;
+                    border-radius: 0 0 7px 7px;
+                }
+            }
+            .news__desc {
+                margin-left: 35px;
+                .title {
+                    font-size: 24px;
+                    font-family: "Roboto-Medium";
+                    position: relative;
+                }
+                .desc {
+                    width: 80%;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

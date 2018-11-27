@@ -1,0 +1,57 @@
+.landing-page__quote {
+    background: $footer;
+    margin-top: 100px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    .quote {
+        width: 80%;
+        position: relative;
+        margin-left: 10%;
+        display: flex;
+        &--image-wrapper {
+            width: 40%;
+            display: flex;
+            @include center;
+            @include mQ($phone) {
+                display: none;
+            }
+        }
+        &--image {
+            position: absolute;
+            bottom: 0;
+            width: 250px;
+            height: 250px;
+            background: url(./img/graphics/showRoom.jpg);
+            @include background;
+            @include mQ($tablet_portrait) {
+                width: 150px;
+                height: 150px;
+                right: 0;
+            }
+        }
+        &--text {
+            font-style: italic;
+            font-size: 20px;
+            font-family: "Roboto-Light";
+            color: white;
+            width: 60%;
+            padding: 10px;
+            line-height: 28px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include mQ($tablet_portrait) {
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+        &--author {
+            padding: 10px 20px;
+        }
+        @include mQ($tablet_portrait) {
+            width: 90%;
+        }
+    }
+}

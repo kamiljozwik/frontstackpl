@@ -1,0 +1,194 @@
+.landing-page__tags {
+    &.part1 {
+        margin-top: 70px;
+        @include mQ($phone) {
+            margin-top: 250px;
+        }
+    }
+    &.part2 {
+        margin-top: 100px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 10%;
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        &__column {
+            padding: 0 5px;
+            width: 20vw;
+            @include mQ($tablet_portrait) {
+                width: 80vw;
+            }
+        }
+        &__list {
+            background: $light-grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+            &--item {
+                border-bottom: 1px solid $grey;
+                height: 120px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include background;
+                .item {
+                    &--title {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        padding: 10px;
+                        max-width: 90%;
+                        font-size: 20px;
+                        font-family: "Roboto-Medium";
+                    }
+                    &--footer {
+                        .item--date {
+                            font-size: 12px;
+                        }
+                        padding: 0px 10px 20px 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+                &:first-child {
+                    height: 300px;
+                    width: 100%;
+                    border-bottom: none;
+                    .item {
+                        &--title {
+                            padding: 20px;
+                            font-size: 30px;
+                            align-items: flex-end;
+                            a {
+                                color: white;
+                            }
+                        }
+                        &--footer {
+                            color: white;
+                            padding: 25px;
+                        }
+                        &--seeMore {
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__readAll {
+            display: inline-block;
+            padding: 20px 0px;
+            @include center;
+            font-family: "Roboto-Bold";
+            &::after {
+                content: '\25B6';
+                color: $red;
+                margin-left: 5px;
+            }
+            &.noPosts {
+                &::after {
+                    content: '';
+                }
+            }
+        }
+        @include mQ($tablet_portrait) {
+            justify-content: center;
+        }
+    }
+    .events {
+        margin-left: 3%;
+        width: 24vw;
+        position: relative;
+        &__label {
+            height: 76px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            &::before {
+                top: 38px;
+            }
+            @include mQ($phone) {
+                width: 90vw;
+            }
+        }
+        &__column {
+            height: 100%;
+        }
+        &__list {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            &--item {
+                border-left: 1px solid darken($color: $grey, $amount: 10);
+                margin-left: 8%;
+                margin-top: 0%;
+                padding: 0% 0 3% 22px;
+                div {
+                    padding: 5px 0px;
+                }
+                .events--title {
+                    font-size: 20px;
+                    position: relative;
+                    font-family: "Roboto-Medium";
+                    &:hover {
+                        a {
+                            color: $red;
+                        }
+                    }
+                    &::before {
+                        content: url(./img/icons/roundArrow.svg);
+                        position: absolute;
+                        background: white;
+                        left: -33px;
+                        max-width: 20px;
+                        max-height: 20px;
+                    }
+                }
+                .events--place, .events--date {
+                    font-size: 15px;
+                    color: darken($color: $grey, $amount: 30);
+                }
+                .events--isFree {
+                    color: $red;
+                    font-family: "Roboto-Black";
+                    font-size: 12px;
+                }
+                &:first-child {
+                    margin-top:5%;
+                    .events--title {
+                        &::before {
+                            padding-top: 10px;
+                            top: -5px;
+                        }
+                    }
+                }
+                &.seeMore {
+                    margin-top: 20px;
+                    margin-left: 0;
+                    border: none;
+
+                }
+            }
+            @include mQ($phone) {
+                margin-left: 10%;
+                width: 90vw;
+            }
+        }
+        @include mQ($tablet_portrait) {
+            width: 40vw;
+        }
+        @include mQ($phone) {
+            margin-left: 0;
+        }
+    }
+    @include mQ($phone) {
+        padding: 0;
+    }
+}

@@ -1,0 +1,113 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  &__menu {
+    background: $lighten-grey;
+    width: 70px !important;
+    .sidebar__wrapper {
+      overflow: visible !important;
+    }
+  }
+  &__burger {
+    width: 100%;
+    cursor: pointer;
+    &::after {
+      transition: 0.5s;
+      transform: translateX(0px);
+    }
+    &.open {
+      &::after {
+        transition: 0.5s;
+        transform: translateX(-70px);
+      }
+    }
+  }
+  .sidebar__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .bm-item {
+      height: 100%;
+      width: 70px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      color: $black;
+      position: relative;
+      &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 2vw auto;
+        background-position: center center;
+        position: absolute;
+        right: -70px;
+        width: 70px;
+        height: 100%;
+        @include center;
+        background-color: $lighten-grey;
+        @include mQ($tablet_portrait) {
+          background-size: 3vw auto;
+        }
+      }
+      &:first-child {
+        @include mQ($phone) {
+            background-color: white;
+          &::after {
+            background-color: white;
+          }
+        }
+      }
+      &:not(:first-child) {
+        @include mQ($phone) {
+          &::after {
+            content: unset;
+          }
+        }
+      }
+      &:hover {
+        background-color: $grey;
+        @include mQ($phone) {
+          background-color: white;
+        }
+        &::after {
+          background-color: $grey;
+          @include mQ($phone) {
+            background-color: white;
+          }
+        }
+      }
+      &.disabled {
+        color: $grey;
+      }
+      &.active {
+        font-family: "Roboto-Bold";
+        color: $red;
+        &::after {
+          border-right: 5px solid $red;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+// -- SIDEBAR ICONS -- //
+
+@mixin sidebarIcons($category, $image) {
+  a[data-link=#{$category}]::after {
+    background-image: url("./img/icons/sidebar/"+$image);
+  }
+}
+
+.sidebar {
+  @include sidebarIcons('Open', 'burger.svg');
+  @include sidebarIcons('Main', 'home.svg');
+  @include sidebarIcons('News', 'news.svg');
+  @include sidebarIcons('Show', 'show.svg');
+  @include sidebarIcons('JS', 'js.svg');
+  @include sidebarIcons('Web', 'web.svg');
+  @include sidebarIcons('Voice', 'voice.svg');
+  @include sidebarIcons('FrontOps', 'frontops.svg');
+  @include sidebarIcons('API', 'api.svg');
+  @include sidebarIcons('Prod', 'prod.svg');
+}

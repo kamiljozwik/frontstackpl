@@ -1,0 +1,44 @@
+// mixin for media queries
+@mixin mQ($arg){                        
+  @media screen and (max-width: $arg){
+    @content                              
+  }
+};
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin background {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin underline($size, $color) {
+  &::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 0%;
+    max-width: 0%;
+    height: 19px;
+    border-bottom: $size solid $color;
+    transition: 0.1s ease-out;
+}
+&:hover {
+    &::after {
+        transition: 0.3s ease-out;
+        content: "";
+        position: absolute;
+        width: 110%;
+        max-width: 110%;
+    }
+}
+}

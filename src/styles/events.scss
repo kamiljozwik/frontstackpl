@@ -1,0 +1,65 @@
+.events-wrapper {
+    display: flex;
+    justify-content: center;
+    .events {
+        width: 75vw;
+        @include mQ($phone) {
+            width: 100vw;
+            padding-left: 5%;
+            box-sizing: border-box;
+        }
+    }
+
+    .events__list {
+        border-left: 3px solid $black;
+        &--item {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            margin: 50px 0px;
+            .event__data {
+                margin: 0px 30px;
+                width: 20%;
+                .title {
+                    font-size: 24px;
+                    font-family: "Roboto-Medium";
+                    position: relative;
+                    &::before {
+                        content: url(./img/icons/roundArrow.svg);
+                        position: absolute;
+                        background: white;
+                        left: -41px;
+                        max-width: 20px;
+                        max-height: 20px;
+                    }
+                    a {
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+                .place {
+                    padding: 3px 0;
+                    font-size: 14px;
+                }
+                .date {
+                    padding: 3px 0;
+                    font-size: 14px;
+                }
+                .isFree {
+                    padding: 3px 0;
+                    font-size: 14px;
+                    font-family: "Roboto-Black";
+                    color: $red;
+                }
+            }
+            .event__desc {
+                width: 80%;
+                .desc {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

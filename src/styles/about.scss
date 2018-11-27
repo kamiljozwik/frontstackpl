@@ -1,0 +1,107 @@
+.about-wrapper {
+    width: 75%;
+    margin-left: 10%;
+    // SECTION
+    .section {
+        .info {
+            position: relative;
+            display: flex;
+            &--text {
+                width: 70%;
+                padding: 0 20px 20px 20px;
+                font-size: 20px;
+                font-family: "Roboto-Light";
+                line-height: 30px;
+                p {
+                    margin: 20px 0;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+                @include mQ($tablet_portrait) {
+                    width: 90%;
+                }
+            }
+            &--img {
+                min-width: 400px;
+                height: 400px;
+                background: gray;
+                @include mQ($tablet_portrait) {
+                    display: none;
+                }
+            }
+        } 
+    }
+    // SECTION 1
+
+    // SECTION 2
+    .section-2 {
+        margin-top: 80px;
+        .topics {
+            margin-top: 30px;
+            width: 100%;
+            &__list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .item {
+                    background: #EEEEEE;
+                    border: 1px solid transparent;
+                    border-radius: 10px;
+                    box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.2);
+                    margin: 5px 5px;
+                    box-sizing: border-box;
+                    width: calc((100% / 3) - 10px);
+                    height: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center; 
+                    &--title {
+                        font-size: 32px;
+                        font-family: "Roboto-Bold";
+                        letter-spacing: 2px;
+                        padding: 20px 0 10px 0;
+                    }
+                    &--desc {
+                        font-size: 16px;
+                        font-family: "Roboto-Regular";
+                        line-height: 22px;
+                        padding: 0 20px;
+                    }
+                    &--link {
+                        padding: 10px 0 20px 0;
+                    }
+                    &.js {
+                        background: $js;
+                    }
+                    &.web {
+                        background: $web;
+                    }
+                    @include mQ($tablet_portrait) {
+                        width: calc((100% / 2) - 10px);
+                    }
+                    @include mQ($phone) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    // SECTION 3
+    .section-3 {
+        margin-top: 50px;
+        .label {
+            margin-bottom: 30px;
+        }
+    }
+    .section-4 {
+        margin-top: 50px;
+
+        .info--img {
+            // position: absolute;
+            // height: 480px;
+            // right: 0;
+        }
+    }
+}
