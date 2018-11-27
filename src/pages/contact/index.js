@@ -40,6 +40,7 @@ const Contact = () => (
           <div className="label label-regular">Wsparcie</div>
           <div className="support__desc">
             <p>Frontstack.pl jest projektem open source i w całości jest finansowany oraz utrzymywany przez jego twórcę. Jeżeli podobają Ci się treści udostępniane na stronie, wspomóż projekt przekazując na nasze konto niewielką kwotę, która umożliwi nam opłacenie wszystkich usług i narzędzi, dzięki którym frontstack.pl ma szansę funkcjonować w sieci.</p>
+            <p>Link wkrótce...</p>
           </div>
         </div>
       </div>
