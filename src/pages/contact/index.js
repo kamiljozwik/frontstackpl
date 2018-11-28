@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import ContactForm from './Form';
 import Layout from '../../components/layout';
 import facebook from '../../styles/img/logos/social/facebook--black.svg';
@@ -22,12 +23,12 @@ const Contact = () => (
               </a>
               <div className="slack-desc">
                 <p>Najszybszą formą komunikacji, zarówno z administratorem strony jak i innymi członkami naszej społeczności są nasze kanały na Slack'u. Zapraszamy do skorzystania z tej metody kontaktu.</p>
-                <div className="seeMore"><a href={slackLink} target="_blank" rel="noopener noreferrer">przejdź</a></div>
+                <div className="seeMore"><OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer">przejdź</OutboundLink></div>
               </div>
             </div>
             <div className="contact__links--social">
-              <div className="social--fb"><a href="https://www.facebook.com/frontstackpl/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></a></div>
-              <div className="social--twitter"><a href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></a></div>
+              <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
+              <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
               <div className="email"><a href="mailto: kontakt@frontstack.pl"><img className="mail-ico" src={mail} alt="mail" /></a></div>
             </div>
           </div>

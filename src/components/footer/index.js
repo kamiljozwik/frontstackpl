@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import FSLogo from '../Topbar/FSLogo';
 import facebook from '../../styles/img/logos/social/facebook--black.svg';
 import twitter from '../../styles/img/logos/social/twitter--black.svg';
@@ -12,10 +13,10 @@ const Footer = () => (
     <div className="logo"><FSLogo /></div>
     <div className="copyright">Copyright 2018. All rights reserved.</div>
     <div className="social">
-      <div className="social--fb"><a href="https://www.facebook.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></a></div>
-      <div className="social--twitter"><a href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></a></div>
-      <div className="social--slack"><a href={slackLink} target="_blank" rel="noopener noreferrer"><img src={slack} alt="slack" /></a></div>
-      <div className="social--github"><a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" /></a></div>
+      <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
+      <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
+      <div className="social--slack"><OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer"><img src={slack} alt="slack" /></OutboundLink></div>
+      <div className="social--github"><OutboundLink href="https://github.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" /></OutboundLink></div>
     </div>
   </section>
 );
