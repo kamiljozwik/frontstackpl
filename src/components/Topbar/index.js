@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import FSLogo from './FSLogo';
 import facebook from '../../styles/img/logos/social/facebook--black.svg';
 import twitter from '../../styles/img/logos/social/twitter--black.svg';
@@ -34,7 +35,7 @@ const showPopup = () => SlackModal.fire({
   confirmButtonClass: 'modal__slack--confirm',
   showCloseButton: true,
   focusConfirm: false,
-  confirmButtonText: <a href={slackLink} target="_blank" rel="noopener noreferrer"> Otwórz #Slack </a>,
+  confirmButtonText: <OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer"> Otwórz #Slack </OutboundLink>,
   confirmButtonAriaLabel: 'Go to slack!'
 });
 
@@ -54,9 +55,9 @@ const Topbar = () => (
           <span className="talks--infoBtn">info</span>
         </div>
       </div>
-      <a href={slackLink} target="_blank" rel="noopener noreferrer">
+      <OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer">
         <img src={slack} alt="slack" />
-      </a>
+      </OutboundLink>
     </div>
     <div className="center logo">
       <FSLogo />
@@ -67,9 +68,9 @@ const Topbar = () => (
         <div className="contact"><Link to="/contact">Kontakt</Link></div>
       </div>
       <div className="social">
-        <div className="social--fb"><a href="https://www.facebook.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></a></div>
-        <div className="social--twitter"><a href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></a></div>
-        <div className="social--github"><a href="https://github.com" target="_blank" rel="noopener noreferrer"><img src={github} alt="hithub" /></a></div>
+        <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
+        <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
+        <div className="social--github"><OutboundLink href="https://github.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={github} alt="hithub" /></OutboundLink></div>
       </div>
     </div>
   </div>
