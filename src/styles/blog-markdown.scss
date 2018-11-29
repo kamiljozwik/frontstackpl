@@ -104,14 +104,14 @@ h6 tt, h6 code {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 38px;
   color: black;
 }
 
 h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #cccccc;
-  color: black;
+  font-size: 32px;
+  color: $black;
+  padding: 40px 0px 10px 0;
 }
 
 h3 {
@@ -377,6 +377,7 @@ code, tt {
 }
 
 pre code {
+  color: white;
   margin: 0;
   padding: 0;
   white-space: pre;
@@ -395,10 +396,10 @@ pre code {
 }
 
 pre {
-  background-color: #f8f8f8;
+  background-color: #283593;
   border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 18px;
+  line-height: 25px;
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px;
@@ -414,8 +415,8 @@ strong {
 }
 
 p {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 em {
@@ -423,11 +424,24 @@ em {
 }
 
 ul {
+  font-size: 20px;
   list-style: disc;
+  li {
+    line-height: 36px;
+  }
 }
 
 ol {
   list-style: decimal;
 }
 
+}
+
+.post__content {
+  @include mQ($tablet_portrait) {
+    padding-left: 10%;
+  }
+  @include mQ($phone) {
+    padding-left: 0;
+  }
 }
