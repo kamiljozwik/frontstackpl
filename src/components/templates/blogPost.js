@@ -25,7 +25,7 @@ class blogPost extends Component {
   )
 
   render() {
-    const { title, content, author, inspirations } = this.post;
+    const { title, content, author, inspirations, tags } = this.post;
     const shortname = this.props.pageContext.disqusShortName;
     const disqusConfig = {
       url: `https://frontstack.pl${this.props.location.pathname}`,
@@ -36,7 +36,7 @@ class blogPost extends Component {
     return (
       <Layout type="blog-post-page" currentPage={this.category}>
         <Header
-          siteTitle="JavaScript"
+          siteTitle={tags[0]}
           category={this.category}
           post={{ node: this.post }}
           subcategories={this.headerData.subcategories}
