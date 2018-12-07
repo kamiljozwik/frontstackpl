@@ -20,13 +20,22 @@
     }
 }
 
-
 // NEW HEADER
 .category-header {
     width: calc( 100vw - 17px);
     height: 50vh;
     display: flex;
     position: relative;
+    &.codeless {
+        justify-content: center;
+        .header--label {
+            left: 0;
+        }
+        .header__posts {
+            padding-left: 3%;
+            padding-bottom: 3%;
+        }
+    }
     .header--label {
         position: absolute;
         margin-left: 10%;
@@ -53,6 +62,7 @@
                 font-family: "Roboto-Bold";
                 max-width: 80%;
                 letter-spacing: 1px;
+                margin: 10px 0;
             }
             .seeMore {
                 display: inline-block;

@@ -1,0 +1,41 @@
+.landing-page__tags.codeless {
+    margin-top: 80px;
+    .codeless {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90vw;
+        .tags__column {
+            width: 40vw;
+            padding: 0;
+            &:first-child {
+                margin-right: 40px;
+            }
+            .tags__list--item {
+                @include mQ($phone) {
+                    height: 150px;
+                }
+            }
+            @include mQ($tablet_portrait) {
+                width: 80vw;
+                &:first-child {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        @include mQ($tablet_portrait) {
+            justify-content: center;
+        }
+        @include mQ($phone) {
+            margin-top: 200px;
+        }
+    }
+    .tags__readAll {
+        @include mQ($phone) {
+            padding-left: 5%;
+        }
+    }
+    @include mQ($phone) {
+        padding-left: 5%;
+    }
+}

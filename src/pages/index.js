@@ -6,6 +6,20 @@ import moment from 'moment';
 import Layout from '../components/layout';
 import HeaderLanding from '../components/header/Landing';
 
+const CodelessItem = ({ post }) => (
+  <div className="tags__column">
+    <div className="tags__list">
+      <div className="tags__list--item" style={{ backgroundImage: `url(${post.node.lead.file.url}?w=770&h=300&fl=progressive&q=50&fit=fill)` }}>
+        <div className="item--title"><Link to={`${post.node.tags[0]}/post/${post.node.slug}`}>{ post.node.title }</Link></div>
+        <div className="item--footer">
+          <div className="item--date">{ moment(post.node.createdAt).format('DD/MM/YYYY') }</div>
+          <div className="item--seeMore seeMore"><Link to={`${post.node.tags[0]}/post/${post.node.slug}`}>czytaj</Link></div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const TagsColumn = ({ posts, label, link }) => (
   <div className="tags__column">
     <div className="tags__label label-regular">{label}</div>
@@ -53,6 +67,7 @@ class IndexPage extends Component {
   constructor(props) {
     super(props);
     this.latestPosts = this.props.data.allContentfulBlogEntry.edges;
+    this.Codeless = this.props.data.Codeless ? this.props.data.Codeless.edges : [];
     this.JSPosts = this.props.data.JSPosts ? this.props.data.JSPosts.edges : [];
     this.WebPosts = this.props.data.WebPosts ? this.props.data.WebPosts.edges : [];
     this.VoicePosts = this.props.data.VoicePosts ? this.props.data.VoicePosts.edges : [];
@@ -68,6 +83,22 @@ class IndexPage extends Component {
     return (
       <Layout type="landing-page" currentPage="main">
         <HeaderLanding latestPosts={this.latestPosts} news={this.News} />
+        <section className="landing-page__tags codeless">
+          {this.Codeless.length > 0
+          && (
+            <>
+              <div className="codeless">
+                {
+                  this.Codeless.map(post => <CodelessItem post={post} />)
+                }
+                {
+                  this.Codeless.map(post => <CodelessItem post={post} />)
+                }
+              </div>
+              <Link to="/codeless" className="tags__readAll seeMore">Sprawdź wszystkie</Link>
+            </>
+          )}
+        </section>
         <section className="landing-page__tags part1">
           <div className="tags">
             {<TagsColumn posts={this.JSPosts} label="JavaScript" link="js" />}
@@ -130,6 +161,7 @@ export const pageQuery = graphql`
       limit: 5
       filter: {
         node_locale: {eq: "pl-PL"}
+        tags: {nin: "codeless"}
       },
       sort: {fields: [createdAt], order: DESC}
     )
@@ -137,6 +169,21 @@ export const pageQuery = graphql`
       edges {
         node {
           ...LandingBlogPostFields
+        }
+      }
+    }
+    Codeless: allContentfulBlogEntry (
+      limit: 2
+      filter: {
+        node_locale: {eq: "pl-PL"}
+        tags: {in: "codeless"}
+      },
+      sort: {fields: [createdAt], order: DESC}
+    )
+    {
+      edges {
+        node {
+        ...LandingBlogPostFields
         }
       }
     }
