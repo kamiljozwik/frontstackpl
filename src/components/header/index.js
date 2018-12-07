@@ -17,16 +17,20 @@ const Header = ({ siteTitle, category, currentSubcategory, subcategories, post, 
           <div className="title"><Link to={`${post.node.tags[0]}/post/${post.node.slug}`} className="title">{post.node.title}</Link></div>
           {isBlogPost ? '' : <Link to={`${post.node.tags[0]}/post/${post.node.slug}`} className="seeMore">Czytaj</Link>}
         </div>
-        <div className="header__posts__background">
-          <div className="header__posts__inner" />
-        </div>
+        {category !== 'codeless' && (
+          <div className="header__posts__background">
+            <div className="header__posts__inner" />
+          </div>
+        )}
       </div>
-      <Subcategories
-        subcategories={subcategories}
-        category={category}
-        siteTitle={siteTitle}
-        currentSubcategory={currentSubcategory}
-      />
+      {category !== 'codeless' && (
+        <Subcategories
+          subcategories={subcategories}
+          category={category}
+          siteTitle={siteTitle}
+          currentSubcategory={currentSubcategory}
+        />
+      )}
     </section>
   </React.Fragment>
 );

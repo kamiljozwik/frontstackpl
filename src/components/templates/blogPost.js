@@ -4,7 +4,6 @@ import Disqus from 'disqus-react';
 import Avatar from 'react-avatar';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
-import '../../cdn_local/platform';
 import Layout from '../layout';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
@@ -15,7 +14,7 @@ class blogPost extends Component {
     super(props);
     this.post = props.data.contentfulBlogEntry;
     this.category = props.data.contentfulBlogEntry.tags[0];
-    this.subcategory = props.data.contentfulBlogEntry.tags[1];
+    this.subcategory = props.data.contentfulBlogEntry.tags.length > 1 ? props.data.contentfulBlogEntry.tags[1] : '';
     this.headerData = headerFactory(this.category);
   }
 

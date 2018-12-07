@@ -34,7 +34,8 @@ class Layout extends Component {
                   { name: 'keywords', content: 'sample, something' },
                 ]}
               >
-                <html lang="en" />
+                <html lang="pl" />
+                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8" />
               </Helmet>
               <Topbar />
               <div className="sidebar" ref={this.sidebarMenuWrapper}>
