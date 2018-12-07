@@ -14,7 +14,7 @@ class blogPost extends Component {
     super(props);
     this.post = props.data.contentfulBlogEntry;
     this.category = props.data.contentfulBlogEntry.tags[0];
-    this.subcategory = props.data.contentfulBlogEntry.tags[1];
+    this.subcategory = props.data.contentfulBlogEntry.tags.length > 1 ? props.data.contentfulBlogEntry.tags[1] : '';
     this.headerData = headerFactory(this.category);
   }
 
@@ -25,7 +25,7 @@ class blogPost extends Component {
   )
 
   render() {
-    const { title, content, author, inspirations } = this.post;
+    const { title, content, author, inspirations, tags } = this.post;
     const shortname = this.props.pageContext.disqusShortName;
     const disqusConfig = {
       url: `https://frontstack.pl${this.props.location.pathname}`,
@@ -36,7 +36,7 @@ class blogPost extends Component {
     return (
       <Layout type="blog-post-page" currentPage={this.category}>
         <Header
-          siteTitle="JavaScript"
+          siteTitle={tags[0]}
           category={this.category}
           post={{ node: this.post }}
           subcategories={this.headerData.subcategories}

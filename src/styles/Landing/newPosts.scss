@@ -1,9 +1,6 @@
 .landing-page__tags {
     &.part1 {
-        margin-top: 70px;
-        @include mQ($phone) {
-            margin-top: 250px;
-        }
+        margin-top: 20px;
     }
     &.part2 {
         margin-top: 100px;
@@ -67,6 +64,7 @@
                             align-items: flex-end;
                             a {
                                 color: white;
+                                line-height: 36px;
                             }
                         }
                         &--footer {
