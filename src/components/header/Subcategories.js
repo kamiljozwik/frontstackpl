@@ -4,12 +4,8 @@ import nanoid from 'nanoid';
 import { Link } from 'gatsby';
 
 const Subcategory = ({ category, subcategory, currentSubcategory }) => (
-  <li className="header__subcategories__list--item">
-    <div className="subcategories-title">
-      <div className="header__subcategories__list--item">
-        <div className={`subcategories-title ${currentSubcategory === subcategory ? 'active' : ''}`}><Link to={`/${category}/${subcategory}`}>{ subcategory }</Link></div>
-      </div>
-    </div>
+  <li className={`header__subcategories__list--item ${currentSubcategory === subcategory ? 'active' : ''}`}>
+    <div className="subcategories-title"><Link to={`/${category}/${subcategory}`}>{ subcategory }</Link></div>
   </li>
 );
 

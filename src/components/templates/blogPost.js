@@ -4,6 +4,7 @@ import Disqus from 'disqus-react';
 import Avatar from 'react-avatar';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
+import '../../cdn_local/platform';
 import Layout from '../layout';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
