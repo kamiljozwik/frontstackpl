@@ -156,12 +156,6 @@
                         width: 25px;
                     }
                 }
-                &--github img {
-                    width: 30px;
-                    @include mQ($phone) {
-                        width: 22px;
-                    }
-                }
             }
             @include mQ($tablet_portrait) {
                 order: 3;

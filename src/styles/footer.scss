@@ -51,9 +51,6 @@
                 transform: scale(1.2);
             }
         }
-        &--github img {
-            width: 27px;
-        }
         @include mQ($tablet_portrait) {
             order: 2;
             width: 100%;

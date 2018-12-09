@@ -20,9 +20,9 @@
         &--image {
             position: absolute;
             bottom: 0;
-            width: 250px;
-            height: 250px;
-            background: url(./img/graphics/showRoom.jpg);
+            width: 200px;
+            height: 280px;
+            background: url(./img/graphics/Monk.jpg);
             @include background;
             @include mQ($tablet_portrait) {
                 width: 150px;

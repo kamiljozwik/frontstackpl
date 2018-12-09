@@ -33,7 +33,11 @@
         } 
     }
     // SECTION 1
-
+    .section-1 {
+        .info--img {
+            background: url(./img/graphics/Hello.jpg);
+        }
+    }
     // SECTION 2
     .section-2 {
         margin-top: 80px;
@@ -94,14 +98,15 @@
         .label {
             margin-bottom: 30px;
         }
+        .info--img {
+            background: url(./img/graphics/joinUs.jpg);
+        }
     }
     .section-4 {
         margin-top: 50px;
 
         .info--img {
-            // position: absolute;
-            // height: 480px;
-            // right: 0;
+            background: url(./img/graphics/Author.jpg);
         }
     }
 }
