@@ -89,7 +89,7 @@ class IndexPage extends Component {
             <>
               <div className="codeless">
                 {
-                  this.Codeless.map(post => <CodelessItem post={post} />)
+                  this.Codeless.map(post => <CodelessItem key={nanoid()} post={post} />)
                 }
               </div>
               <Link to="/codeless" className="tags__readAll seeMore">Sprawdź wszystkie</Link>
