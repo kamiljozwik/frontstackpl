@@ -60,7 +60,7 @@ const Topbar = () => (
       </OutboundLink>
     </div>
     <div className="center logo">
-      <FSLogo />
+      <Link to="/"><FSLogo /></Link>
     </div>
     <div className="right">
       <div className="links">

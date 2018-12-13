@@ -21,7 +21,7 @@ const HeaderLanding = ({ latestPosts, news }) => (
         <div className="header__posts--latest">
           <div className="date">{ moment(latestPosts[0].node.createdAt).format('DD/MM/YYYY') }</div>
           <div className="title"><Link to={`${latestPosts[0].node.tags[0]}/post/${latestPosts[0].node.slug}`} className="title">{latestPosts[0].node.title}</Link></div>
-          <Link to={`${latestPosts[0].node.tags[0]}/post/${latestPosts[0].node.slug}`} className="seeMore">Czytaj</Link>
+          {/* <Link to={`${latestPosts[0].node.tags[0]}/post/${latestPosts[0].node.slug}`} className="seeMore">Czytaj</Link> */}
         </div>
         <div className="header__posts__container">
           <ul className="header__posts__list">
