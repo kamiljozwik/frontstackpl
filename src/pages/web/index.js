@@ -19,18 +19,18 @@ const WEBPage = ({ data }) => (
         post={data.allPosts.edges[0]}
       />
       <section className="recent-posts">
-        <ThumbnailList posts={data.allPosts.edges.slice(1, 3)} type="recent-posts" />
+        <ThumbnailList posts={data.allPosts.edges.slice(1, 3)} isThumbnail={false} />
       </section>
       <section className="second-level-posts">
         {data.allPosts.edges[3] && (
           <>
-            <span className="label__small">Pozostałe wpisy</span>
-            <ThumbnailList posts={data.allPosts.edges.slice(3, 7)} type="second-level-posts" />
+            <span className="label-small">Pozostałe wpisy</span>
+            <ThumbnailList posts={data.allPosts.edges.slice(3, 6)} type="second-level-posts" />
           </>
         )}
       </section>
       <section className="older-posts">
-        <ThumbnailList posts={data.allPosts.edges.slice(7, 11)} type="older-posts" />
+        <ThumbnailList posts={data.allPosts.edges.slice(6)} type="older-posts" />
       </section>
     </Layout>
   </React.Fragment>

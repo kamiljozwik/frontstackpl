@@ -36,7 +36,7 @@ class blogPost extends Component {
     return (
       <Layout type="blog-post-page" currentPage={this.category}>
         <Header
-          siteTitle={tags[0]}
+          siteTitle={this.headerData.title}
           category={this.category}
           post={{ node: this.post }}
           subcategories={this.headerData.subcategories}

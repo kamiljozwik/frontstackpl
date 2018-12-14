@@ -1,11 +1,19 @@
 const headerData = {
   js: {
     title: 'JavaScript',
-    subcategories: ['general', 'security']
+    subcategories: [
+      { general: 'Ogólne' },
+      { security: 'Bezpieczeństwo' },
+    ]
   },
   web: {
     title: 'Web',
-    subcategories: ['css']
+    subcategories: [
+      { css: 'CSS' },
+      { mobile: 'Mobile' },
+      { browser: 'Przeglądarka' },
+      { react: 'React' }
+    ]
   },
   news: {
     title: 'News',

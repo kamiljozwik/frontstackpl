@@ -22,8 +22,12 @@ const JSPage = ({ data }) => (
         <ThumbnailList posts={data.allPosts.edges.slice(1, 3)} isThumbnail={false} />
       </section>
       <section className="second-level-posts">
-        <span className="label-small">Pozostałe wpisy</span>
-        <ThumbnailList posts={data.allPosts.edges.slice(3, 6)} />
+        {data.allPosts.edges[3] && (
+          <>
+            <span className="label-small">Pozostałe wpisy</span>
+            <ThumbnailList posts={data.allPosts.edges.slice(3, 6)} type="second-level-posts" />
+          </>
+        )}
       </section>
       <section className="older-posts">
         <ThumbnailList posts={data.allPosts.edges.slice(6)} />

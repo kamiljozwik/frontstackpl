@@ -30,6 +30,11 @@
                 font-family: "Roboto-Bold";
                 max-width: 80%;
                 letter-spacing: 1px;
+                a {
+                    line-height: 55px;
+                    box-shadow: 10px 0 0 $black, -10px 0 0 $black;
+                    background-color: $black;
+                }
             }
             .seeMore {
                 display: inline-block;

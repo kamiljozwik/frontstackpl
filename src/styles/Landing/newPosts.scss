@@ -37,6 +37,7 @@
                     &--title {
                         display: flex;
                         align-items: center;
+                        line-height: 25px;
                         height: 100%;
                         padding: 10px;
                         max-width: 90%;
@@ -59,12 +60,15 @@
                     border-bottom: none;
                     .item {
                         &--title {
-                            padding: 20px;
+                            display: block;
+                            padding: 25% 0 0 5%;
                             font-size: 30px;
-                            align-items: flex-end;
+                            max-width: 90%;
                             a {
+                                background-color: $black;
                                 color: white;
-                                line-height: 36px;
+                                line-height: 40px;
+                                box-shadow: 10px 0 0 $black, -10px 0 0 $black;
                             }
                         }
                         &--footer {

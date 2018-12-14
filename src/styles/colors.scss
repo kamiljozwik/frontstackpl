@@ -4,12 +4,14 @@ $subcategories: #577590;
 $primary-blue: #577590;
 $sidebar: rgb(57, 62, 65);
 $sidebar-active: rgb(88, 95, 100);
+$black: #212121;
 $grey: #BDBDBD;
 $lighten-grey: lighten($color: $grey, $amount: 15);
 $light-grey: #f9f9f9;
 $dark-grey: #393E41;
+// $dark-grey-title-background: rgba(57,62,65,0.6);
+$dark-grey-title-background: $black;
 $text: #393E41;
-$black: #212121;
 $red: #EF5350;
 
 // category colors

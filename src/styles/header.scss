@@ -63,6 +63,11 @@
                 max-width: 80%;
                 letter-spacing: 1px;
                 margin: 10px 0;
+                a {
+                    line-height: 70px;
+                    background-color: $black;
+                    box-shadow: 10px 0 0 $black, -10px 0 0 $black;
+                }
             }
             .seeMore {
                 display: inline-block;
@@ -82,6 +87,9 @@
                     font-family: "Roboto-Bold";
                     letter-spacing: 1px;
                     text-align: left;
+                    a {
+                        line-height: 90px;
+                    }
                 }
             }
             @include mQ($tablet_portrait) {
