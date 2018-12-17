@@ -4,6 +4,7 @@ import Disqus from 'disqus-react';
 import Avatar from 'react-avatar';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
+import ThumbnailList from '../ThumbnailList';
 import Layout from '../layout';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
@@ -25,7 +26,7 @@ class blogPost extends Component {
   )
 
   render() {
-    const { title, content, author, inspirations, tags } = this.post;
+    const { title, content, author, inspirations, related } = this.post;
     const shortname = this.props.pageContext.disqusShortName;
     const disqusConfig = {
       url: `https://frontstack.pl${this.props.location.pathname}`,
@@ -58,6 +59,11 @@ class blogPost extends Component {
               </div>
             </div>
           </section>
+          {related && (
+            <section className="post__related">
+              <ThumbnailList posts={related} type="second-level-posts" isRelated />
+            </section>
+          )}
           {inspirations && inspirations.length > 0 && (
             <section className="post__links">
               <span className="post__links--label">Źródła:</span>

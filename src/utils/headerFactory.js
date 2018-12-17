@@ -3,7 +3,6 @@ const headerData = {
     title: 'JavaScript',
     subcategories: [
       { general: 'Ogólne' },
-      { security: 'Bezpieczeństwo' },
     ]
   },
   web: {

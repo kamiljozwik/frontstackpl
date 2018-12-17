@@ -27,15 +27,15 @@ PostThumbnail.propTypes = {
 };
 
 PostThumbnail.defaultProps = {
-  isThumbnail: true
+  isThumbnail: true,
 };
 
-const ThumbnailList = ({ posts, isThumbnail }) => (
+const ThumbnailList = ({ posts, isThumbnail, isRelated }) => (
   <ul className="posts__list">
     { posts.map((edge, index) => (
       <PostThumbnail
         key={nanoid()}
-        node={edge.node}
+        node={isRelated ? edge : edge.node}
         index={index}
         isThumbnail={isThumbnail}
       />)) }
@@ -46,10 +46,12 @@ export default ThumbnailList;
 
 ThumbnailList.propTypes = {
   posts: PropTypes.array.isRequired,
-  isThumbnail: PropTypes.bool
+  isThumbnail: PropTypes.bool,
+  isRelated: PropTypes.bool,
 };
 
 ThumbnailList.defaultProps = {
-  isThumbnail: true
+  isThumbnail: true,
+  isRelated: false
 };
 

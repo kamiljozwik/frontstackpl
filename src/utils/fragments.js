@@ -19,6 +19,17 @@ fragment BlogPostFields on ContentfulBlogEntry {
     }
     author
     inspirations
+    related {
+        tags
+        slug
+        title
+        createdAt
+        lead {
+            file {
+                url
+            }
+        }
+    }
 }
 `;
 

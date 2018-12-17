@@ -37,17 +37,34 @@
           height: 25px;
         }
       }
+      @include mQ($tablet_portrait) {
+        padding-left: 10%;
+      }
     }
-      &__links {
-        margin-top: 20px;
-        color: $grey;
-        &--item {
-          padding: 2px 10px;
-          font-size: 13px;
+    &__related {
+      margin-top: 50px;
+      .posts__list {
+        display: flex;
+        justify-content: flex-start;
+        .item {
+          width: 25%;
+        }
+        @include mQ($tablet_portrait) {
+          flex-wrap: wrap;
+          padding-left: 10%;
         }
       }
-      &__comments {
-        margin-top: 50px;
+    }
+    &__links {
+      margin-top: 20px;
+      color: $grey;
+      &--item {
+        padding: 2px 10px;
+        font-size: 13px;
       }
+    }
+    &__comments {
+      margin-top: 50px;
+    }
   }
 }
