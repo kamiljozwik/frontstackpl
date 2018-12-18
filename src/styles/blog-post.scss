@@ -48,6 +48,12 @@
         justify-content: flex-start;
         .item {
           width: 25%;
+          @include mQ($tablet_portrait) {
+            width: 45%;
+          }
+          @include mQ($phone) {
+            width: 90%;
+          }
         }
         @include mQ($tablet_portrait) {
           flex-wrap: wrap;

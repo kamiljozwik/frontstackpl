@@ -34,7 +34,7 @@ const About = ({ data }) => (
             <ul className="topics__list">
               <TopicTile
                 name="JavaScript"
-                desc="Najważniejsze spoiwo wszystkich front-endowych technologii, czyli język JavaScript. W tym dziale znajdziesz wiele informacji na temat samego języka, najnowszej składni, testów, rozszerzeń ( np. TypeScript ) i wszystkiego co ma wspólnego z tym jednym z najpopularniejszych obecnie języków na świecie."
+                desc="Najważniejsze spoiwo wszystkich front-endowych technologii, czyli język JavaScript. W tym dziale znajdziesz wiele informacji na temat samego języka, najnowszej składni, testów, rozszerzeń ( np. TypeScript ) i wszystkiego co ma wspólnego z tym jednym z najpopularniejszych obecnie języków programowania na świecie."
                 link="js"
               />
               <TopicTile
@@ -54,7 +54,7 @@ const About = ({ data }) => (
               />
               <TopicTile
                 name="API"
-                desc="Nawet najszybsza i najpiękniejsza aplikacja internetowa nie będzie zbyt często odwiedzana, gdy nie będzie interaktywna oraz aktualizowana - najbardziej oczywistym źródłem informacji są bazy danych bądź zewnętrze serwisy. Jak pobrać z nich dane, jak radzić sobie z asynchronicznością, czym jest REST API, GraphQL, Apollo, Swagger ? Odpowiedzi do odnalezienia w tym dziale."
+                desc="Nawet najszybsza i najpiękniejsza aplikacja internetowa nie będzie zbyt często odwiedzana, gdy nie będzie aktualizowana - najbardziej oczywistym źródłem informacji są bazy danych bądź zewnętrze serwisy. Jak pobrać z nich dane, jak radzić sobie z asynchronicznością, czym jest REST API, GraphQL, Apollo, Swagger ? Odpowiedzi do odnalezienia w tym dziale."
                 link="api"
               />
               <TopicTile
@@ -72,7 +72,7 @@ const About = ({ data }) => (
             <div className="info--text">
               <p>Frontstack.pl jest cały czas we wczesnej fazie rozwoju, więc gdzieniegdzie można spotkać małe bugi i niedociągnięcia. Chcemy jednak, aby strona ta była zawsze aktualna i korzystała z najnowszych technologii.</p>
               <p>Dlatego też mamy nadzieję, że rozrastająca się społeczność frontstack.pl będzie dbała o to, aby nasza strona była wzorcowym i perfekcyjnie przygotowanym produktem.</p>
-              <p>Jeżeli widzisz jakiś błąd na stronie, wiesz, że coś można zrobić lepiej, szybciej, czyściej bądź masz pomysły na nowe funkcjonalności - przejdź na naszego <a href={slackLink} target="_blank" rel="noopener noreferrer" class="letter-red">Slack'a</a> i zgłoś nam swoje uwagi.</p>
+              <p>Jeżeli widzisz jakiś błąd na stronie, wiesz, że coś można zrobić lepiej, szybciej, czyściej, bądź masz pomysły na nowe funkcjonalności - przejdź na naszego <a href={slackLink} target="_blank" rel="noopener noreferrer" class="letter-red">Slack'a</a> i zgłoś nam swoje uwagi.</p>
               <p>Z drugiej strony, jeżeli masz pomysł na ciekawy artykuł, albo wiesz o ciekawym wydarzeniu front-endowym którego nie ma na naszej liście - również czekamy na Twoje sugestie.</p>
             </div>
           </div>
@@ -81,10 +81,10 @@ const About = ({ data }) => (
           <div className="label label-regular">Cześć,</div>
           <div className="info">
             <div className="info--text">
-              <p>Mam na imię Kamil i jestem front-end developerem. Jako, że regularnie i z wielką przyjemnością śledzę wszelkie nowości w świecie front-endu, jakiś czas temu postanowiłem, że może dobrym pomysłem byłoby założyć osobistego bloga, aby dzielić się nowo zdobytą wiedzą oraz własnymi przemyśleniami z innymi developerami.</p>
+              <p>mam na imię Kamil i jestem front-end developerem. Jako, że regularnie i z wielką przyjemnością śledzę wszelkie nowości w świecie front-endu, jakiś czas temu postanowiłem, że może dobrym pomysłem byłoby założyć osobistego bloga, aby dzielić się nowo zdobytą wiedzą oraz własnymi przemyśleniami z innymi developerami.</p>
               <p>Wtedy też, podczas pierwszych prac nad blogiem, pomyślałem sobie: "A może jednak coś więcej niż blog ?"</p>
-              <p>Tak wpadł mi do głowy pomysł na nieduży portal, zrzeszający miłośników technologii front-endowych: <strong>FRONTSTACK.PL</strong></p>
-              <p>Mam naprawdę wielką nadzieję, że już niedługo będę mógł usunąć tą sekcję, którą właśnie czytasz i na jej miejsce wstawić nową: <strong>ZESPÓŁ.</strong></p>
+              <p>Tak wpadł mi do głowy pomysł na nieduży portal, zrzeszający miłośników technologii front-endowych: <strong>frontstack.pl</strong></p>
+              <p>Mam naprawdę wielką nadzieję, że już niedługo będę mógł usunąć tą sekcję, którą właśnie czytasz i na jej miejsce wstawić nową: <strong>Zespół.</strong></p>
               <p>Do tego jeszcze długa droga i wiele artykułów do napisania - wierzę jednak, że moja praca pomoże jeszcze niejednemu ( początkującemu i doświadczonemu ) developerowi.</p>
             </div>
             <div className="info--img" />

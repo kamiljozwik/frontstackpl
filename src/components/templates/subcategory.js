@@ -27,7 +27,7 @@ class Subcategory extends Component {
           />
           <section className="older-posts">
             <span className="label-small">{ this.subcategory }</span>
-            <ThumbnailList posts={this.props.data.allPosts.edges.slice(0, 8)} type="older-posts" />
+            <ThumbnailList posts={this.props.data.allPosts.edges.slice(1)} type="older-posts" />
           </section>
         </Layout>
         </>

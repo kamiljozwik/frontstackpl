@@ -59,17 +59,17 @@ class blogPost extends Component {
               </div>
             </div>
           </section>
-          {related && (
-            <section className="post__related">
-              <ThumbnailList posts={related} type="second-level-posts" isRelated />
-            </section>
-          )}
           {inspirations && inspirations.length > 0 && (
             <section className="post__links">
               <span className="post__links--label">Źródła:</span>
               <ul className="post__links--list">
                 { this.renderInspirations(inspirations) }
               </ul>
+            </section>
+          )}
+          {related && (
+            <section className="post__related">
+              <ThumbnailList posts={related} type="second-level-posts" isRelated />
             </section>
           )}
           <section className="post__comments">
