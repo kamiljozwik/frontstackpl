@@ -442,6 +442,13 @@ ol {
   }
 }
 
+&.news__content {
+  code {
+    padding: 1px 5px;
+    background-color: $light-grey;
+    color: $black
+  }
+}
 
 }
 

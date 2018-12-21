@@ -3,6 +3,7 @@ const headerData = {
     title: 'JavaScript',
     subcategories: [
       { general: 'Ogólne' },
+      { tests: 'Testy' },
     ]
   },
   web: {
@@ -36,7 +37,9 @@ const headerData = {
   },
   prod: {
     title: 'Produktywność',
-    subcategories: []
+    subcategories: [
+      { ide: 'IDE' }
+    ]
   },
   codeless: {
     title: 'Codeless',

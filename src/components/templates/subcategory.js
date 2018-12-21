@@ -12,6 +12,7 @@ class Subcategory extends Component {
     this.category = props.data.allPosts.edges[0].node.tags[0];
     this.subcategory = props.data.allPosts.edges[0].node.tags[1];
     this.headerData = headerFactory(this.category);
+    this.printSubcategory = this.headerData.subcategories.filter(item => Object.keys(item)[0] === this.subcategory)[0][this.subcategory];
   }
 
   render() {
@@ -26,7 +27,7 @@ class Subcategory extends Component {
             post={this.props.data.allPosts.edges[0]}
           />
           <section className="older-posts">
-            <span className="label-small">{ this.subcategory }</span>
+            <span className="label-small">{ this.printSubcategory }</span>
             <ThumbnailList posts={this.props.data.allPosts.edges.slice(1)} type="older-posts" />
           </section>
         </Layout>
