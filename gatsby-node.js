@@ -62,5 +62,42 @@ exports.createPages = ({ graphql, actions }) => {
         // return;
       })
     );
+    // Toolbox pages for categories
+    resolve(
+      graphql(`
+        {
+          allContentfulToolEntry(limit: 100) {
+            edges {
+              node {
+                id 
+                category
+              }
+            }
+          }
+        }
+    `).then((result) => {
+        if (result.errors) {
+          reject(result.errors);
+        }
+        const categories = [];
+        result.data.allContentfulToolEntry.edges.forEach((edge) => {
+          const { category } = edge.node;
+          categories.push(category);
+        });
+
+        // Create subcategories toolbox pages
+        _.uniq(categories).forEach((category) => {
+          const toolsPath = `/${category}/toolbox/`;
+          createPage({
+            path: toolsPath,
+            component: path.resolve(`src/components/templates/toolbox.js`),
+            context: {
+              category
+            },
+          });
+        });
+        // return;
+      })
+    );
   });
 };

@@ -7,7 +7,7 @@ const Subcategory = ({ category, subcategory, currentSubcategory }) => {
   const urlName = Object.keys(subcategory)[0];
   const printName = subcategory[Object.keys(subcategory)[0]];
   return (
-    <li className={`header__subcategories__list--item ${currentSubcategory === urlName ? 'active' : ''}`}>
+    <li className={`header__subcategories__list--item ${(urlName === 'toolbox' || urlName === 'cheatsheets') ? 'toolbox-link' : ''} ${currentSubcategory === urlName ? 'active' : ''}`}>
       <div className="subcategories-title"><Link to={`/${category}/${urlName}`}>{ printName }</Link></div>
     </li>
   );

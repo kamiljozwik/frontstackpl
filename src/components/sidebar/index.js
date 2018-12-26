@@ -14,7 +14,6 @@ class Sidebar extends Component {
 
   switchMenu = (event) => {
     event.preventDefault();
-    // console.log(event.target.classList.toggle('open'));
     event.target.classList.toggle('open');
     this.setState(prevState => ({
       menuOpen: !prevState.menuOpen
