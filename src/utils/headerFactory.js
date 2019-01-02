@@ -2,7 +2,7 @@ const commonTools = {
   must: 'Obowiązkowe',
   important: 'Ważne',
   other: 'Inne'
-}
+};
 
 const headerData = {
   js: {
@@ -12,7 +12,7 @@ const headerData = {
       { general: 'Ogólne' },
       { tests: 'Testy' },
     ],
-    tools: 
+    tools:
       {
         ...commonTools,
       },
@@ -26,7 +26,7 @@ const headerData = {
       { browser: 'Przeglądarka' },
       { react: 'React' }
     ],
-    tools: 
+    tools:
       {
         ...commonTools,
       },

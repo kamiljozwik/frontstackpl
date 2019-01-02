@@ -1,5 +1,6 @@
 import React from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import moment from 'moment';
 import FSLogo from '../Topbar/FSLogo';
 import facebook from '../../styles/img/logos/social/facebook--black.svg';
 import twitter from '../../styles/img/logos/social/twitter--black.svg';
@@ -11,7 +12,7 @@ const slackLink = 'https://join.slack.com/t/frontstackpl/shared_invite/enQtNDg0M
 const Footer = () => (
   <section className="footer">
     <div className="logo"><FSLogo /></div>
-    <div className="copyright">Copyright 2018. All rights reserved.</div>
+    <div className="copyright">{`Copyright ${moment().format('YYYY')}. All rights reserved.`}</div>
     <div className="social">
       <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
       <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>

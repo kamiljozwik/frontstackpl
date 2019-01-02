@@ -9,9 +9,9 @@ const Header = ({ siteTitle, category, currentSubcategory, subcategories, post, 
     <section className={`category-header ${category}`}>
       {isBlogPost || isToolBox ? '' : <div className="header--label label-small">Najnowszy wpis</div>}
       {isToolBox ? (
-        <div
-          className="header__posts header__posts--toolbox"
-        />
+        <div className="header__posts header__posts--toolbox">
+          <span className="title">TOOLBOX</span>
+        </div>
       ) : (
         <div
           className="header__posts"

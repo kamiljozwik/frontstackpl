@@ -1,3 +1,18 @@
+.category-header .header__posts--toolbox {
+    background-image: url(./img/graphics/toolbox.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    .title {
+        color: white;
+        font-size: 75px;
+        font-family: "Roboto-Bold";
+        letter-spacing: 1px;
+        background-color: #212121;
+        padding: 10px 40px;
+    }
+}
+
 .toolbox {
     margin-left: 10% !important;
     &__types {

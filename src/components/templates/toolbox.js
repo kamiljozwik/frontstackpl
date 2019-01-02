@@ -48,12 +48,12 @@ class Subcategory extends Component {
   render() {
     return (
       <>
-        <Layout type="category-page category-page__subcategories">
+        <Layout type="category-page category-page__subcategories" currentPage={this.pageCategory}>
           <Header
-            category={this.pageCategory}
             siteTitle={this.headerData.title}
-            subcategories={this.headerData.subcategories}
+            category={this.pageCategory}
             currentSubcategory="toolbox"
+            subcategories={this.headerData.subcategories}
             isToolBox
           />
           <section className="toolbox">
