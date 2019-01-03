@@ -28,6 +28,17 @@ const headerData = {
     ],
     tools:
       {
+        bundler: 'Bundlers',
+        auth: 'Autoryzacja',
+        charts: 'Wizualizacja',
+        animation: 'Animacja',
+        ui: 'UI',
+        notifications: 'Notyfikacje',
+        scroll: 'Scroll',
+        chats: 'Chats',
+        performance: 'Wydajność',
+        ecommerce: 'eCommerce',
+        search: 'Wyszukiwanie',
         ...commonTools,
       },
   },
