@@ -218,4 +218,5 @@
     
     @include SubcategoryBackgroundColor('js', $js);
     @include SubcategoryBackgroundColor('web', $web);
+    @include SubcategoryBackgroundColor('prod', $prod);
 }

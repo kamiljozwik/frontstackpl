@@ -11,6 +11,7 @@ const Header = ({ siteTitle, category, currentSubcategory, subcategories, post, 
       {isToolBox ? (
         <div className="header__posts header__posts--toolbox">
           <span className="title">TOOLBOX</span>
+          <div className="header__posts__background" />
         </div>
       ) : (
         <div

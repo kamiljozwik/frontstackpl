@@ -82,6 +82,9 @@
                     &.web {
                         background: $web;
                     }
+                    &.prod {
+                        background: $prod;
+                    }
                     @include mQ($tablet_portrait) {
                         width: calc((100% / 2) - 10px);
                     }
