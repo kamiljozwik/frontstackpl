@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { CSSPlugin, AttrPlugin } from 'gsap/all';
 import { StaticQuery, graphql } from 'gatsby';
 import Sidebar from './sidebar';
 import Topbar from './Topbar';
 import Footer from './footer';
 import '../styles/index.scss';
+
+//without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
+const plugins = [CSSPlugin, AttrPlugin];
 
 class Layout extends Component {
   constructor(props) {

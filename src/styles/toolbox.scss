@@ -21,10 +21,15 @@
     margin-left: 10% !important;
     &__types {
         display: flex;
-        flex-wrap: wrap;
+        &--left {
+            width: 40%;
+        }
+        &--right {
+            width: 40%;
+        }
     }
     &__list {
-        width: 40%;
+        width: 100%;
         margin-top: 30px;
         @include mQ($tablet_portrait) {
             width: 80%;
@@ -34,6 +39,9 @@
         }
         &--type {
             font-weight: 800;
+        }
+        &--toggle {
+            cursor: pointer;
         }
         &--content {
             .item {

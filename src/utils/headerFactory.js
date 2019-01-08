@@ -1,5 +1,5 @@
 const commonTools = {
-  must: 'Obowiązkowe',
+  must: 'Bardzo ważne',
   important: 'Ważne',
   other: 'Inne'
 };
@@ -14,6 +14,7 @@ const headerData = {
     ],
     tools:
       {
+        tests: 'Testowanie',
         ...commonTools,
       },
   },
@@ -30,7 +31,7 @@ const headerData = {
       {
         bundler: 'Bundlers',
         auth: 'Autoryzacja',
-        charts: 'Wizualizacja',
+        charts: 'Wizualizacja danych',
         animation: 'Animacja',
         ui: 'UI',
         notifications: 'Notyfikacje',
@@ -39,6 +40,7 @@ const headerData = {
         performance: 'Wydajność',
         ecommerce: 'eCommerce',
         search: 'Wyszukiwanie',
+        tests: 'Testowanie',
         ...commonTools,
       },
   },

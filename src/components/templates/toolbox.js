@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
 import { uniq } from 'lodash';
+import TweenMax from 'gsap/TweenMax';
 import Layout from '../layout';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
@@ -25,9 +26,29 @@ const ToolItem = tool => (
   </li>
 );
 
+function toggleList(e) {
+  e.preventDefault();
+  const list = e.target;
+  if (list.classList.contains('show')) {
+    TweenMax.to(list.parentNode, 0.2, { height: '80px', overflow: 'hidden' });
+    list.textContent = 'Rozwiń';
+  } else {
+    TweenMax.set(list.parentNode, { height: 'auto', overflow: 'visible' });
+    TweenMax.from(list.parentNode, 0.2, { height: '80px' });
+    list.textContent = 'Zwiń';
+  }
+  list.classList.toggle('show');
+}
+
 const ToolsList = ({ type, printType, tools }) => (
   <div className="toolbox__list">
     <span className="toolbox__list--type label-regular">{printType}</span>
+    <span
+      className="toolbox__list--toggle" role="button" tabIndex={0}
+      onClick={toggleList} onKeyPress={toggleList}
+    >
+      {'Rozwiń'}
+    </span>
     <ul className="toolbox__list--content">
       {
         tools.map(tool => tool.node.type === type && <ToolItem key={nanoid()} tool={tool} />)
@@ -45,6 +66,43 @@ class Subcategory extends Component {
     this.types = uniq(this.tools.map(tool => tool.node.type));
   }
 
+  componentDidMount() {
+    TweenMax.to('.toolbox__list', 0, { height: '80px', overflow: 'hidden' });
+  }
+
+  generateTable = () => {
+    const left = [];
+    const right = [];
+    this.types.map((type, index) => {
+      index % 2 === 0 ? left.push(type) : right.push(type);
+      return null;
+    });
+    return (
+      <>
+        <div className="toolbox__types--left">
+          {left.map(type => (
+            <ToolsList
+              key={nanoid()}
+              type={type}
+              printType={this.headerData.tools[type]}
+              tools={this.tools}
+            />
+          ))}
+        </div>
+        <div className="toolbox__types--right">
+          {right.map(type => (
+            <ToolsList
+              key={nanoid()}
+              type={type}
+              printType={this.headerData.tools[type]}
+              tools={this.tools}
+            />
+          ))}
+        </div>
+      </>
+    );
+  }
+
   render() {
     return (
       <>
@@ -58,15 +116,7 @@ class Subcategory extends Component {
           />
           <section className="toolbox">
             <div className="toolbox__types">
-              {
-                this.types.map(type => (
-                  <ToolsList
-                    key={nanoid()}
-                    type={type}
-                    printType={this.headerData.tools[type]}
-                    tools={this.tools}
-                  />))
-              }
+              { this.generateTable() }
             </div>
           </section>
         </Layout>
