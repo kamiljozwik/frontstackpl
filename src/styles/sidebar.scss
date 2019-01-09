@@ -14,11 +14,22 @@
     &::after {
       transition: 0.5s;
       transform: translateX(0px);
+      @include mQ($phone) {
+        border-radius: 50%;
+        box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.2);
+      }
     }
     &.open {
+      background-color: $lighten-grey;
       &::after {
         transition: 0.5s;
+        background-color: $lighten-grey;
         transform: translateX(-70px);
+        @include mQ($phone) {
+          border-radius: 0;
+          box-shadow: initial;
+          background-color: $lighten-grey;
+        }
       }
     }
   }
@@ -52,9 +63,14 @@
       &:first-child {
         @include mQ($phone) {
             background-color: white;
-          &::after {
-            background-color: white;
-          }
+            &::after {
+              background-color: white;
+            }
+            &.open {
+              &::after {
+                background-color: $lighten-grey;
+              } 
+            }
         }
       }
       &:not(:first-child) {

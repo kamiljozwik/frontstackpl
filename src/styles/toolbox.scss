@@ -21,11 +21,20 @@
     margin-left: 10% !important;
     &__types {
         display: flex;
+        @include mQ($tablet_portrait) {
+            flex-direction: column;
+        }
         &--left {
             width: 40%;
+            @include mQ($tablet_portrait) {
+                width: 100%;
+            }
         }
         &--right {
             width: 40%;
+            @include mQ($tablet_portrait) {
+                width: 100%;
+            }
         }
     }
     &__list {

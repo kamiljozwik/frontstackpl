@@ -98,7 +98,7 @@
                         @include mQ($phone) {
                             position: relative;
                             left: auto;
-                            top: auto;
+                            top: 5px;
                         }
                     }
                     @include mQ($phone) {

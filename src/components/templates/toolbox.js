@@ -30,11 +30,11 @@ function toggleList(e) {
   e.preventDefault();
   const list = e.target;
   if (list.classList.contains('show')) {
-    TweenMax.to(list.parentNode, 0.2, { height: '80px', overflow: 'hidden' });
+    TweenMax.to(list.parentNode, 0.2, { height: '60px', overflow: 'hidden' });
     list.textContent = 'Rozwiń';
   } else {
     TweenMax.set(list.parentNode, { height: 'auto', overflow: 'visible' });
-    TweenMax.from(list.parentNode, 0.2, { height: '80px' });
+    TweenMax.from(list.parentNode, 0.2, { height: '60px' });
     list.textContent = 'Zwiń';
   }
   list.classList.toggle('show');
@@ -67,7 +67,7 @@ class Subcategory extends Component {
   }
 
   componentDidMount() {
-    TweenMax.to('.toolbox__list', 0, { height: '80px', overflow: 'hidden' });
+    TweenMax.to('.toolbox__list', 0, { height: '60px', overflow: 'hidden' });
   }
 
   generateTable = () => {
