@@ -60,7 +60,7 @@
                 color: white;
                 font-size: 52px;
                 font-family: "Roboto-Bold";
-                max-width: 80%;
+                max-width: 90%;
                 letter-spacing: 1px;
                 margin: 10px 0;
                 a {
@@ -83,12 +83,12 @@
                     letter-spacing: 2px;
                 }
                 .title {
-                    font-size: 70px;
+                    font-size: 4vw;
                     font-family: "Roboto-Bold";
                     letter-spacing: 1px;
                     text-align: left;
                     a {
-                        line-height: 90px;
+                        line-height: 5vw;
                     }
                     @include mQ($tablet_portrait) {
                         font-size: 50px;
