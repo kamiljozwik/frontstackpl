@@ -22,7 +22,8 @@ const About = ({ data }) => (
           <div className="info">
             <div className="info--text">
               <p>Frontstack.pl jest miejscem w którym możesz znaleźć najświeższe wiadomości ze świata front-endu, jak również wiele ciekawych artykułów omawiajacych najnowsze oraz najważniejsze aspekty front-end'owego ekosystemu.</p>
-              <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też kod strony jest dostępny na licencji <strong>open source</strong> i można znaleźć go pod tym <a href="https://github.com/frontstackpl" target="_blank" rel="noopener noreferrer" class="letter-red">adresem.</a> </p>
+              { /* <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też kod strony jest dostępny na licencji <strong>open source</strong> i można znaleźć go pod tym <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="letter-red">adresem.</a> </p> */}
+              <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też już niedługo (po skończeniu pisania README, contributing guide oraz code of conduct) pojawi się tutaj link do repozytorium.</p>
               <p>Liczę na to, że strona frontstack.pl będzie w stanie pomóc wszystkim, zarówno doświadczonym jak i początkującym developerom, podnosić swoje umiejętności i wspólnie budować społeczność polskich front-end developerów. </p>
             </div>
             <div className="info--img" />
