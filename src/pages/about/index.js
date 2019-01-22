@@ -21,9 +21,9 @@ const About = ({ data }) => (
           <div className="label label-regular">Czym jest frontstack.pl ?</div>
           <div className="info">
             <div className="info--text">
-              <p>Frontstack.pl jest miejscem w którym możesz znaleźć najświeższe wiadomości ze świata front-endu, jak również wiele ciekawych artykułów omawiajacych najnowsze oraz najważniejsze aspekty front-end'owego ekosystemu.</p>
+              <p>Frontstack.pl jest miejscem w którym możesz znaleźć najświeższe wiadomości ze świata front-endu, jak również wiele ciekawych artykułów omawiajacych najnowsze oraz najważniejsze aspekty front-endowego ekosystemu.</p>
               { /* <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też kod strony jest dostępny na licencji <strong>open source</strong> i można znaleźć go pod tym <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="letter-red">adresem.</a> </p> */}
-              <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też już niedługo (po skończeniu pisania README, contributing guide oraz code of conduct) pojawi się tutaj link do repozytorium.</p>
+              <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też już niedługo (po skończeniu pisania README, contributing guide oraz code of conduct) pojawi się tutaj link do repozytorium z kodem źródłowym tego bloga.</p>
               <p>Liczę na to, że strona frontstack.pl będzie w stanie pomóc wszystkim, zarówno doświadczonym jak i początkującym developerom, podnosić swoje umiejętności i wspólnie budować społeczność polskich front-end developerów. </p>
             </div>
             <div className="info--img" />
@@ -71,10 +71,9 @@ const About = ({ data }) => (
           <div className="info">
             <div className="info--img" />
             <div className="info--text">
-              <p>Frontstack.pl jest cały czas we wczesnej fazie rozwoju, więc gdzieniegdzie można spotkać małe bugi i niedociągnięcia. Chciałbym jednak, aby strona ta była zawsze aktualna i korzystała z najnowszych technologii.</p>
-              <p>Dlatego też mam nadzieję, że rozrastająca się społeczność frontstack.pl będzie dbała o to, aby nasza strona była wzorcowym i perfekcyjnie przygotowanym produktem.</p>
-              <p>Jeżeli widzisz jakiś błąd na stronie, wiesz, że coś można zrobić lepiej, szybciej, czyściej, bądź masz pomysły na nowe funkcjonalności - przejdź na naszego <a href={slackLink} target="_blank" rel="noopener noreferrer" class="letter-red">Slacka</a> i zgłoś swoje uwagi.</p>
-              <p>Z drugiej strony, jeżeli masz pomysł na ciekawy artykuł, albo wiesz o ciekawym wydarzeniu front-endowym którego nie ma na liście - również czekam na Twoje sugestie.</p>
+              <p>Frontstack.pl jest cały czas we wczesnej fazie rozwoju, więc gdzieniegdzie można spotkać małe bugi i niedociągnięcia. Będę się jednak starał, aby strona ta była zawsze aktualna i korzystała z najnowszych technologii.</p>
+              <p>Jeżeli widzisz jakiś błąd na stronie, wiesz, że coś można zrobić lepiej, szybciej, czyściej, bądź masz pomysły na nowe funkcjonalności - przejdź na <a href={slackLink} target="_blank" rel="noopener noreferrer" class="letter-red">Slacka</a> i zgłoś swoje uwagi.</p>
+              <p>Z drugiej strony, jeżeli masz pomysł na ciekawy artykuł, albo wiesz o ciekawym wydarzeniu front-endowym którego nie ma na liście - również czekam na Twoje sugestie. Z wielką przyjemnością umieszczę twój wpis na tym blogu.</p>
             </div>
           </div>
         </section>
@@ -83,9 +82,8 @@ const About = ({ data }) => (
           <div className="info">
             <div className="info--text">
               <p>mam na imię Kamil i jestem front-end developerem. Jako, że regularnie i z wielką przyjemnością śledzę wszelkie nowości w świecie front-endu, jakiś czas temu postanowiłem, że może dobrym pomysłem byłoby założyć osobistego bloga, aby dzielić się nowo zdobytą wiedzą oraz własnymi przemyśleniami z innymi developerami.</p>
-              <p>Wtedy też, podczas pierwszych prac nad blogiem, ciągle wpadały mi do głowy pomysły na nowe tematy oraz funkcjonalności, które rozbudowały ten projekt do czegoś zdecydowanie więcej niż tylko blog osobisty.</p>
-              <p>Tak powstał <strong>frontstack.pl</strong> - blog skupiony wokół wszystkiego co związane z szeroko pojętym front-endem.</p>
-              <p>Mocno wierzę w to, że dzięki temu blogowi oraz zaangażowaniu innych użytkowników, społeczność front-end developerów będzie regularnie powiększała się o nowych specjalistów a także pozwolała na ciągły rozwój zawodowy osób, które ze swoim IDE spędziły już niejedną godzinę.</p>
+              <p>Wtedy też, podczas pierwszych prac nad blogiem, ciągle wpadały mi do głowy pomysły na nowe tematy oraz funkcjonalności, które rozbudowały ten projekt do czegoś nieco więcej niż tylko blog osobisty.</p>
+              <p>Tak powstał <strong>frontstack.pl</strong> - blog skupiony wokół wszystkiego co związane z szeroko pojętym front-endem. Mam nadzieję, że każdy odwiedzający znajdzie tutaj coś interesującego dla siebie.</p>
             </div>
             <div className="info--img" />
           </div>

@@ -17,11 +17,10 @@ const ModalContent = () => (
       <li>natrafiłeś na problem i nie możesz znaleźć rozwiązania,</li>
       <li>chcesz zasięgnąć rad od doświadczonych developerów,</li>
       <li>masz pomysł na ciekawy artykuł,</li>
-      <li>masz uwagi co do funkcjonowania naszej strony,</li>
-      <li>masz pomysły jak rozwinąć naszą stronę,</li>
-      <li>chcesz rozwijać stronę razem z nami, </li>
+      <li>masz uwagi co do funkcjonowania strony,</li>
+      <li>chcesz dołożyć swoją cegiełkę do rozwoju tej strony,</li>
     </ul>
-    <p>koniecznie odwiedź nasze kanały tematyczne i buduj razem z nami społeczność frontstack.pl!</p>
+    <p>koniecznie odwiedź na Slacku odpowiednie kanały tematyczne i podziel się swoją opinią.</p>
   </div>
 );
 

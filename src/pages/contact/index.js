@@ -22,7 +22,7 @@ const Contact = () => (
                 <img src={slack} alt="slack" />
               </a>
               <div className="slack-desc">
-                <p>Najszybszą formą komunikacji, zarówno z administratorem strony jak i innymi członkami naszej społeczności są odpowiednie kanały na Slack'u. Zapraszamy do skorzystania z tej metody kontaktu.</p>
+                <p>Najszybszą formą komunikacji, zarówno ze mną strony jak i innymi developerami są odpowiednie kanały na Slack'u. Zapraszamy do skorzystania z tej metody kontaktu.</p>
                 <div className="seeMore"><OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer">przejdź</OutboundLink></div>
               </div>
             </div>
