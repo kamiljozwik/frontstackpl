@@ -291,6 +291,7 @@ export const pageQuery = graphql`
       }
       News: allContentfulNewsEntry (
         sort: {fields: [createdAt], order: DESC}
+        limit: 6
         ) {
         edges {
           node {
