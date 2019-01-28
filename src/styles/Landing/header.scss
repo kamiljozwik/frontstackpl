@@ -28,12 +28,18 @@
                 color: white;
                 font-size: 40px;
                 font-family: "Roboto-Bold";
-                max-width: 80%;
+                max-width: 90%;
                 letter-spacing: 1px;
+                @include mQ($tablet_landscape) {
+                    font-size: 30px;
+                }
                 a {
                     line-height: 55px;
                     box-shadow: 10px 0 0 $black, -10px 0 0 $black;
                     background-color: $black;
+                    @include mQ($tablet_landscape) {
+                        line-height: 40px;
+                    }
                 }
             }
             .seeMore {

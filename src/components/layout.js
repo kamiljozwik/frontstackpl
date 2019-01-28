@@ -34,8 +34,8 @@ class Layout extends Component {
               <Helmet
                 title={dataQuery.site.siteMetadata.title}
                 meta={[
-                  { name: 'description', content: 'Sample' },
-                  { name: 'keywords', content: 'sample, something' },
+                  { name: 'description', content: 'Strona dla wszystkich frontendow' },
+                  { name: 'keywords', content: 'web, javascript, html, css, react, blog' },
                 ]}
               >
                 <html lang="pl" />
