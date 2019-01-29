@@ -65,10 +65,14 @@
             background-color: white;
             &::after {
               background-color: white;
+              top: 0;
+              height: 70px;
+              background-size: 20px;
             }
             &.open {
               &::after {
                 background-color: $lighten-grey;
+                height: 100%;
               } 
             }
         }

@@ -4236,6 +4236,11 @@ detab@^2.0.0:
   dependencies:
     repeat-string "^1.5.4"
 
+detect-browser@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/detect-browser/-/detect-browser-4.0.4.tgz#295cd005a91a3eba21ba5eb09a6dc5992bc7bdb9"
+  integrity sha512-dNDdnWUiZNwgHxbNGgs0jCLH8BnbuCKVlC3PVxb981ZkbD6KMh3XjROayPMJBLqp2EtFwWWU8fSWZtHiT2sn7Q==
+
 detect-indent@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-4.0.0.tgz#f76d064352cdf43a1cb6ce619c4ee3a9475de208"

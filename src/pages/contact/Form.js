@@ -24,13 +24,12 @@ export default class ContactForm extends React.Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        'form-name': form.getAttribute('name'),
         ...this.state
       })
     })
       .then(() => navigate(form.getAttribute('action')))
-      // .catch((error) => { throw new Error(error) });
-      .catch((error) => { console.log(error) });
+      .catch((error) => { throw new Error(error) });
   };
 
   render() {

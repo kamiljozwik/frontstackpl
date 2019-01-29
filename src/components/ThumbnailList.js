@@ -13,7 +13,6 @@ const PostThumbnail = ({ node, index, isThumbnail }) => (
     <div className="item__data">
       <Link className="item__data--title" to={`/${node.tags[0]}/post/${node.slug}`}>{node.title}</Link>
       <div className="item__data--footer">
-        {console.log(node)}
         <div className="item__data--date">{ moment(node.createdAt).format('DD/MM/YYYY') }</div>
         <Link to={`${node.tags[0]}/post/${node.slug}`} className="seeMore">Czytaj</Link>
       </div>
