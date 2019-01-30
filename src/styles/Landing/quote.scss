@@ -3,34 +3,33 @@
     margin-top: 100px;
     height: 300px;
     display: flex;
+    justify-content: center;
     position: relative;
     .quote {
         width: 80%;
         position: relative;
-        margin-left: 10%;
         display: flex;
+        padding-left: 10%;
         &--image-wrapper {
             width: 40%;
             display: flex;
-            @include center;
+            justify-content: center;
+            align-items: flex-end;
             @include mQ($phone) {
                 display: none;
             }
         }
         &--image {
-            position: absolute;
-            bottom: 0;
-            width: 200px;
-            height: 280px;
+            width: 100%;
+            height: 100%;
             background: url(./img/graphics/Monk.jpg);
-            @include background;
-            @include mQ($tablet_portrait) {
-                width: 150px;
-                height: 150px;
-                right: 0;
-            }
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+
         }
         &--text {
+            box-sizing: border-box;
             font-style: italic;
             font-size: 20px;
             font-family: "Roboto-Light";
@@ -43,7 +42,9 @@
             flex-direction: column;
             justify-content: center;
             @include mQ($tablet_portrait) {
-                font-size: 16px;
+                font-size: 20px;
+            }
+            @include mQ($phone) {
                 width: 100%;
             }
         }
@@ -52,6 +53,9 @@
         }
         @include mQ($tablet_portrait) {
             width: 90%;
+        }
+        @include mQ($phone) {
+            padding: 0;
         }
     }
 }

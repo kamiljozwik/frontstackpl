@@ -1,8 +1,8 @@
 .landing-page__show {
-    margin-top: 100px;
-    height: 300px;
+    margin-top: 50px;
     display: flex;
     position: relative;
+    margin-bottom: 50px;
     .show {
         width: 80%;
         position: relative;
@@ -10,12 +10,11 @@
         display: flex;
         &--image {
             position: relative;
-            top: -15%;
             width: 40%;
-            height: 140%;
             margin-right: 30px;
             background: url(./img/graphics/showRoom.jpg);
             @include background;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
             @include mQ($tablet_portrait) {
                 display: none;
             }
@@ -51,5 +50,8 @@
         @include mQ($phone) {
             margin: 0;
         }
+    }
+    @include mQ($tablet_portrait) {
+        margin-bottom: 0;
     }
 }

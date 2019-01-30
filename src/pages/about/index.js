@@ -26,7 +26,6 @@ const About = ({ data }) => (
               <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też już niedługo (po skończeniu pisania README, contributing guide oraz code of conduct) pojawi się tutaj link do repozytorium z kodem źródłowym tego bloga.</p>
               <p>Liczę na to, że strona frontstack.pl będzie w stanie pomóc wszystkim, zarówno doświadczonym jak i początkującym developerom, podnosić swoje umiejętności i wspólnie budować społeczność polskich front-end developerów. </p>
             </div>
-            <div className="info--img" />
           </div>
         </section>
         <section className="section section-2">

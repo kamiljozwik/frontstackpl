@@ -24,9 +24,11 @@
 .category-header {
     width: calc( 100vw - 17px);
     height: 50vh;
+    margin-bottom: 50px;
     display: flex;
     position: relative;
     &.codeless {
+        display: none;
         justify-content: center;
         .header--label {
             left: 0;
@@ -51,6 +53,7 @@
         @include background;
         box-shadow: -5px 3px 8px 0px rgba(0,0,0,0.5);
         &--latest {
+            width: 90%;
             .date {
                 color: white;
                 font-size: 12px;
@@ -58,15 +61,20 @@
             }
             .title {
                 color: white;
-                font-size: 52px;
+                font-size: 5vw;
                 font-family: "Roboto-Bold";
-                max-width: 90%;
                 letter-spacing: 1px;
                 margin: 10px 0;
                 a {
-                    line-height: 70px;
+                    line-height: 7vw;
                     background-color: $black;
                     box-shadow: 10px 0 0 $black, -10px 0 0 $black;
+                }
+                @include mQ($phone) {
+                    font-size: 40px;
+                    a {
+                        line-height: 52px;
+                    }
                 }
             }
             .seeMore {
@@ -83,12 +91,12 @@
                     letter-spacing: 2px;
                 }
                 .title {
-                    font-size: 4vw;
+                    font-size: 5vw;
                     font-family: "Roboto-Bold";
                     letter-spacing: 1px;
                     text-align: left;
                     a {
-                        line-height: 5vw;
+                        line-height: 7vw;
                     }
                     @include mQ($tablet_portrait) {
                         font-size: 50px;
@@ -96,6 +104,15 @@
                             line-height: 70px;
                         }
                     }
+                    @include mQ($xsmall) {
+                        font-size: 46px;
+                        a {
+                            line-height: 66px;
+                        }
+                    }
+                }
+                & + .header__posts__background {
+                    margin-top: 50px;
                 }
             }
             @include mQ($tablet_portrait) {
@@ -107,7 +124,7 @@
             }
         }
         &__background {
-            margin-top: 50px;
+            margin-top: 10px;
             .header__posts {
                 &__inner {
                     z-index: 1;
@@ -205,15 +222,24 @@
         }
         @include mQ($phone) {
             width: 100%;
+            z-index: 2;
         }
     }
-
+    @include mQ($desktop) {
+        max-height: 600px;
+    }
+    @include mQ($tablet_landscape) {
+        max-height: 400px;
+    }
     @include mQ($tablet_portrait) {
-        height: 80vh;
+        height: 40vh;
     }
     @include mQ($phone) {
+        margin-bottom: 0;
         flex-direction: column;
         width: 100vw;
+        height: calc(80vh + 100px);
+        max-height: initial;
     }
     
     @include SubcategoryBackgroundColor('js', $js);

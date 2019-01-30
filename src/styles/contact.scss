@@ -20,6 +20,9 @@
                         transition: 0.2s;
                         transform: scale(1.2);
                     }
+                    @include mQ($phone) {
+                        display: none;
+                    }
                 }
                 .slack-desc {
                     flex-grow: 1; 
@@ -98,6 +101,9 @@
                     padding: 10px 10px 30px 10px;
                     position: relative;
                     @include underline(4px, $red);
+                }
+                @include mQ($phone) {
+                    padding: 15px;
                 }
             }
             @include mQ($tablet_portrait) {

@@ -1,15 +1,12 @@
 .landing-page__tags {
-    &.part1 {
-        @include mQ($phone) {
-            margin-top: 170px;
-        }
-    }
-    &.part2 {
-        margin-top: 100px;
-        @include mQ($xsmall) {
-            margin-top: 170px;
-        }
-    }
+    // &.part1 {
+    // }
+    // &.part2 {
+    //     margin-top: 100px;
+    //     @include mQ($xsmall) {
+    //         margin-top: 170px;
+    //     }
+    // }
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -32,7 +29,7 @@
             box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
             &--item {
                 border-bottom: 1px solid $grey;
-                height: 120px;
+                height: 150px;
                 width: 90%;
                 display: flex;
                 flex-direction: column;
@@ -42,18 +39,32 @@
                     &--title {
                         display: flex;
                         align-items: center;
-                        line-height: 25px;
                         height: 100%;
-                        padding: 10px;
                         max-width: 90%;
-                        font-size: 20px;
-                        font-family: "Roboto-Medium";
+                        a {
+                            font-size: 20px;
+                            font-family: "Roboto-Medium";
+                            line-height: 25px;
+                            @include mQ($tablet_landscape) {
+                                font-size: 14px;
+                                line-height: 18px;
+                            }
+                            @include mQ($tablet_portrait) {
+                                font-size: 24px;
+                                line-height: 32px;
+                            }
+                            @include mQ($phone) {
+                                font-size: 20px;
+                                line-height: 25px;
+                            }
+
+                        }
                     }
                     &--footer {
                         .item--date {
                             font-size: 12px;
                         }
-                        padding: 0px 10px 20px 10px;
+                        padding: 10px 0 20px 0;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -67,18 +78,36 @@
                         &--title {
                             display: block;
                             padding: 12% 0 0 5%;
-                            font-size: 30px;
                             max-width: 90%;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            color: white;
                             a {
                                 background-color: $black;
                                 color: white;
+                                font-size: 30px;
                                 line-height: 40px;
                                 box-shadow: 10px 0 0 $black, -10px 0 0 $black;
+                                @include mQ($tablet_landscape) {
+                                    font-size: 26px;
+                                    line-height: 34px;
+                                }
+                                @include mQ($tablet_portrait) {
+                                    font-size: 40px;
+                                    line-height: 55px;
+                                }
+                                @include mQ($phone) {
+                                    font-size: 30px;
+                                    line-height: 40px;
+                                }
                             }
                         }
                         &--footer {
                             color: white;
-                            padding: 25px;
+                            padding: 15px;
+                            @include mQ($tablet_portrait) {
+                                padding: 25px;
+                            }
                         }
                         &--seeMore {
                             a {
@@ -86,6 +115,9 @@
                             }
                         }
                     }
+                }
+                @include mQ($tablet_landscape) {
+                    height: 120px;
                 }
             }
         }

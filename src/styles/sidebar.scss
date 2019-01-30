@@ -48,7 +48,7 @@
       &::after {
         content: "";
         background-repeat: no-repeat;
-        background-size: 2vw auto;
+        background-size: 45px auto;
         background-position: center center;
         position: absolute;
         right: -70px;
@@ -56,9 +56,6 @@
         height: 100%;
         @include center;
         background-color: $lighten-grey;
-        @include mQ($tablet_portrait) {
-          background-size: 3vw auto;
-        }
       }
       &:first-child {
         @include mQ($phone) {

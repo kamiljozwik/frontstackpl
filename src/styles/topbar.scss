@@ -53,7 +53,8 @@
                     padding: 0 5px;
                     transition: 0.1s;
                     @include mQ($phone) {
-                        width: 28px;
+                        width: 26px;
+                        height: 40px;
                     }
                 }
                 &:hover {
@@ -70,6 +71,7 @@
             @include mQ($phone) {
                 order: 3;
                 margin-left: 0;
+                display: initial;
             }
         }
         .center {
