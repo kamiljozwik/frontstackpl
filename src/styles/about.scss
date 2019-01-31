@@ -18,7 +18,7 @@
                         margin-top: 0;
                     }
                 }
-                @include mQ($tablet_portrait) {
+                @include mQ($portrait) {
                     width: 90%;
                 }
             }
@@ -26,7 +26,7 @@
                 min-width: 400px;
                 height: 400px;
                 background: gray;
-                @include mQ($tablet_landscape) {
+                @include mQ($landscape) {
                     display: none;
                 }
             }
@@ -49,6 +49,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 .item {
+                    position: relative;
                     background: #EEEEEE;
                     border: 1px solid transparent;
                     border-radius: 10px;
@@ -60,12 +61,11 @@
                     min-height: 400px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     align-items: center; 
                     &--title {
                         font-size: 32px;
                         font-family: "Roboto-Bold";
-                        letter-spacing: 2px;
                         padding: 20px 0 10px 0;
                     }
                     &--desc {
@@ -73,9 +73,12 @@
                         font-family: "Roboto-Regular";
                         line-height: 22px;
                         padding: 0 20px;
+                        margin-bottom: 50px;
                     }
                     &--link {
                         padding: 10px 0 20px 0;
+                        position: absolute;
+                        bottom: 0;
                     }
                     &.js {
                         background: $js;
@@ -86,7 +89,7 @@
                     &.prod {
                         background: $prod;
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         width: calc((100% / 2) - 10px);
                     }
                     @include mQ($phone) {
@@ -94,7 +97,7 @@
                     }
                 }
             }
-            @include mQ($tablet_landscape) {
+            @include mQ($landscape) {
                 width: 100%;
             }
         }

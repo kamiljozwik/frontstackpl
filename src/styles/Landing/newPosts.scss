@@ -17,7 +17,7 @@
         &__column {
             padding: 0 5px;
             width: 20vw;
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 width: 80vw;
             }
         }
@@ -45,11 +45,11 @@
                             font-size: 20px;
                             font-family: "Roboto-Medium";
                             line-height: 25px;
-                            @include mQ($tablet_landscape) {
+                            @include mQ($landscape) {
                                 font-size: 14px;
                                 line-height: 18px;
                             }
-                            @include mQ($tablet_portrait) {
+                            @include mQ($portrait) {
                                 font-size: 24px;
                                 line-height: 32px;
                             }
@@ -88,11 +88,11 @@
                                 font-size: 30px;
                                 line-height: 40px;
                                 box-shadow: 10px 0 0 $black, -10px 0 0 $black;
-                                @include mQ($tablet_landscape) {
+                                @include mQ($landscape) {
                                     font-size: 26px;
                                     line-height: 34px;
                                 }
-                                @include mQ($tablet_portrait) {
+                                @include mQ($portrait) {
                                     font-size: 40px;
                                     line-height: 55px;
                                 }
@@ -105,7 +105,7 @@
                         &--footer {
                             color: white;
                             padding: 15px;
-                            @include mQ($tablet_portrait) {
+                            @include mQ($portrait) {
                                 padding: 25px;
                             }
                         }
@@ -116,7 +116,7 @@
                         }
                     }
                 }
-                @include mQ($tablet_landscape) {
+                @include mQ($landscape) {
                     height: 120px;
                 }
             }
@@ -137,7 +137,7 @@
                 }
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             justify-content: center;
         }
     }
@@ -220,7 +220,7 @@
                 width: 90vw;
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             width: 40vw;
         }
         @include mQ($phone) {

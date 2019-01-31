@@ -41,7 +41,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 font-size: 20px;
             }
             @include mQ($phone) {
@@ -51,7 +51,7 @@
         &--author {
             padding: 10px 20px;
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             width: 90%;
         }
         @include mQ($phone) {

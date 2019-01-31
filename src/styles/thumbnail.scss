@@ -27,7 +27,7 @@
 }
 
 @mixin mobileRecentPosts {
-  @include mQ($tablet_portrait){
+  @include mQ($portrait){
     height: 200px;
   }
   @include mQ($phone){

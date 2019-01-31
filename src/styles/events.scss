@@ -37,7 +37,7 @@
                             color: $red;
                         }
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         font-size: 18px;
                     }
                 }
@@ -61,7 +61,7 @@
                 .desc {
                     font-size: 18px;
                     line-height: 24px;
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         font-size: 14px;
                         line-height: 20px;
                     }

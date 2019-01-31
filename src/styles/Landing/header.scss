@@ -32,14 +32,14 @@
                 font-family: "Roboto-Bold";
                 max-width: 90%;
                 letter-spacing: 1px;
-                @include mQ($tablet_landscape) {
+                @include mQ($landscape) {
                     font-size: 30px;
                 }
                 a {
                     line-height: 55px;
                     box-shadow: 10px 0 0 $black, -10px 0 0 $black;
                     background-color: $black;
-                    @include mQ($tablet_landscape) {
+                    @include mQ($landscape) {
                         line-height: 40px;
                     }
                 }
@@ -50,7 +50,7 @@
                 bottom: -20px;
                 color: white;
             }
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 padding-left: 2%;
                 flex-grow: 1;
                 display: flex;
@@ -92,7 +92,7 @@
                             font-size: 15px;
                             line-height: 17px;
                         }
-                        @include mQ($tablet_portrait) {
+                        @include mQ($portrait) {
                             font-size: 12px;
                             line-height: 15px;
                         }
@@ -102,7 +102,7 @@
                         height: 63px;
                         margin-right: 5px;
                         @include background;
-                        @include mQ($tablet_portrait) {
+                        @include mQ($portrait) {
                             min-width: 80px;
                             height: 50px;
                         }
@@ -116,7 +116,7 @@
                         left: 128px;
                         font-size: 10px;
                         color: $grey;
-                        @include mQ($tablet_landscape) {
+                        @include mQ($landscape) {
                             display: none;
                         }
                         @include mQ($phone) {
@@ -145,7 +145,7 @@
                 }
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             width: 75%;
         }
         @include mQ($phone) {
@@ -154,7 +154,7 @@
             min-height: 70vh;
         }
     }
-    @include mQ($tablet_landscape) {
+    @include mQ($landscape) {
         height: 80vh;
     }
     @include mQ($phone) {
@@ -204,7 +204,7 @@
                     position: relative;
                     cursor: pointer;
                     @include underline(2px, $red);
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         line-height: 16px;
                     }
                 }
@@ -227,7 +227,7 @@
                     border: 1px solid $black;
                     border-radius: 0 0 4px 4px;
                 }
-                @include mQ($tablet_portrait) {
+                @include mQ($portrait) {
                     display: none;
                 }
             }
@@ -240,7 +240,7 @@
         margin-top: 10px;
         padding-left: 5%;
     }
-    @include mQ($tablet_portrait) {
+    @include mQ($portrait) {
         width: 25%;
     }
     @include mQ($phone) {

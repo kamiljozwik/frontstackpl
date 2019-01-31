@@ -16,7 +16,7 @@
                     height: 150px;
                 }
             }
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 width: 80vw;
                 &:first-child {
                     margin-right: 0;
@@ -24,7 +24,7 @@
                 }
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             justify-content: center;
         }
         @include mQ($phone) {

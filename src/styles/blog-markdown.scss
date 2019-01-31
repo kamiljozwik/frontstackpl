@@ -453,7 +453,7 @@ ol {
 }
 
 .post__content {
-  @include mQ($tablet_portrait) {
+  @include mQ($portrait) {
     padding-left: 10%;
   }
   @include mQ($phone) {

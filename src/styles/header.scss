@@ -61,18 +61,20 @@
             }
             .title {
                 color: white;
-                font-size: 5vw;
                 font-family: "Roboto-Bold";
                 letter-spacing: 1px;
                 margin: 10px 0;
                 a {
-                    line-height: 7vw;
+                    font-size: 4vw;
+                    line-height: 5vw;
                     background-color: $black;
                     box-shadow: 10px 0 0 $black, -10px 0 0 $black;
-                }
-                @include mQ($phone) {
-                    font-size: 40px;
-                    a {
+                    @include mQ($landscape) {
+                        font-size: 5vw;
+                        line-height: 7vw;
+                    }
+                    @include mQ($phone) {
+                        font-size: 40px;
                         line-height: 52px;
                     }
                 }
@@ -98,7 +100,7 @@
                     a {
                         line-height: 7vw;
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         font-size: 50px;
                         a {
                             line-height: 70px;
@@ -115,7 +117,7 @@
                     margin-top: 50px;
                 }
             }
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 padding-left: 2%;
                 flex-grow: 1;
                 display: flex;
@@ -142,7 +144,7 @@
                 }
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             width: 75%;
         }
         @include mQ($phone) {
@@ -184,10 +186,10 @@
                     a {
                         box-sizing: border-box;
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         font-size: 12px;
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         font-size: 14px;
                     }
                 }
@@ -202,7 +204,7 @@
                         background: url(./img/icons/tools.svg);
                         @include background;
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         width: 100%;
                     }
                     @include mQ($phone) {
@@ -217,7 +219,7 @@
                 }
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             width: 25%;
         }
         @include mQ($phone) {
@@ -228,10 +230,10 @@
     @include mQ($desktop) {
         max-height: 600px;
     }
-    @include mQ($tablet_landscape) {
+    @include mQ($landscape) {
         max-height: 400px;
     }
-    @include mQ($tablet_portrait) {
+    @include mQ($portrait) {
         height: 40vh;
     }
     @include mQ($phone) {

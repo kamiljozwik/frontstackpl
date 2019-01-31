@@ -19,7 +19,7 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-between;
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         display: none;
                     }
                 }
@@ -28,7 +28,7 @@
                     height: 35px;
                     display: flex;
                     align-items: flex-end;
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         display: none;
                     }
                 }
@@ -63,7 +63,7 @@
                 }
             }
 
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 order: 1;
                 width: auto;
                 margin-left: 10%;
@@ -78,7 +78,7 @@
             width: 300px;
             height: 100%;
             @include center;
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 order: 2;
             }
             @include mQ($phone) {
@@ -109,7 +109,7 @@
                         }
                         @include underline(4px, $red);
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         justify-content: flex-start;
                         flex-grow: initial;
                         padding: 2px 0;
@@ -128,7 +128,7 @@
                         }
                         @include underline(4px, $red);
                     }
-                    @include mQ($tablet_portrait) {
+                    @include mQ($portrait) {
                         flex-grow: initial;
                         padding: 2px 0;
                     }
@@ -136,7 +136,7 @@
                         padding: 0 8px;
                     }
                 }
-                @include mQ($tablet_portrait) {
+                @include mQ($portrait) {
                     flex-direction: column;
                     justify-content: center;
                 }
@@ -160,7 +160,7 @@
                     }
                 }
             }
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 order: 3;
             }
             @include mQ($phone) {

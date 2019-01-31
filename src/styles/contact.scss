@@ -35,7 +35,7 @@
                         padding: 10px 0;
                     }
                 }
-                @include mQ($tablet_portrait) {
+                @include mQ($portrait) {
                     padding: 0;
                 }
             }
@@ -55,7 +55,7 @@
                     }
                 }
             }
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 width: 100%;
             }
             @include mQ($phone) {
@@ -106,7 +106,7 @@
                     padding: 15px;
                 }
             }
-            @include mQ($tablet_portrait) {
+            @include mQ($portrait) {
                 width: 100%;
                 padding-left: 5%;
             }
@@ -114,7 +114,7 @@
                 padding: 0;
             }
         }
-        @include mQ($tablet_portrait) {
+        @include mQ($portrait) {
             flex-direction: column;
         }
     }
