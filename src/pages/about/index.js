@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Layout from '../../components/layout';
+import browserstack from '../../styles/img/graphics/browserstack.png';
 
 const TopicTile = ({ name, desc, link }) => (
   <li className={`item ${link}`}>
@@ -85,6 +86,16 @@ const About = ({ data }) => (
               <p>Tak powstał <strong>frontstack.pl</strong> - blog skupiony wokół wszystkiego co związane z szeroko pojętym front-endem. Mam nadzieję, że każdy odwiedzający znajdzie tutaj coś interesującego dla siebie.</p>
             </div>
             <div className="info--img" />
+          </div>
+        </section>
+        <section className="section section-5">
+          <div className="label label-regular">Partnerzy</div>
+          <div className="partners">
+            <ul className="partners_list">
+              <li className="partner">
+                <a href="https://www.browserstack.com/" target="_blank" rel="noopener noreferrer"><img src={browserstack} alt="browserstack" /></a>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
