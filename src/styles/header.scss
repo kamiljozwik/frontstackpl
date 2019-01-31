@@ -93,22 +93,22 @@
                     letter-spacing: 2px;
                 }
                 .title {
-                    font-size: 5vw;
-                    font-family: "Roboto-Bold";
-                    letter-spacing: 1px;
                     text-align: left;
                     a {
-                        line-height: 7vw;
+                        font-size: 4vw;
+                        font-family: "Roboto-Bold";
+                        line-height: 5vw;
+                        letter-spacing: 1px;
                     }
                     @include mQ($portrait) {
-                        font-size: 50px;
                         a {
+                            font-size: 50px;
                             line-height: 70px;
                         }
                     }
                     @include mQ($xsmall) {
-                        font-size: 46px;
                         a {
+                            font-size: 46px;
                             line-height: 66px;
                         }
                     }
