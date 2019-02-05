@@ -51,7 +51,7 @@ const About = ({ data }) => (
               <TopicTile
                 name="FrontOps"
                 desc="FrontOps, czyli nieco okrojona forma DevOps. Nie zajmujemy się na tej stronie back-endem, więc skupimy się tylko na narzędziach, które ułatwiają nam rozwój front-endowego oprogramowania w trybie CI/CD oraz pracę w środowisku 'serverless' - czyli to co front-endzi lubią najbardziej."
-                link="frontOps"
+                link="frontops"
               />
               <TopicTile
                 name="API"

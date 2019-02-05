@@ -50,7 +50,7 @@ class Sidebar extends Component {
         <Link className={`${this.isTabActive('js')}`} data-link="JS" to="/js/">JS</Link>
         <Link className={`${this.isTabActive('web')}`} data-link="Web" to="/web/">WEB</Link>
         <Link className={`disabled ${this.isTabActive('voice')}`} data-link="Voice" to="/voice/">Głos</Link>
-        <Link className={`disabled ${this.isTabActive('frontOps')}`} data-link="FrontOps" to="/frontOps/">FrontOps</Link>
+        <Link className={`${this.isTabActive('frontops')}`} data-link="FrontOps" to="/frontops/">FrontOps</Link>
         <Link className={`disabled ${this.isTabActive('api')}`} data-link="API" to="/api/">API</Link>
         <Link className={`${this.isTabActive('prod')}`} data-link="Prod" to="/prod/">Prod.</Link>
       </Menu>

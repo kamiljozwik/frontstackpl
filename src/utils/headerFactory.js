@@ -58,7 +58,9 @@ const headerData = {
   },
   frontops: {
     title: 'frontOps',
-    subcategories: []
+    subcategories: [
+      { other: 'Inne' }
+    ]
   },
   api: {
     title: 'API',

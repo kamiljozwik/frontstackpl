@@ -86,6 +86,9 @@
                     &.prod {
                         background: $prod;
                     }
+                    &.frontops {
+                        background: $frontops;
+                    }
                     @include mQ($portrait) {
                         width: calc((100% / 2) - 10px);
                     }
