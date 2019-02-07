@@ -21,7 +21,9 @@ class Layout extends Component {
   }
 
   render() {
-    browser.name !== 'chrome' && typeof window !== 'undefined' && browserPopup(browser.name);
+    if (!browser.name.match(/^(chrome|firefox|opera|edge|ios)$/) && typeof window !== 'undefined') {
+      browserPopup(browser.name);
+    }
     return (
       <StaticQuery
         query={graphql`

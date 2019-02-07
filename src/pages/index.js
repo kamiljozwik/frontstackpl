@@ -121,7 +121,7 @@ class IndexPage extends Component {
         </section>
         <section className="landing-page__tags part2">
           <div className="tags">
-            {<TagsColumn posts={this.FrontOps} label="FrontOps" link="frontOps" />}
+            {<TagsColumn posts={this.FrontOps} label="FrontOps" link="frontops" />}
             {<TagsColumn posts={this.API} label="API" link="api" />}
             {<TagsColumn posts={this.Prod} label="Produktywność" link="prod" />}
           </div>
