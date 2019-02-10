@@ -57,7 +57,7 @@ const headerData = {
     subcategories: []
   },
   frontops: {
-    title: 'frontOps',
+    title: 'frontops',
     subcategories: [
       { other: 'Inne' }
     ]
