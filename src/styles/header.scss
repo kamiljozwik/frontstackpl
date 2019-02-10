@@ -130,6 +130,14 @@
             .header__posts {
                 &__inner {
                     z-index: 1;
+                    text-align: right;
+                    span {
+                        display: inline-block;
+                        padding: 0 10px 0 10px;
+                        background: black;
+                        color: white;
+                        line-height: 22px;
+                    }
                 }
             }
             &::after {

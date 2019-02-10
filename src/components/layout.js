@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { detect } from 'detect-browser';
+// import { detect } from 'detect-browser';
+import browser from 'browser-detect';
 import { CSSPlugin, AttrPlugin } from 'gsap/all';
 import { StaticQuery, graphql } from 'gatsby';
-import browserPopup from './modals/detect-browser';
+// import browserPopup from './modals/detect-browser';
 import Sidebar from './sidebar';
 import Topbar from './Topbar';
 import Footer from './footer';
@@ -12,7 +13,7 @@ import '../styles/index.scss';
 
 // without this line, CSSPlugin and AttrPlugin may get dropped by your bundler...
 const plugins = [CSSPlugin, AttrPlugin]; // eslint-disable-line
-const browser = detect();
+// const browser = detect();
 
 class Layout extends Component {
   constructor(props) {
@@ -21,9 +22,11 @@ class Layout extends Component {
   }
 
   render() {
-    if (!browser.name.match(/^(chrome|firefox|opera|edge|ios)$/) && typeof window !== 'undefined') {
-      browserPopup(browser.name);
-    }
+    const result = browser();
+    console.log(result);
+    // if (!browser.name.match(/^(chrome|firefox|opera|edge|ios)$/) && typeof window !== 'undefined') {
+    //   browserPopup(browser.name);
+    // }
     return (
       <StaticQuery
         query={graphql`
