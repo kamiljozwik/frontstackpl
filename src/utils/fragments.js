@@ -7,6 +7,7 @@ fragment BlogPostFields on ContentfulBlogEntry {
     slug
     tags
     lead {
+        description
         file {
             url
         }

@@ -2592,6 +2592,13 @@ brorand@^1.0.1:
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
+browser-detect@^0.2.28:
+  version "0.2.28"
+  resolved "https://registry.yarnpkg.com/browser-detect/-/browser-detect-0.2.28.tgz#5688fc22f638390614ebea4646483403fb20ebfb"
+  integrity sha512-KeWGHqYQmHDkCFG2dIiX/2wFUgqevbw/rd6wNi9N6rZbaSJFtG5kel0HtprRwCGp8sqpQP79LzDJXf/WCx4WAw==
+  dependencies:
+    core-js "^2.5.7"
+
 browser-resolve@^1.8.1:
   version "1.11.3"
   resolved "https://registry.yarnpkg.com/browser-resolve/-/browser-resolve-1.11.3.tgz#9b7cbb3d0f510e4cb86bdbd796124d28b5890af6"
@@ -4235,11 +4242,6 @@ detab@^2.0.0:
   integrity sha512-/hhdqdQc5thGrqzjyO/pz76lDZ5GSuAs6goxOaKTsvPk7HNnzAyFN5lyHgqpX4/s1i66K8qMGj+VhA9504x7DQ==
   dependencies:
     repeat-string "^1.5.4"
-
-detect-browser@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/detect-browser/-/detect-browser-4.0.4.tgz#295cd005a91a3eba21ba5eb09a6dc5992bc7bdb9"
-  integrity sha512-dNDdnWUiZNwgHxbNGgs0jCLH8BnbuCKVlC3PVxb981ZkbD6KMh3XjROayPMJBLqp2EtFwWWU8fSWZtHiT2sn7Q==
 
 detect-indent@^4.0.0:
   version "4.0.0"

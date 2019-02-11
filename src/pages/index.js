@@ -61,8 +61,6 @@ const EventsColumn = ({ events }) => (
   </div>
 );
 
-const slackLink = 'https://join.slack.com/t/frontstackpl/shared_invite/enQtNDg0MDI5NzExMzUxLTVmNjdmMjFhMzllYTUzM2JjMTZjMWZhNTE4NDU2OTgyNWE5NmFhNGYyMmI1YThiMGVhYjRjM2FhZWYzODYxMzY';
-
 class IndexPage extends Component {
   constructor(props) {
     super(props);

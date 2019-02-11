@@ -52,6 +52,10 @@
         }
         &--type {
             font-weight: 800;
+            @include mQ($phone) {
+                width: 90%;
+                font-size: 28px;
+            }
         }
         &--toggle {
             cursor: pointer;
@@ -95,5 +99,8 @@
                 }
             }
         }
+    }
+    @include mQ($phone) {
+        margin-left: 0% !important;
     }
 }
