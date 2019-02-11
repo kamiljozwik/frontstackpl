@@ -1,3 +1,4 @@
+[![Licence](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2657385f-83f4-4ec4-a51a-93bf8da3ced2/deploy-status)](https://app.netlify.com/sites/frontstack/deploys)
 [![Dependecies](https://david-dm.org/frontstackpl/frontstackpl.svg)](https://david-dm.org/frontstackpl/frontstackpl)
 [![DevDependecies](https://david-dm.org/frontstackpl/frontstackpl/dev-status.svg)](https://david-dm.org/frontstackpl/frontstackpl?type=dev)
