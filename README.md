@@ -8,5 +8,10 @@ Już niedługo pojawią się tutaj informacje mówiące w jaki sposób można do
 
 ## Partnerzy
 ![alt text](src/styles/img/graphics/browserstack.png "Logo Title Text 1")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffrontstackpl%2Ffrontstackpl.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffrontstackpl%2Ffrontstackpl?ref=badge_shield)
 
 [Browserstack](https://www.browserstack.com/ "Browserstack") - testowanie wyglądu aplikacji na różnych wersjach przeglądarek
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffrontstackpl%2Ffrontstackpl.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffrontstackpl%2Ffrontstackpl?ref=badge_large)
