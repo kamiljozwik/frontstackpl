@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
+import SEO from '../SEO';
 import ThumbnailList from '../ThumbnailList';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
@@ -19,6 +20,10 @@ class Subcategory extends Component {
     return (
       <>
         <Layout type="category-page category-page__subcategories" currentPage={this.category}>
+          <SEO
+            title={this.headerData.title} description="" image=""
+            url={`https://frontstack.pl/${this.category}/${this.subcategory}`} keywords={[]}
+          />
           <Header
             siteTitle={this.headerData.title}
             category={this.category}

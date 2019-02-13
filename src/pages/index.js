@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import nanoid from 'nanoid';
 import moment from 'moment';
 import Layout from '../components/layout';
+import SEO from '../components/SEO';
 import HeaderLanding from '../components/header/Landing';
 
 const CodelessItem = ({ post }) => (
@@ -80,6 +81,10 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout type="landing-page" currentPage="main">
+        <SEO
+          title="frontstack.pl" description="" image=""
+          url="https://frontstack.pl" keywords={[`frontstackpl`]}
+        />
         <HeaderLanding latestPosts={this.latestPosts} news={this.News} />
         <section className="landing-page__tags codeless">
           {this.Codeless.length > 0

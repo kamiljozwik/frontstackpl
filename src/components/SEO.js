@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-function SEO({ title, description, meta, keywords, url, image }) {
+function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
   return (
     <StaticQuery
       query={detailsQuery}  // eslint-disable-line
@@ -21,10 +21,10 @@ function SEO({ title, description, meta, keywords, url, image }) {
                 name: `description`,
                 content: metaDescription,
               },
-              // {
-              //   property: `og:site_name`,
-              //   content: `frontstack.pl`,
-              // },
+              {
+                property: `og:site_name`,
+                content: `frontstackpl`,
+              },
               {
                 property: `og:title`,
                 content: title,
@@ -35,7 +35,7 @@ function SEO({ title, description, meta, keywords, url, image }) {
               },
               {
                 property: `og:type`,
-                content: `article`,
+                content: `${isBlogPost ? 'article' : 'website'}`,
               },
               {
                 property: `og:url`,
@@ -81,7 +81,8 @@ function SEO({ title, description, meta, keywords, url, image }) {
 SEO.defaultProps = {
   meta: [],
   keywords: [],
-  description: ''
+  description: '',
+  isBlogPost: true
 };
 
 SEO.propTypes = {
@@ -90,7 +91,8 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  image: PropTypes.string.isRequired,
+  isBlogPost: PropTypes.bool
 };
 
 export default SEO;

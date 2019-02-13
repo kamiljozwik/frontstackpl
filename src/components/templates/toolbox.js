@@ -5,6 +5,7 @@ import nanoid from 'nanoid';
 import { uniq } from 'lodash';
 import TweenMax from 'gsap/TweenMax';
 import Layout from '../layout';
+import SEO from '../SEO';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
 import github from '../../styles/img/logos/social/github.svg';
@@ -107,6 +108,10 @@ class Subcategory extends Component {
     return (
       <>
         <Layout type="category-page category-page__subcategories" currentPage={this.pageCategory}>
+          <SEO
+            title={this.headerData.title} description="" image=""
+            url={`https://frontstack.pl/${this.category}/toolbox`} keywords={[]}
+          />
           <Header
             siteTitle={this.headerData.title}
             category={this.pageCategory}
