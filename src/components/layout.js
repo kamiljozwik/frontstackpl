@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import browser from 'browser-detect';
 import { CSSPlugin, AttrPlugin } from 'gsap/all';
 import { StaticQuery, graphql } from 'gatsby';
@@ -36,16 +35,6 @@ class Layout extends Component {
         `}
         render={dataQuery => (
             <>
-              <Helmet
-                title={dataQuery.site.siteMetadata.title}
-                meta={[
-                  { name: 'description', content: 'Strona dla wszystkich frontendow' },
-                  { name: 'keywords', content: 'web, javascript, html, css, react, blog' },
-                ]}
-              >
-                <html lang="pl" />
-                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8" />
-              </Helmet>
               <Topbar />
               <div className="sidebar" ref={this.sidebarMenuWrapper}>
                 <Sidebar currentPage={this.props.currentPage} />
