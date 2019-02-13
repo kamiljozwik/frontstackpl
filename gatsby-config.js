@@ -4,7 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Front Stack',
+    title: 'frontstack.pl',
+    description: 'Strona poświęcona tematom front-endowym'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

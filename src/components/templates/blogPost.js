@@ -5,6 +5,7 @@ import Avatar from 'react-avatar';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
 import ThumbnailList from '../ThumbnailList';
+import SEO from '../SEO';
 import Layout from '../layout';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
@@ -26,7 +27,7 @@ class blogPost extends Component {
   )
 
   render() {
-    const { title, content, author, inspirations, related } = this.post;
+    const { title, lead, content, author, inspirations, related } = this.post;
     const shortname = this.props.pageContext.disqusShortName;
     const disqusConfig = {
       url: `https://frontstack.pl${this.props.location.pathname}`,
@@ -36,6 +37,10 @@ class blogPost extends Component {
 
     return (
       <Layout type="blog-post-page" currentPage={this.category}>
+        <SEO
+          title={title} description="" image={lead.file.url}
+          url={`https://frontstack.pl${this.props.location.pathname}`} keywords={[`frontstackpl`]}
+        />
         <Header
           siteTitle={this.headerData.title}
           category={this.category}
