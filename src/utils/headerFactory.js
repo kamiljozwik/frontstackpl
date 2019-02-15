@@ -31,7 +31,7 @@ const headerData = {
       {
         bundler: 'Bundlers',
         auth: 'Autoryzacja',
-        charts: 'Wizualizacja danych',
+        charts: 'Wykresy',
         animation: 'Animacja',
         ui: 'UI',
         notifications: 'Notyfikacje',
@@ -57,7 +57,7 @@ const headerData = {
     subcategories: []
   },
   frontops: {
-    title: 'frontOps',
+    title: 'frontops',
     subcategories: [
       { other: 'Inne' }
     ]

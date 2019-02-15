@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "kamil jozwik <kamil@kamiljozwik.com>",
   "dependencies": {
-    "detect-browser": "^4.0.4",
+    "browser-detect": "^0.2.28",
     "disqus-react": "^1.0.5",
     "dotenv": "^6.0.0",
     "gatsby": "2.0.3",

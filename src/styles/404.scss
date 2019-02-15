@@ -1,0 +1,22 @@
+.not-found {
+    text-align: center;
+    .four-oh-four {
+        font-size: 400px;
+        opacity: 0.2;
+        font-family: 'Roboto-Bold';
+        @include mQ($portrait) {
+            font-size: 150px;
+        }
+    }
+    .desc {
+        opacity: 0.4;
+    }
+    .link {
+        margin: 50px;
+        display: inline-block;
+        color: black;
+        position: relative;
+        opacity: 0.6;
+        @include underline(4px, $red);
+    }
+}

@@ -25,7 +25,9 @@ const Header = ({ siteTitle, category, currentSubcategory, subcategories, post, 
           </div>
           {category !== 'codeless' && (
             <div className="header__posts__background">
-              <div className="header__posts__inner" />
+              <div className="header__posts__inner">
+                <span>{isBlogPost ? post.node.lead.description : ''}</span>
+              </div>
             </div>
           )}
         </div>
