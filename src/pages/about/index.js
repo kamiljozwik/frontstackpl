@@ -72,8 +72,8 @@ const About = ({ data }) => (
             <div className="info--img" />
             <div className="info--text">
               <p>Frontstack.pl jest cały czas we wczesnej fazie rozwoju, więc gdzieniegdzie można spotkać małe bugi i niedociągnięcia. Będę się jednak starał, aby strona ta była zawsze aktualna i korzystała z najnowszych technologii.</p>
-              <p>Jeżeli widzisz jakiś błąd na stronie, wiesz, że coś można zrobić lepiej, szybciej, czyściej, bądź masz pomysły na nowe funkcjonalności - przejdź na <a href={slackLink} target="_blank" rel="noopener noreferrer" className="letter-red">Slacka</a> i zgłoś swoje uwagi.</p>
-              <p>Z drugiej strony, jeżeli masz pomysł na ciekawy artykuł, albo wiesz o ciekawym wydarzeniu front-endowym którego nie ma na liście - również czekam na Twoje sugestie. Z wielką przyjemnością umieszczę twój wpis na tym blogu.</p>
+              <p>Jeżeli widzisz jakiś błąd na stronie, wiesz, że coś można zrobić lepiej, szybciej, czyściej, bądź masz pomysły na nowe funkcjonalności - zgłoś swoje uwagi.</p>
+              <p>Z drugiej strony, jeżeli masz pomysł na ciekawy artykuł - również czekam na Twoje sugestie. Z wielką przyjemnością umieszczę twój wpis na tym blogu.</p>
             </div>
           </div>
         </section>

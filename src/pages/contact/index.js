@@ -16,16 +16,6 @@ const Contact = () => (
         <div className="label label-regular">Kontakt</div>
         <div className="contact">
           <div className="contact__links">
-            <div className="label label-small">Social</div>
-            <div className="contact__links--slack">
-              <a href={slackLink} target="_blank" rel="noopener noreferrer">
-                <img src={slack} alt="slack" />
-              </a>
-              <div className="slack-desc">
-                <p>Najszybszą formą komunikacji, zarówno ze mną strony jak i innymi developerami są odpowiednie kanały na Slack'u. Zapraszamy do skorzystania z tej metody kontaktu.</p>
-                <div className="seeMore"><OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer">przejdź</OutboundLink></div>
-              </div>
-            </div>
             <div className="contact__links--social">
               <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
               <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>

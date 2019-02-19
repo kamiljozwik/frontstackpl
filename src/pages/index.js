@@ -45,23 +45,6 @@ const TagsColumn = ({ posts, label, link }) => (
   </div>
 );
 
-const EventsColumn = ({ events }) => (
-  <div className="events__column">
-    <div className="events__label label-small">NAJBLIŻSZE WYDARZENIA</div>
-    <ul className="events__list">
-      {events.map(event => (
-        <li key={nanoid()} className="events__list--item">
-          <div className="events--title"><a href={event.node.link}>{ event.node.title }</a></div>
-          <div className="events--place">{ event.node.place }</div>
-          <div className="events--date">{ moment(event.node.date).format('DD/MM/YYYY') }</div>
-          <div className="events--isFree">{ event.node.isFree ? <span>FREE</span> : <></> }</div>
-        </li>
-      ))}
-      <li className="events__list--item seeMore"><Link to="/events">wszystkie</Link></li>
-    </ul>
-  </div>
-);
-
 class IndexPage extends Component {
   constructor(props) {
     super(props);
@@ -104,9 +87,6 @@ class IndexPage extends Component {
             {<TagsColumn posts={this.JSPosts} label="JavaScript" link="js" />}
             {<TagsColumn posts={this.WebPosts} label="Web" link="web" />}
             {<TagsColumn posts={this.VoicePosts} label="Głos" link="voice" />}
-          </div>
-          <div className="events">
-            {<EventsColumn events={this.Events} />}
           </div>
         </section>
         <section className="landing-page__show">
