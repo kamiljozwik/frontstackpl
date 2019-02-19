@@ -4,6 +4,7 @@ import Disqus from 'disqus-react';
 import Avatar from 'react-avatar';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
+import Helmet from 'react-helmet';
 import ThumbnailList from '../ThumbnailList';
 import SEO from '../SEO';
 import Layout from '../layout';
@@ -37,6 +38,9 @@ class blogPost extends Component {
 
     return (
       <Layout type="blog-post-page" currentPage={this.category}>
+        <Helmet>
+          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8" />
+        </Helmet>
         <SEO
           title={title} description="" image={lead.file.url}
           url={`https://frontstack.pl${this.props.location.pathname}`} keywords={[`blogpost`]}
