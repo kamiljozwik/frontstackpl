@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
 import moment from 'moment';
 import { Link } from 'gatsby';
-import News from './News';
+import Toolboxes from './Toolboxes';
 
 const BlogPost = ({ node }) => (
   <li className="header__posts__item">
@@ -13,7 +13,7 @@ const BlogPost = ({ node }) => (
   </li>
 );
 
-const HeaderLanding = ({ latestPosts, news }) => (
+const HeaderLanding = ({ latestPosts }) => (
   <React.Fragment>
     <section className="landing-page__header">
       <div className="header__posts--label label-small">Najnowszy wpis</div>
@@ -21,7 +21,6 @@ const HeaderLanding = ({ latestPosts, news }) => (
         <div className="header__posts--latest">
           <div className="date">{ moment(latestPosts[0].node.createdAt).format('DD/MM/YYYY') }</div>
           <div className="title"><Link to={`${latestPosts[0].node.tags[0]}/post/${latestPosts[0].node.slug}`} className="title">{latestPosts[0].node.title}</Link></div>
-          {/* <Link to={`${latestPosts[0].node.tags[0]}/post/${latestPosts[0].node.slug}`} className="seeMore">Czytaj</Link> */}
         </div>
         <div className="header__posts__container">
           <ul className="header__posts__list">
@@ -29,7 +28,7 @@ const HeaderLanding = ({ latestPosts, news }) => (
           </ul>
         </div>
       </div>
-      <News news={news} />
+      <Toolboxes categories={['js', 'web']} />
     </section>
   </React.Fragment>
 );

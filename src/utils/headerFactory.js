@@ -44,10 +44,6 @@ const headerData = {
         ...commonTools,
       },
   },
-  news: {
-    title: 'News',
-    subcategories: []
-  },
   show: {
     title: 'Show room',
     subcategories: []

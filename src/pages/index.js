@@ -56,7 +56,6 @@ class IndexPage extends Component {
     this.FrontOps = this.props.data.FrontOps ? this.props.data.FrontOps.edges : [];
     this.API = this.props.data.API ? this.props.data.API.edges : [];
     this.Prod = this.props.data.Prod ? this.props.data.Prod.edges : [];
-    this.News = this.props.data.News ? this.props.data.News.edges : [];
     this.Quote = this.props.data.Quote ? this.props.data.Quote.edges[0].node : [];
   }
 
@@ -67,7 +66,7 @@ class IndexPage extends Component {
           title="frontstack.pl" description="" image=""
           url="https://frontstack.pl" keywords={[`frontstackpl`]}
         />
-        <HeaderLanding latestPosts={this.latestPosts} news={this.News} />
+        <HeaderLanding latestPosts={this.latestPosts} />
         <section className="landing-page__tags codeless">
           {this.Codeless.length > 0
           && (
@@ -256,24 +255,6 @@ export const pageQuery = graphql`
         }
       }
     }
-      News: allContentfulNewsEntry (
-        sort: {fields: [createdAt], order: DESC}
-        limit: 6
-        ) {
-        edges {
-          node {
-            id
-            title
-            slug
-            createdAt
-            content {
-              childMarkdownRemark {
-                html
-              }
-            }
-          }
-        }
-      }
       Quote: allContentfulQuoteEntry {
         edges {
           node {

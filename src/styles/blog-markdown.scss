@@ -1,4 +1,4 @@
-.post__content, .news__content {
+.post__content {
 /*
 Copyright (c) 2017 Chris Patuzzo
 https://twitter.com/chrispatuzzo
@@ -439,14 +439,6 @@ ol {
   list-style: decimal;
   li {
     line-height: 36px;
-  }
-}
-
-&.news__content {
-  code {
-    padding: 1px 5px;
-    background-color: $light-grey;
-    color: $black
   }
 }
 
