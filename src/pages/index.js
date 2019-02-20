@@ -45,23 +45,6 @@ const TagsColumn = ({ posts, label, link }) => (
   </div>
 );
 
-const EventsColumn = ({ events }) => (
-  <div className="events__column">
-    <div className="events__label label-small">NAJBLIŻSZE WYDARZENIA</div>
-    <ul className="events__list">
-      {events.map(event => (
-        <li key={nanoid()} className="events__list--item">
-          <div className="events--title"><a href={event.node.link}>{ event.node.title }</a></div>
-          <div className="events--place">{ event.node.place }</div>
-          <div className="events--date">{ moment(event.node.date).format('DD/MM/YYYY') }</div>
-          <div className="events--isFree">{ event.node.isFree ? <span>FREE</span> : <></> }</div>
-        </li>
-      ))}
-      <li className="events__list--item seeMore"><Link to="/events">wszystkie</Link></li>
-    </ul>
-  </div>
-);
-
 class IndexPage extends Component {
   constructor(props) {
     super(props);
@@ -105,9 +88,6 @@ class IndexPage extends Component {
             {<TagsColumn posts={this.WebPosts} label="Web" link="web" />}
             {<TagsColumn posts={this.VoicePosts} label="Głos" link="voice" />}
           </div>
-          <div className="events">
-            {<EventsColumn events={this.Events} />}
-          </div>
         </section>
         <section className="landing-page__show">
           <div className="show">
@@ -116,7 +96,7 @@ class IndexPage extends Component {
               <div className="show--label label-small">SHOW ROOM</div>
               <div className="show--content">
                 <p>Teoria, tutoriale, przykłady - wszystko to jest bardzo ważnym składnikiem nauki programowania. Najistotniejszym jednak elementem w tej układance jest praktyka. <strong>Show Room</strong> jest miejscem w którym możesz znaleźć żywe implementacje ciekawych elementów UI, komponentów, animacji, całych stron, itp.</p>
-                <p>Jeżeli chcesz podzielić się z nami swoją własną implemetacją któregoś z w/w elementów, koniecznie zajrzyj na <strong>Slacku</strong> na kanał poświęcony Show Room'owi i przedstaw nam swój pomysł! </p>
+                <p>Jeżeli chcesz podzielić się z nami swoją własną implemetacją któregoś z w/w elementów, koniecznie przedstaw nam swój pomysł! </p>
                 <div className="show--seeMore seeMore"><Link to="/show">sprawdź</Link></div>
               </div>
             </div>

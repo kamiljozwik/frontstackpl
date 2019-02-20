@@ -3,11 +3,8 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import ContactForm from './Form';
 import Layout from '../../components/layout';
 import facebook from '../../styles/img/logos/social/facebook--black.svg';
-import slack from '../../styles/img/logos/social/slack--black.svg';
 import twitter from '../../styles/img/logos/social/twitter--black.svg';
 import mail from '../../styles/img/icons/mail.svg';
-
-const slackLink = 'https://join.slack.com/t/frontstackpl/shared_invite/enQtNDg0MDI5NzExMzUxLTVmNjdmMjFhMzllYTUzM2JjMTZjMWZhNTE4NDU2OTgyNWE5NmFhNGYyMmI1YThiMGVhYjRjM2FhZWYzODYxMzY';
 
 const Contact = () => (
   <React.Fragment>
@@ -16,16 +13,6 @@ const Contact = () => (
         <div className="label label-regular">Kontakt</div>
         <div className="contact">
           <div className="contact__links">
-            <div className="label label-small">Social</div>
-            <div className="contact__links--slack">
-              <a href={slackLink} target="_blank" rel="noopener noreferrer">
-                <img src={slack} alt="slack" />
-              </a>
-              <div className="slack-desc">
-                <p>Najszybszą formą komunikacji, zarówno ze mną strony jak i innymi developerami są odpowiednie kanały na Slack'u. Zapraszamy do skorzystania z tej metody kontaktu.</p>
-                <div className="seeMore"><OutboundLink href={slackLink} target="_blank" rel="noopener noreferrer">przejdź</OutboundLink></div>
-              </div>
-            </div>
             <div className="contact__links--social">
               <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
               <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
