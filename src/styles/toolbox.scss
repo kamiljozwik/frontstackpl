@@ -1,5 +1,4 @@
 .category-header .header__posts--toolbox {
-    background-image: url(./img/graphics/toolbox.jpg);
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -18,6 +17,18 @@
     .header__posts__background::after {
         bottom: -50px;
         left: 10%;
+    }
+}
+.category-header {
+    &.js {
+        .header__posts--toolbox {
+            background-image: url(./img/graphics/tools1Big.jpg);
+        }
+    }
+    &.web {
+        .header__posts--toolbox {
+            background-image: url(./img/graphics/tools2Big.jpg);
+        }
     }
 }
 

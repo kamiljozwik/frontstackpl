@@ -47,18 +47,3 @@ fragment LandingBlogPostFields on ContentfulBlogEntry {
     }
 }
 `;
-
-export const NewsQuery = graphql`
-fragment NewsFields on ContentfulBlogEntry {
-    title
-    createdAt
-    slug
-    tags
-    lead {
-        file {
-            url
-        }
-    }
-}
-`;
-

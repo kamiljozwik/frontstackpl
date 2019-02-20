@@ -51,6 +51,7 @@ class IndexPage extends Component {
     this.latestPosts = this.props.data.allContentfulBlogEntry.edges;
     this.Codeless = this.props.data.Codeless ? this.props.data.Codeless.edges : [];
     this.JSPosts = this.props.data.JSPosts ? this.props.data.JSPosts.edges : [];
+    this.ToolboxItems = this.props.data.Toolbox ? this.props.data.Toolbox.edges : [];
     this.WebPosts = this.props.data.WebPosts ? this.props.data.WebPosts.edges : [];
     this.VoicePosts = this.props.data.VoicePosts ? this.props.data.VoicePosts.edges : [];
     this.FrontOps = this.props.data.FrontOps ? this.props.data.FrontOps.edges : [];
@@ -66,7 +67,7 @@ class IndexPage extends Component {
           title="frontstack.pl" description="" image=""
           url="https://frontstack.pl" keywords={[`frontstackpl`]}
         />
-        <HeaderLanding latestPosts={this.latestPosts} />
+        <HeaderLanding latestPosts={this.latestPosts} toolboxItems={this.ToolboxItems} />
         <section className="landing-page__tags codeless">
           {this.Codeless.length > 0
           && (
@@ -162,6 +163,13 @@ export const pageQuery = graphql`
       edges {
         node {
         ...LandingBlogPostFields
+        }
+      }
+    }
+    Toolbox: allContentfulToolEntry {
+      edges {
+        node {
+          category
         }
       }
     }

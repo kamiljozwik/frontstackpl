@@ -188,26 +188,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             width: 90%;
-            // border: 1px solid $black;
-            // width: 100%;
-            margin: 10px;
+            margin: 5px;
             transition: 0.2s;
             box-sizing: border-box;
+            border-radius: 10px;
+            &:hover {
+                transition: 0.2s;
+                transform: scale(1.02);
+            }
             &.js {
                 background: url(./img/graphics/tools1.jpg);
                 @include background;
-                border-bottom: none;
                 margin-top: 5%;
             }
             &.web {
-                background: lightgreen;
+                background: url(./img/graphics/tools2.jpg);
+                @include background;
             }
             .toolboxes-title {
                 width: 50%;
                 text-align: center;
                 background: $black;
                 padding: 0 3px;
+                margin-bottom: 5px;
                 &--link {
                     display: inline-block;
                     width: 100%;
@@ -218,6 +223,35 @@
                     letter-spacing: 1px;
                     position: relative;
                     cursor: pointer;
+                }
+                @include mQ($landscape) {
+                    width: 80%;
+                }
+                @include mQ($portrait) {
+                    width: 90%;
+                }
+                @include mQ($phone) {
+                    width: 50%;
+                }
+            }
+            .toolboxes-count {
+                background: $black;
+                color: white;
+                font-family: 'Roboto-Thin';
+                letter-spacing: 1px;
+                font-size: 14px;
+                width: 50%;
+                text-align: center;
+                background: $black;
+                padding: 5px 3px;
+                @include mQ($landscape) {
+                    width: 80%;
+                }
+                @include mQ($portrait) {
+                    width: 90%;
+                }
+                @include mQ($phone) {
+                    width: 50%;
                 }
             }
             @include mQ($phone) {

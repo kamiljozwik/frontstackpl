@@ -13,7 +13,7 @@ const BlogPost = ({ node }) => (
   </li>
 );
 
-const HeaderLanding = ({ latestPosts }) => (
+const HeaderLanding = ({ latestPosts, toolboxItems }) => (
   <React.Fragment>
     <section className="landing-page__header">
       <div className="header__posts--label label-small">Najnowszy wpis</div>
@@ -28,7 +28,7 @@ const HeaderLanding = ({ latestPosts }) => (
           </ul>
         </div>
       </div>
-      <Toolboxes categories={['js', 'web']} />
+      <Toolboxes toolboxItems={toolboxItems} categories={['js', 'web']} />
     </section>
   </React.Fragment>
 );
