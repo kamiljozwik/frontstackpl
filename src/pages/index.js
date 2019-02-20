@@ -56,7 +56,6 @@ class IndexPage extends Component {
     this.FrontOps = this.props.data.FrontOps ? this.props.data.FrontOps.edges : [];
     this.API = this.props.data.API ? this.props.data.API.edges : [];
     this.Prod = this.props.data.Prod ? this.props.data.Prod.edges : [];
-    this.Events = this.props.data.Events ? this.props.data.Events.edges : [];
     this.News = this.props.data.News ? this.props.data.News.edges : [];
     this.Quote = this.props.data.Quote ? this.props.data.Quote.edges[0].node : [];
   }
@@ -257,21 +256,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    Events: allContentfulEventEntry (
-      sort: {fields: [date], order: ASC}
-      limit: 5
-    ) {
-        edges {
-          node {
-            title
-            slug
-            place
-            date
-            isFree
-            link
-          }
-        }
-      }
       News: allContentfulNewsEntry (
         sort: {fields: [createdAt], order: DESC}
         limit: 6
