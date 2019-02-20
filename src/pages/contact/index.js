@@ -3,11 +3,8 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import ContactForm from './Form';
 import Layout from '../../components/layout';
 import facebook from '../../styles/img/logos/social/facebook--black.svg';
-import slack from '../../styles/img/logos/social/slack--black.svg';
 import twitter from '../../styles/img/logos/social/twitter--black.svg';
 import mail from '../../styles/img/icons/mail.svg';
-
-const slackLink = 'https://join.slack.com/t/frontstackpl/shared_invite/enQtNDg0MDI5NzExMzUxLTVmNjdmMjFhMzllYTUzM2JjMTZjMWZhNTE4NDU2OTgyNWE5NmFhNGYyMmI1YThiMGVhYjRjM2FhZWYzODYxMzY';
 
 const Contact = () => (
   <React.Fragment>

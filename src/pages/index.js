@@ -96,7 +96,7 @@ class IndexPage extends Component {
               <div className="show--label label-small">SHOW ROOM</div>
               <div className="show--content">
                 <p>Teoria, tutoriale, przykłady - wszystko to jest bardzo ważnym składnikiem nauki programowania. Najistotniejszym jednak elementem w tej układance jest praktyka. <strong>Show Room</strong> jest miejscem w którym możesz znaleźć żywe implementacje ciekawych elementów UI, komponentów, animacji, całych stron, itp.</p>
-                <p>Jeżeli chcesz podzielić się z nami swoją własną implemetacją któregoś z w/w elementów, koniecznie zajrzyj na <strong>Slacku</strong> na kanał poświęcony Show Room'owi i przedstaw nam swój pomysł! </p>
+                <p>Jeżeli chcesz podzielić się z nami swoją własną implemetacją któregoś z w/w elementów, koniecznie przedstaw nam swój pomysł! </p>
                 <div className="show--seeMore seeMore"><Link to="/show">sprawdź</Link></div>
               </div>
             </div>

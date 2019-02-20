@@ -12,8 +12,6 @@ const TopicTile = ({ name, desc, link }) => (
   </li>
 );
 
-const slackLink = 'https://join.slack.com/t/frontstackpl/shared_invite/enQtNDg0MDI5NzExMzUxLTVmNjdmMjFhMzllYTUzM2JjMTZjMWZhNTE4NDU2OTgyNWE5NmFhNGYyMmI1YThiMGVhYjRjM2FhZWYzODYxMzY';
-
 const About = ({ data }) => (
   <React.Fragment>
     <Layout type="withoutHeader" currentPage="main">
@@ -23,8 +21,7 @@ const About = ({ data }) => (
           <div className="info">
             <div className="info--text">
               <p>Frontstack.pl jest miejscem w którym możesz znaleźć najświeższe wiadomości ze świata front-endu, jak również wiele ciekawych artykułów omawiajacych najnowsze oraz najważniejsze aspekty front-endowego ekosystemu.</p>
-              { /* <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też kod strony jest dostępny na licencji <strong>open source</strong> i można znaleźć go pod tym <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="letter-red">adresem.</a> </p> */}
-              <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też już niedługo (po skończeniu pisania README, contributing guide oraz code of conduct) pojawi się tutaj link do repozytorium z kodem źródłowym tego bloga.</p>
+              <p>Frontstack.pl został stworzony z myślą o wspólnym dzieleniu się wiedzą oraz doświadczeniami, dlatego też kod strony jest dostępny na licencji <strong>open source</strong> i można znaleźć go pod tym <a href="https://github.com/frontstackpl/frontstackpl" target="_blank" rel="noopener noreferrer" class="letter-red">adresem.</a> </p>
               <p>Liczę na to, że strona frontstack.pl będzie w stanie pomóc wszystkim, zarówno doświadczonym jak i początkującym developerom, podnosić swoje umiejętności i wspólnie budować społeczność polskich front-end developerów. </p>
             </div>
           </div>

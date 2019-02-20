@@ -13,7 +13,7 @@ const Footer = () => (
     <div className="social">
       <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
       <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
-      <div className="social--github"><OutboundLink href="https://github.com" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" /></OutboundLink></div>
+      <div className="social--github"><OutboundLink href="https://github.com/frontstackpl/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" /></OutboundLink></div>
     </div>
   </section>
 );
