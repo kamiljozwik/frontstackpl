@@ -158,7 +158,7 @@
         height: 80vh;
     }
     @include mQ($phone) {
-        height: calc(80vh + 300px); // 300px = height of news column
+        height: auto;
         max-height: initial;
         flex-direction: column;
         width: calc( 100vw );
@@ -173,7 +173,7 @@
         height: calc(100% - 40px);
         top: 0;
         @include mQ($phone) {
-            height: 300px;
+            height: auto;
         }
     }
     &__list {
@@ -258,6 +258,9 @@
                 padding: 10px 0;
             }
         }
+        @include mQ($phone) {
+            background: none;
+        }
     }
     &--seeMore {
         margin-top: 10px;
@@ -268,5 +271,6 @@
     }
     @include mQ($phone) {
         width: 100%;
+        margin-top: 20px;
     }
 }
