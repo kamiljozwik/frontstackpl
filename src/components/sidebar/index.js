@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import debounce from 'lodash/debounce';
 import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'gatsby';
 
@@ -8,8 +9,21 @@ class Sidebar extends Component {
     super(props);
     this.sidebarMenu = React.createRef();
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      windowWidth: 0
     };
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', debounce(this.updateWindowDimensions, 300));
+  }
+
+  updateWindowDimensions = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      windowWidth: window.innerWidth
+    }));
   }
 
   switchMenu = (event) => {
@@ -26,7 +40,8 @@ class Sidebar extends Component {
     return (
       <Menu
         ref={this.sidebarMenu}
-        isOpen={this.state.menuOpen}
+        isOpen={this.state.windowWidth > 600 ? true : this.state.menuOpen}
+        width={70}
         noOverlay
         className="sidebar__menu"
         customBurgerIcon={false}
@@ -44,9 +59,9 @@ class Sidebar extends Component {
         >
           {''}
         </a>
-        <Link className={`${this.isTabActive('main')}`} data-link="Main" to="/">Main</Link>
+        <Link className={`${this.isTabActive('main')}`} data-link="Main" to="/" />
         <Link className={`disabled ${this.isTabActive('show')}`} data-link="Show" to="/show/">Show</Link>
-        <Link className={`${this.isTabActive('js')}`} data-link="JS" to="/js/">JS</Link>
+        <Link className={`${this.isTabActive('js')}`} data-link="JS" to="/js/">JavaScript</Link>
         <Link className={`${this.isTabActive('web')}`} data-link="Web" to="/web/">WEB</Link>
         <Link className={`disabled ${this.isTabActive('voice')}`} data-link="Voice" to="/voice/">Głos</Link>
         <Link className={`${this.isTabActive('frontops')}`} data-link="FrontOps" to="/frontops/">FrontOps</Link>

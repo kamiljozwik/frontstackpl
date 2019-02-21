@@ -19,7 +19,7 @@ class Layout extends Component {
 
   render() {
     const detectedBrowser = browser();
-    if (!detectedBrowser.name.match(/^(chrome|firefox|opera|edge|ios)$/) && typeof window !== 'undefined') {
+    if (!detectedBrowser.name.match(/^(chrome|firefox|safari|opera|edge|ios)$/) && typeof window !== 'undefined') {
       browserPopup(detectedBrowser.name);
     }
     return (

@@ -3,12 +3,18 @@
   top: 0;
   &__menu {
     background: $lighten-grey;
-    width: 70px !important;
-    .sidebar__wrapper {
-      overflow: visible !important;
+    transition: none !important;
+    @include mQ($phone) {
+      transition: all 0.5s ease 0s !important;
     }
   }
+  .sidebar__wrapper {
+    overflow: visible !important;
+  }
+
+  // -- Burger Ico on mobile --
   &__burger {
+    height: 0 !important;
     width: 100%;
     cursor: pointer;
     &::after {
@@ -19,6 +25,19 @@
         box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.2);
       }
     }
+    &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 45px auto;
+        background-position: center center;
+        background-image: url("./img/icons/sidebar/burger.svg");
+        position: absolute;
+        right: -70px;
+        width: 70px;
+        height: 100%;
+        @include center;
+        background-color: $lighten-grey;
+      }
     &.open {
       background-color: $lighten-grey;
       &::after {
@@ -32,31 +51,27 @@
         }
       }
     }
+    @include mQ($phone) {
+      height: 100% !important;
+    }
   }
+
+  // -- Sidebar items --
   .sidebar__items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    box-shadow: 0px 0 10px 0px rgba(0, 0, 0, 0.5);
     .bm-item {
       height: 100%;
       width: 70px;
       display: flex !important;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       color: $black;
       position: relative;
-      &::after {
-        content: "";
-        background-repeat: no-repeat;
-        background-size: 45px auto;
-        background-position: center center;
-        position: absolute;
-        right: -70px;
-        width: 70px;
-        height: 100%;
-        @include center;
-        background-color: $lighten-grey;
-      }
+      font-size: 12px;
+      color: $lighten-grey;
       &:first-child {
         @include mQ($phone) {
             background-color: white;
@@ -74,36 +89,27 @@
             }
         }
       }
-      &:not(:first-child) {
-        @include mQ($phone) {
-          &::after {
-            content: unset;
-          }
-        }
-      }
       &:hover {
-        background-color: $grey;
+        // background-color: $grey;
+        color: $red;
+        // border-right: 5px solid $red;
+        box-sizing: border-box;
         @include mQ($phone) {
           background-color: white;
         }
-        &::after {
-          background-color: $grey;
-          @include mQ($phone) {
-            background-color: white;
-          }
-        }
       }
-      &.disabled {
-        color: $grey;
-      }
+      // &.disabled {
+      //   color: $lighten-grey;
+      // }
       &.active {
         font-family: "Roboto-Bold";
         color: $red;
-        &::after {
-          border-right: 5px solid $red;
-          box-sizing: border-box;
-        }
+        border-right: 5px solid $red;
+        box-sizing: border-box;
       }
+    }
+    @include mQ($phone) {
+      box-shadow: none;
     }
   }
 }
@@ -111,13 +117,15 @@
 // -- SIDEBAR ICONS -- //
 
 @mixin sidebarIcons($category, $image) {
-  a[data-link=#{$category}]::after {
+  a[data-link=#{$category}] {
     background-image: url("./img/icons/sidebar/"+$image);
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center center;
   }
 }
 
 .sidebar {
-  @include sidebarIcons('Open', 'burger.svg');
   @include sidebarIcons('Main', 'home.svg');
   @include sidebarIcons('News', 'news.svg');
   @include sidebarIcons('Show', 'show.svg');
