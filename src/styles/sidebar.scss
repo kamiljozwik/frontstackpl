@@ -107,6 +107,9 @@
         border-right: 5px solid $red;
         box-sizing: border-box;
       }
+      @include mQ($phone) {
+        color: $grey;
+      }
     }
     @include mQ($phone) {
       box-shadow: none;

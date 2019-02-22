@@ -158,7 +158,7 @@
         @include mQ($phone) {
             width: 100%;
             padding: 0;
-            min-height: 70vh;
+            min-height: 50vh;
         }
     }
     .header__subcategories {
@@ -233,6 +233,7 @@
         @include mQ($phone) {
             width: 100%;
             z-index: 2;
+            margin-top: 20px;
         }
     }
     @include mQ($desktop) {
@@ -248,7 +249,8 @@
         margin-bottom: 0;
         flex-direction: column;
         width: 100vw;
-        height: calc(80vh + 100px);
+        // height: calc(80vh + 100px);
+        height: auto;
         max-height: initial;
     }
     
