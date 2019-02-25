@@ -130,7 +130,6 @@
 
 .sidebar {
   @include sidebarIcons('Main', 'home.svg');
-  @include sidebarIcons('News', 'news.svg');
   @include sidebarIcons('Show', 'show.svg');
   @include sidebarIcons('JS', 'js.svg');
   @include sidebarIcons('Web', 'web.svg');

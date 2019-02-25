@@ -67,7 +67,8 @@ const headerData = {
     title: 'Produktywność',
     subcategories: [
       { ide: 'IDE' },
-      { git: 'GIT' }
+      { git: 'GIT' },
+      { monitoring: 'Monitoring' }
     ]
   },
   codeless: {
