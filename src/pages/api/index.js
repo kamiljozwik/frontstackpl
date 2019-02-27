@@ -11,12 +11,6 @@ const headerData = headerFactory(pageCategory);
 
 const APIPage = ({ data }) => (
   <React.Fragment>
-    {/* <Header
-      category={pageCategory}
-      siteTitle={headerData.title}
-      subcategories={headerData.subcategories}
-      post={data.allPosts.edges[0]}
-    /> */}
     <Layout type="category-page" currentPage="api">
       <UnderCOnstruction />
     </Layout>

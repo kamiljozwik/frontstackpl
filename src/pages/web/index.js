@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import ThumbnailList from '../../components/ThumbnailList';
 import Layout from '../../components/layout';
+import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 import Header from '../../components/header';
 import headerFactory from '../../utils/headerFactory';
 
@@ -11,27 +11,16 @@ const headerData = headerFactory(pageCategory);
 
 const WEBPage = ({ data }) => (
   <React.Fragment>
-    <Layout type="category-page" currentPage="web">
+    <Layout type="category-page" currentPage={pageCategory}>
       <Header
         category={pageCategory}
         siteTitle={headerData.title}
         subcategories={headerData.subcategories}
         post={data.allPosts.edges[0]}
       />
-      <section className="recent-posts">
-        <ThumbnailList posts={data.allPosts.edges.slice(1, 3)} isThumbnail={false} />
-      </section>
-      <section className="second-level-posts">
-        {data.allPosts.edges[3] && (
-          <>
-            <span className="label-small">Pozostałe wpisy</span>
-            <ThumbnailList posts={data.allPosts.edges.slice(3, 6)} type="second-level-posts" />
-          </>
-        )}
-      </section>
-      <section className="older-posts">
-        <ThumbnailList posts={data.allPosts.edges.slice(6)} type="older-posts" />
-      </section>
+      <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />
+      <SecondLevelPosts posts={data.allPosts.edges.slice(3, 6)} />
+      <OlderPosts posts={data.allPosts.edges.slice(6)} />
     </Layout>
   </React.Fragment>
 );

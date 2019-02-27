@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'gatsby';
+import { HeaderContext } from '../../HeaderContext';
 
 class Sidebar extends Component {
+  static contextType = HeaderContext;
+
   constructor(props) {
     super(props);
     this.sidebarMenu = React.createRef();
@@ -34,7 +37,8 @@ class Sidebar extends Component {
     }));
   }
 
-  isTabActive = link => this.props.currentPage === link ? 'active' : ''; // eslint-disable-line
+  // isTabActive = link => this.props.currentPage === link ? 'active' : ''; // eslint-disable-line
+  isTabActive = link => this.context.currentCategory === link ? 'active' : ''; // eslint-disable-line
 
   render() {
     return (
@@ -73,7 +77,3 @@ class Sidebar extends Component {
 }
 
 export default Sidebar;
-
-Sidebar.propTypes = {
-  currentPage: PropTypes.string.isRequired,
-};

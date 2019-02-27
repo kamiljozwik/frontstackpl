@@ -23,10 +23,10 @@
     "nanoid": "^1.2.3",
     "node-sass": "^4.9.3",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "react": "^16.8.3",
     "react-avatar": "^3.4.4",
     "react-burger-menu": "^2.5.2",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "sweetalert2": "^7.29.1",
     "sweetalert2-react-content": "^1.0.1"

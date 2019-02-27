@@ -4,6 +4,7 @@ import browser from 'browser-detect';
 import { CSSPlugin, AttrPlugin } from 'gsap/all';
 import { StaticQuery, graphql } from 'gatsby';
 import browserPopup from './modals/detect-browser';
+import { HeaderProvider } from '../HeaderContext';
 import Sidebar from './sidebar';
 import Topbar from './Topbar';
 import Footer from './footer';
@@ -34,16 +35,16 @@ class Layout extends Component {
           }
         `}
         render={dataQuery => (
-            <>
-              <Topbar />
-              <div className="sidebar" ref={this.sidebarMenuWrapper}>
-                <Sidebar currentPage={this.props.currentPage} />
-              </div>
-              <div className={this.props.type}>
-                { this.props.children }
-              </div>
-              <Footer />
-            </>
+          <HeaderProvider>
+            <Topbar />
+            <div className="sidebar" ref={this.sidebarMenuWrapper}>
+              <Sidebar />
+            </div>
+            <div className={this.props.type}>
+              { this.props.children }
+            </div>
+            <Footer />
+          </HeaderProvider>
         )}
       />
     );

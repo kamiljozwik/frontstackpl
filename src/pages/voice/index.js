@@ -13,11 +13,6 @@ const headerData = headerFactory(pageCategory);
 
 const VoicePage = ({ data }) => (
   <React.Fragment>
-    {/* <Header
-      category={pageCategory}
-      siteTitle={headerData.title}
-      subcategories={headerData.subcategories}
-    /> */}
     <Layout type="category-page" currentPage="voice">
       <UnderCOnstruction />
     </Layout>

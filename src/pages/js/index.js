@@ -1,37 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import ThumbnailList from '../../components/ThumbnailList';
 import Layout from '../../components/layout';
 import Header from '../../components/header';
-import headerFactory from '../../utils/headerFactory';
+import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 
-const pageCategory = 'js';
-const headerData = headerFactory(pageCategory);
+function getPostsCount(posts) {
+  const count = {};
+  for (const post of posts) { // eslint-disable-line
+    const subcategory = post.node.tags[1];
+    if (count[subcategory]) {
+      count[subcategory]++;
+    } else {
+      count[subcategory] = 1;
+    }
+  }
+  return count;
+}
 
 const JSPage = ({ data }) => (
   <React.Fragment>
-    <Layout type="category-page" currentPage="js">
-      <Header
-        category={pageCategory}
-        siteTitle={headerData.title}
-        subcategories={headerData.subcategories}
-        post={data.allPosts.edges[0]}
-      />
-      <section className="recent-posts">
-        <ThumbnailList posts={data.allPosts.edges.slice(1, 3)} isThumbnail={false} />
-      </section>
-      <section className="second-level-posts">
-        {data.allPosts.edges[3] && (
-          <>
-            <span className="label-small">Pozostałe wpisy</span>
-            <ThumbnailList posts={data.allPosts.edges.slice(3, 6)} type="second-level-posts" />
-          </>
-        )}
-      </section>
-      <section className="older-posts">
-        <ThumbnailList posts={data.allPosts.edges.slice(6)} />
-      </section>
+    {console.log(getPostsCount(data.allPosts.edges))}
+    <Layout type="category-page">
+      <Header post={data.allPosts.edges[0]} />
+      <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />
+      <SecondLevelPosts posts={data.allPosts.edges.slice(3, 6)} />
+      <OlderPosts posts={data.allPosts.edges.slice(6)} />
     </Layout>
   </React.Fragment>
 );

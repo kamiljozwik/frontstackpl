@@ -8,6 +8,7 @@ import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
 
 class Subcategory extends Component {
+
   constructor(props) {
     super(props);
     this.category = props.data.allPosts.edges[0].node.tags[0];
