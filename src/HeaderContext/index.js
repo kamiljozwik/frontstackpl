@@ -7,14 +7,25 @@ class HeaderProvider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentCategory: this.getCategory(),
-      currentSubcategory: this.getSubcategory()
+      currentCategory: '',  // eslint-disable-line
+      currentSubcategory: '',  // eslint-disable-line
     };
   }
 
-  getCategory = () => typeof document !== 'undefined' ? document.location.pathname.split('/')[1] : 'js';
+  componentDidMount() {
+    this.getCategory();
+    this.getSubcategory();
+  }
 
-  getSubcategory = () => typeof document !== 'undefined' ? document.location.pathname.split('/')[2] : '';
+  getCategory = () => {
+    const category = typeof document !== 'undefined' ? document.location.pathname.split('/')[1] : '';
+    this.setState({currentCategory: category});  // eslint-disable-line
+  }
+
+  getSubcategory = () => {
+    const subCategory = typeof document !== 'undefined' ? document.location.pathname.split('/')[2] : '';
+    this.setState({currentSubcategory: subCategory}); // eslint-disable-line
+  }
 
   render() {
     return (

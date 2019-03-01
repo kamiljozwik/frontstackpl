@@ -9,7 +9,6 @@ import ThumbnailList from '../ThumbnailList';
 import SEO from '../SEO';
 import Layout from '../layout';
 import Header from '../header';
-import headerFactory from '../../utils/headerFactory';
 import Twitter from '../../styles/img/logos/social/twitter.svg';
 
 class blogPost extends Component {
@@ -18,7 +17,6 @@ class blogPost extends Component {
     this.post = props.data.contentfulBlogEntry;
     this.category = props.data.contentfulBlogEntry.tags[0];
     this.subcategory = props.data.contentfulBlogEntry.tags.length > 1 ? props.data.contentfulBlogEntry.tags[1] : '';
-    this.headerData = headerFactory(this.category);
   }
 
   renderInspirations = inspirations => (
@@ -37,7 +35,7 @@ class blogPost extends Component {
     };
 
     return (
-      <Layout type="blog-post-page" currentPage={this.category}>
+      <Layout type="blog-post-page">
         <Helmet>
           <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8" />
         </Helmet>
@@ -45,13 +43,7 @@ class blogPost extends Component {
           title={title} description="" image={lead.file.url}
           url={`https://frontstack.pl${this.props.location.pathname}`} keywords={[`blogpost`]}
         />
-        <Header
-          siteTitle={this.headerData.title}
-          category={this.category}
-          post={{ node: this.post }}
-          subcategories={this.headerData.subcategories}
-          isBlogPost
-        />
+        <Header post={{ node: this.post }} isBlogPost />
         <div className="post">
           <section className="post__content" dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }} />
           <section className="post__author">

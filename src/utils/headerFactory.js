@@ -5,6 +5,10 @@ const commonTools = {
 };
 
 const headerData = {
+  main: {
+    title: 'Start',
+    subcategories: []
+  },
   js: {
     title: 'JavaScript',
     subcategories: [
@@ -78,6 +82,6 @@ const headerData = {
 };
 
 
-const headerFactory = category => headerData[category];
+const headerFactory = category => category !== '' ? headerData[category] : headerData['main']; //eslint-disable-line
 
 export default headerFactory;
