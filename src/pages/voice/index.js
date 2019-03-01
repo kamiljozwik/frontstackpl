@@ -1,20 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import ThumbnailList from '../../components/ThumbnailList';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
-import Header from '../../components/header';
-import UnderCOnstruction from '../../components/temp-pages/under-construction';
-import headerFactory from '../../utils/headerFactory';
-
-const pageCategory = 'voice';
-const headerData = headerFactory(pageCategory);
-
+import UnderConstruction from '../../components/temp-pages/under-construction';
 
 const VoicePage = ({ data }) => (
   <React.Fragment>
-    <Layout type="category-page" currentPage="voice">
-      <UnderCOnstruction />
+    <Layout type="category-page">
+      <UnderConstruction />
     </Layout>
   </React.Fragment>
 );

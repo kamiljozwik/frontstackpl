@@ -14,9 +14,8 @@ const Subcategory = ({ category, subcategory, currentSubcategory }) => {
         <div className="subcategories-title">
           <Link to={`/${category}/${urlName}`}>{ printName }</Link>
         </div>
-        <div className="subcategories-number">
-          {`${2}`}
-        </div>
+        { /* TO DO: Wyświetlanie liczby wiadomości */ }
+        <div className="subcategories-number" />
       </li>
     </React.Fragment>
   );

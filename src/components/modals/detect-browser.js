@@ -6,8 +6,6 @@ import withReactContent from 'sweetalert2-react-content';
 const BrowserModal = withReactContent(Swal);
 const browserModalBackground = browserName => `https://cdnjs.cloudflare.com/ajax/libs/browser-logos/46.1.0/${browserName}/${browserName}.svg`;
 
-const windowGlobal = typeof window !== 'undefined' && window;
-
 // Modal content for not supported browsers
 const BrowserModalContent = browserName => (
   <div className="detect-browser--content">

@@ -5,22 +5,8 @@ import Layout from '../../components/layout';
 import Header from '../../components/header';
 import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 
-function getPostsCount(posts) {
-  const count = {};
-  for (const post of posts) { // eslint-disable-line
-    const subcategory = post.node.tags[1];
-    if (count[subcategory]) {
-      count[subcategory]++;
-    } else {
-      count[subcategory] = 1;
-    }
-  }
-  return count;
-}
-
 const JSPage = ({ data }) => (
   <React.Fragment>
-    {console.log(getPostsCount(data.allPosts.edges))}
     <Layout type="category-page">
       <Header post={data.allPosts.edges[0]} />
       <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />

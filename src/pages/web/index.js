@@ -4,20 +4,11 @@ import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 import Header from '../../components/header';
-import headerFactory from '../../utils/headerFactory';
-
-const pageCategory = 'web';
-const headerData = headerFactory(pageCategory);
 
 const WEBPage = ({ data }) => (
   <React.Fragment>
-    <Layout type="category-page" currentPage={pageCategory}>
-      <Header
-        category={pageCategory}
-        siteTitle={headerData.title}
-        subcategories={headerData.subcategories}
-        post={data.allPosts.edges[0]}
-      />
+    <Layout type="category-page">
+      <Header post={data.allPosts.edges[0]} />
       <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />
       <SecondLevelPosts posts={data.allPosts.edges.slice(3, 6)} />
       <OlderPosts posts={data.allPosts.edges.slice(6)} />

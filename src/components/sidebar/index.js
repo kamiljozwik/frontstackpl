@@ -37,7 +37,6 @@ class Sidebar extends Component {
     }));
   }
 
-  // isTabActive = link => this.props.currentPage === link ? 'active' : ''; // eslint-disable-line
   isTabActive = link => this.context.currentCategory === link ? 'active' : ''; // eslint-disable-line
 
   render() {
@@ -63,13 +62,13 @@ class Sidebar extends Component {
         >
           {''}
         </a>
-        <Link className={`${this.isTabActive('main')}`} data-link="Main" to="/" />
-        <Link className={`disabled ${this.isTabActive('show')}`} data-link="Show" to="/show/">Show</Link>
+        <Link className={`${this.isTabActive('')}`} data-link="Main" to="/" />
+        <Link className={`${this.isTabActive('show')}`} data-link="Show" to="/show/">Show</Link>
         <Link className={`${this.isTabActive('js')}`} data-link="JS" to="/js/">JavaScript</Link>
         <Link className={`${this.isTabActive('web')}`} data-link="Web" to="/web/">WEB</Link>
-        <Link className={`disabled ${this.isTabActive('voice')}`} data-link="Voice" to="/voice/">Głos</Link>
+        <Link className={`${this.isTabActive('voice')}`} data-link="Voice" to="/voice/">Głos</Link>
         <Link className={`${this.isTabActive('frontops')}`} data-link="FrontOps" to="/frontops/">FrontOps</Link>
-        <Link className={`disabled ${this.isTabActive('api')}`} data-link="API" to="/api/">API</Link>
+        <Link className={`${this.isTabActive('api')}`} data-link="API" to="/api/">API</Link>
         <Link className={`${this.isTabActive('prod')}`} data-link="Prod" to="/prod/">Prod.</Link>
       </Menu>
     );

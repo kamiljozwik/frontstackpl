@@ -2,17 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
-import Header from '../../components/header';
-import UnderCOnstruction from '../../components/temp-pages/under-construction';
-import headerFactory from '../../utils/headerFactory';
-
-const pageCategory = 'api';
-const headerData = headerFactory(pageCategory);
+import UnderConstruction from '../../components/temp-pages/under-construction';
 
 const APIPage = ({ data }) => (
   <React.Fragment>
-    <Layout type="category-page" currentPage="api">
-      <UnderCOnstruction />
+    <Layout type="category-page">
+      <UnderConstruction />
     </Layout>
   </React.Fragment>
 );

@@ -8,7 +8,6 @@ import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
 
 class Subcategory extends Component {
-
   constructor(props) {
     super(props);
     this.category = props.data.allPosts.edges[0].node.tags[0];
@@ -20,24 +19,18 @@ class Subcategory extends Component {
   render() {
     return (
       <>
-        <Layout type="category-page category-page__subcategories" currentPage={this.category}>
+        <Layout type="category-page category-page__subcategories">
           <SEO
             title={this.headerData.title} description="" image=""
             url={`https://frontstack.pl/${this.category}/${this.subcategory}`} keywords={[]}
           />
-          <Header
-            siteTitle={this.headerData.title}
-            category={this.category}
-            currentSubcategory={this.subcategory}
-            subcategories={this.headerData.subcategories}
-            post={this.props.data.allPosts.edges[0]}
-          />
+          <Header post={this.props.data.allPosts.edges[0]} />
           <section className="older-posts">
             <span className="label-small">{ this.printSubcategory }</span>
             <ThumbnailList posts={this.props.data.allPosts.edges.slice(1)} type="older-posts" />
           </section>
         </Layout>
-        </>
+      </>
     );
   }
 }
