@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import seoImage from '../styles/img/graphics/frontstack.jpg';
 
 function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
   return (
@@ -51,6 +50,14 @@ function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
                 content: `summary`,
               },
               {
+                name: `twitter:image`,
+                content: image,
+              },
+              {
+                name: `twitter:site`,
+                content: data.site.siteMetadata.author,
+              },
+              {
                 name: `twitter:creator`,
                 content: data.site.siteMetadata.author,
               },
@@ -76,7 +83,7 @@ SEO.defaultProps = {
   keywords: ['frontend', 'front-end', 'javascript', 'react', 'reactjs', 'web-development', 'html', 'css'],
   description: '',
   isBlogPost: true,
-  image: seoImage
+  image: 'https://s3.eu-central-1.amazonaws.com/frontstack/images/Frontstack-FB-small.jpg'
 };
 
 SEO.propTypes = {
