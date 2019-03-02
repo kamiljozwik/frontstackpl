@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'frontstack.pl',
-    description: 'Blog poświęcony tematom front-endowym',
+    title: 'Frontstack.pl - Front-End po polsku',
+    description: 'Pisany po polsku blog poświęcony technologiom Fron-Endowym takim jak JavaScript, React, Gatsby, HTML-CSS, JAM Stack, PWA, AWS i wiele więcej!',
     author: '@jozwikk'
   },
   plugins: [

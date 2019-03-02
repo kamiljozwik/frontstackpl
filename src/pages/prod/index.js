@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 import Layout from '../../components/layout';
+import SEO from '../../components/SEO';
 import Header from '../../components/header';
 
 const ProdPage = ({ data }) => (
   <React.Fragment>
     <Layout type="category-page">
+      <SEO
+        title="Produktywność - Frontstack.pl"
+        url="https://frontstack.pl/prod"
+        isBlogPost={false}
+      />
       <Header post={data.allPosts.edges[0]} />
       <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />
       <SecondLevelPosts posts={data.allPosts.edges.slice(3, 6)} />

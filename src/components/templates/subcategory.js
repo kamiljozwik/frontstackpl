@@ -21,8 +21,9 @@ class Subcategory extends Component {
       <>
         <Layout type="category-page category-page__subcategories">
           <SEO
-            title={this.headerData.title} description="" image=""
-            url={`https://frontstack.pl/${this.category}/${this.subcategory}`} keywords={[]}
+            title={`${this.headerData.title} - Frontstack.pl`}
+            url={`https://frontstack.pl/${this.category}/${this.subcategory}`}
+            isBlogPost={false}
           />
           <Header post={this.props.data.allPosts.edges[0]} />
           <section className="older-posts">

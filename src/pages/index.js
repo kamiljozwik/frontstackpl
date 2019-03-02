@@ -64,8 +64,9 @@ class IndexPage extends Component {
     return (
       <Layout type="landing-page" currentPage="main">
         <SEO
-          title="frontstack.pl" description="" image=""
-          url="https://frontstack.pl" keywords={[`frontstackpl`]}
+          title="Frontstack.pl - Front-End po polsku"
+          url="https://frontstack.pl"
+          isBlogPost={false}
         />
         <HeaderLanding latestPosts={this.latestPosts} toolboxItems={this.ToolboxItems} />
         <section className="landing-page__tags codeless">

@@ -12,7 +12,6 @@ import github from '../../styles/img/logos/social/github.svg';
 import website from '../../styles/img/icons/website.svg';
 import npm from '../../styles/img/icons/npm.svg';
 
-
 const ToolItem = tool => (
   <li className="toolbox__list--item item">
     <div className="item--data">
@@ -58,7 +57,7 @@ const ToolsList = ({ type, printType, tools }) => (
   </div>
 );
 
-class Subcategory extends Component {
+class Toolbox extends Component {
   constructor(props) {
     super(props);
     this.tools = props.data.Tools.edges;
@@ -107,18 +106,12 @@ class Subcategory extends Component {
   render() {
     return (
       <>
-        <Layout type="category-page category-page__subcategories" currentPage={this.pageCategory}>
+        <Layout type="category-page category-page__subcategories">
           <SEO
-            title={this.headerData.title} description="" image=""
-            url={`https://frontstack.pl/${this.category}/toolbox`} keywords={[]}
+            title={`${this.headerData.title} Toolbox - Frontstack.pl`}
+            url={`https://frontstack.pl/${this.category}/toolbox`}
           />
-          <Header
-            siteTitle={this.headerData.title}
-            category={this.pageCategory}
-            currentSubcategory="toolbox"
-            subcategories={this.headerData.subcategories}
-            isToolBox
-          />
+          <Header isToolBox />
           <section className="toolbox">
             <div className="toolbox__types">
               { this.generateTable() }
@@ -130,9 +123,9 @@ class Subcategory extends Component {
   }
 }
 
-export default Subcategory;
+export default Toolbox;
 
-Subcategory.propTypes = {
+Toolbox.propTypes = {
   data: PropTypes.object.isRequired,
 };
 

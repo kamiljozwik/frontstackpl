@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
+import SEO from '../../components/SEO';
 import Header from '../../components/header';
 import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 
 const JSPage = ({ data }) => (
   <React.Fragment>
     <Layout type="category-page">
+      <SEO
+        title="JavaScript - Frontstack.pl"
+        url="https://frontstack.pl/js"
+        isBlogPost={false}
+      />
       <Header post={data.allPosts.edges[0]} />
       <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />
       <SecondLevelPosts posts={data.allPosts.edges.slice(3, 6)} />

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import seoImage from '../styles/img/graphics/frontstack.jpg';
 
 function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
   return (
@@ -15,7 +16,7 @@ function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
               lang: 'pl',
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            // titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -49,17 +50,9 @@ function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
                 name: `twitter:card`,
                 content: `summary`,
               },
-              // {
-              //   name: `twitter:creator`,
-              //   content: data.site.siteMetadata.author,
-              // },
               {
-                name: `twitter:title`,
-                content: title,
-              },
-              {
-                name: `twitter:description`,
-                content: metaDescription,
+                name: `twitter:creator`,
+                content: data.site.siteMetadata.author,
               },
             ]
               .concat(
@@ -80,9 +73,10 @@ function SEO({ title, description, meta, keywords, url, image, isBlogPost }) {
 
 SEO.defaultProps = {
   meta: [],
-  keywords: [],
+  keywords: ['frontend', 'front-end', 'javascript', 'react', 'reactjs', 'web-development', 'html', 'css'],
   description: '',
-  isBlogPost: true
+  isBlogPost: true,
+  image: seoImage
 };
 
 SEO.propTypes = {
@@ -91,7 +85,7 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   isBlogPost: PropTypes.bool
 };
 

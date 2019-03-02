@@ -43,12 +43,13 @@ const Header = ({ post, isBlogPost, isToolBox }) => (
 export default Header;
 
 Header.propTypes = {
-  post: PropTypes.object.isRequired,
+  post: PropTypes.object,
   isBlogPost: PropTypes.bool,
   isToolBox: PropTypes.bool
 };
 
 Header.defaultProps = {
+  post: {},
   isBlogPost: false,
   isToolBox: false,
 };
