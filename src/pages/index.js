@@ -27,7 +27,11 @@ const TagsColumn = ({ posts, label, link }) => (
     <ul className="tags__list">
       {posts.map((post, index) => (
         <li key={nanoid()} className="tags__list--item" style={{ backgroundImage: `${index === 0 ? `url(${post.node.lead.file.url}?w=385&h=300&fl=progressive&q=50&fit=fill)` : ''}` }}>
-          <div className="item--title"><Link to={`${post.node.tags[0]}/post/${post.node.slug}`}>{ post.node.title }</Link></div>
+          <div className="item--title">
+            <h3>
+              <Link to={`${post.node.tags[0]}/post/${post.node.slug}`}>{ post.node.title }</Link>
+            </h3>
+          </div>
           <div className="item--footer">
             <div className="item--date">{ moment(post.node.createdAt).format('DD/MM/YYYY') }</div>
             <div className="item--seeMore seeMore"><Link to={`${post.node.tags[0]}/post/${post.node.slug}`}>czytaj</Link></div>

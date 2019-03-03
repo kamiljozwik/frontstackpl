@@ -11,7 +11,9 @@ const PostThumbnail = ({ node, index, isThumbnail }) => (
       style={{ backgroundImage: `url(${node.lead.file.url}?w=${isThumbnail ? '300' : '400'}&h=${isThumbnail ? '150' : '200'}&fl=progressive&q=100&fit=fill)` }}
     />
     <div className="item__data">
-      <Link className="item__data--title" to={`/${node.tags[0]}/post/${node.slug}`}>{node.title}</Link>
+      <h3 className="item__data--title">
+        <Link to={`/${node.tags[0]}/post/${node.slug}`}>{node.title}</Link>
+      </h3>
       <div className="item__data--footer">
         <div className="item__data--date">{ moment(node.createdAt).format('DD/MM/YYYY') }</div>
         <Link to={`${node.tags[0]}/post/${node.slug}`} className="seeMore">Czytaj</Link>

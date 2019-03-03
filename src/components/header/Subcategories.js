@@ -25,7 +25,11 @@ const Subcategories = () => (
   <HeaderConsumer>
     {({ currentCategory, currentSubcategory }) => (
       <div className="header__subcategories">
-        <div className="header__subcategories--label label-small"><Link to={`/${currentCategory}`}>{headerFactory(currentCategory).title}</Link></div>
+        <div className="header__subcategories--label label-small">
+          <h2>
+            <Link to={`/${currentCategory}`}>{headerFactory(currentCategory).title}</Link>
+          </h2>
+        </div>
         <div className="header__subcategories__container">
           <ul className="header__subcategories__list">
             {headerFactory(currentCategory).subcategories.map(item => (

@@ -12,7 +12,7 @@ const Header = ({ post, isBlogPost, isToolBox }) => (
         {isBlogPost || isToolBox ? '' : <div className="header--label label-small">Najnowszy wpis</div>}
         {isToolBox ? (
           <div className="header__posts header__posts--toolbox">
-            <span className="title">TOOLBOX</span>
+            <h1 className="title">TOOLBOX</h1>
             <div className="header__posts__background" />
           </div>
         ) : (
@@ -22,7 +22,11 @@ const Header = ({ post, isBlogPost, isToolBox }) => (
           >
             <div className={`header__posts--latest ${isBlogPost ? 'blogPost' : ''}`}>
               <div className="date">{ moment(post.node.createdAt).format('DD/MM/YYYY') }</div>
-              <div className="title"><Link to={`${post.node.tags[0]}/post/${post.node.slug}`} className="title">{post.node.title}</Link></div>
+              <div className="title">
+                <h1>
+                  <Link to={`${post.node.tags[0]}/post/${post.node.slug}`} className="title">{post.node.title}</Link>
+                </h1>
+              </div>
               {isBlogPost ? '' : <Link to={`${post.node.tags[0]}/post/${post.node.slug}`} className="seeMore">Czytaj</Link>}
             </div>
             {currentCategory !== 'codeless' && (
