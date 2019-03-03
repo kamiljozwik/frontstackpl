@@ -54,7 +54,9 @@ const headerData = {
   },
   voice: {
     title: 'Głos',
-    subcategories: []
+    subcategories: [
+      { alexa: 'Alexa' }
+    ]
   },
   frontops: {
     title: 'frontops',

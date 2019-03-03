@@ -89,6 +89,9 @@
                     &.frontops {
                         background: $frontops;
                     }
+                    &.voice {
+                        background: $voice;
+                    }
                     @include mQ($portrait) {
                         width: calc((100% / 2) - 10px);
                     }

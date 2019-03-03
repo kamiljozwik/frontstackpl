@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/SEO';
-import UnderConstruction from '../../components/temp-pages/under-construction';
+import Header from '../../components/header';
+import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 
 const VoicePage = ({ data }) => (
   <React.Fragment>
     <Layout type="category-page">
       <SEO
-        title="Voice - Frontstack.pl"
-        url="https://frontstack.pl/voice"
+        title="Głos - Frontstack.pl"
+        url="https://frontstack.pl/prod"
         isBlogPost={false}
       />
-      <UnderConstruction />
+      <Header post={data.allPosts.edges[0]} />
+      <RecentPosts posts={data.allPosts.edges.slice(1, 3)} />
+      <SecondLevelPosts posts={data.allPosts.edges.slice(3, 6)} />
+      <OlderPosts posts={data.allPosts.edges.slice(6)} />
     </Layout>
   </React.Fragment>
 );

@@ -258,4 +258,5 @@
     @include SubcategoryBackgroundColor('web', $web);
     @include SubcategoryBackgroundColor('prod', $prod);
     @include SubcategoryBackgroundColor('frontops', $frontops);
+    @include SubcategoryBackgroundColor('voice', $voice);
 }
