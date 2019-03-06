@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import nanoid from 'nanoid';
 import moment from 'moment';
 import Layout from '../components/layout';
 import SEO from '../components/SEO';
@@ -26,7 +25,7 @@ const TagsColumn = ({ posts, label, link }) => (
     <div className="tags__label label-regular">{label}</div>
     <ul className="tags__list">
       {posts.map((post, index) => (
-        <li key={nanoid()} className="tags__list--item" style={{ backgroundImage: `${index === 0 ? `url(${post.node.lead.file.url}?w=385&h=300&fl=progressive&q=50&fit=fill)` : ''}` }}>
+        <li key={post.node.slug} className="tags__list--item" style={{ backgroundImage: `${index === 0 ? `url(${post.node.lead.file.url}?w=385&h=300&fl=progressive&q=50&fit=fill)` : ''}` }}>
           <div className="item--title">
             <h3>
               <Link to={`${post.node.tags[0]}/post/${post.node.slug}`}>{ post.node.title }</Link>
@@ -75,7 +74,7 @@ function IndexPage({ data }) {
                 <>
                   <div className="codeless">
                     {
-                      Codeless.map(post => <CodelessItem key={nanoid()} post={post} />)
+                      Codeless.map(post => <CodelessItem key={post.node.slug} post={post} />)
                     }
                   </div>
                   <Link to="/codeless" className="tags__readAll seeMore">Sprawdź wszystkie</Link>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import browser from 'browser-detect';
 import { CSSPlugin, AttrPlugin } from 'gsap/all';
@@ -14,7 +14,6 @@ import '../styles/index.scss';
 const plugins = [CSSPlugin, AttrPlugin]; // eslint-disable-line
 
 function Layout({ type, children }) {
-  const sidebarMenuWrapperRef = useRef(null);
 
   useEffect(() => {
     const detectedBrowser = browser();
@@ -37,7 +36,7 @@ function Layout({ type, children }) {
       render={dataQuery => (
         <HeaderProvider>
           <Topbar />
-          <div className="sidebar" ref={sidebarMenuWrapperRef}>
+          <div className="sidebar">
             <Sidebar />
           </div>
           <div className={type}>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Disqus from 'disqus-react';
 import Avatar from 'react-avatar';
 import { graphql } from 'gatsby';
-import nanoid from 'nanoid';
 import Helmet from 'react-helmet';
 import ThumbnailList from '../ThumbnailList';
 import SEO from '../SEO';
@@ -24,7 +23,7 @@ function blogPost({ data, pageContext, location }) {
 
   const renderInspirations = inspirationsList => (
     inspirationsList.map(item => (
-      <li key={nanoid()} className="post__links--item">{item}</li>
+      <li key={item} className="post__links--item">{item}</li>
     ))
   );
 

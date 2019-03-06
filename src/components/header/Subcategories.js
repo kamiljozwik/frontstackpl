@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 import { Link } from 'gatsby';
 import { HeaderConsumer } from '../../HeaderContext';
 import headerFactory from '../../utils/headerFactory';
@@ -34,7 +33,7 @@ const Subcategories = () => (
           <ul className="header__subcategories__list">
             {headerFactory(currentCategory).subcategories.map(item => (
               <Subcategory
-                key={nanoid()}
+                key={Object.keys(item)[0]}
                 category={currentCategory}
                 subcategory={item}
                 currentSubcategory={currentSubcategory}

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 import { Link, graphql } from 'gatsby';
 import headerFactory from '../../utils/headerFactory';
 
@@ -25,7 +24,7 @@ const Toolboxes = ({ categories, toolboxItems }) => (
     <div className="header__toolboxes--label label-small">Toolboxes</div>
     <div className="header__toolboxes__container">
       <ul className="header__toolboxes__list">
-        { categories.map(category => <ToolboxItem key={nanoid()} category={category} toolboxItems={toolboxItems} />) }
+        { categories.map(category => <ToolboxItem key={category} category={category} toolboxItems={toolboxItems} />) }
       </ul>
     </div>
   </div>

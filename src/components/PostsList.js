@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import nanoid from 'nanoid';
 
 const SinglePost = ({ node }) => (
   <li>
@@ -13,7 +12,7 @@ const SinglePost = ({ node }) => (
 
 const PostsList = ({ posts }) => (
   <ul>
-    { posts.map(edge => <SinglePost key={nanoid()} node={edge.node} />) }
+    { posts.map(edge => <SinglePost key={edge.node.slug} node={edge.node} />) }
   </ul>
 );
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 import moment from 'moment';
 import { Link } from 'gatsby';
 
@@ -36,7 +35,7 @@ const ThumbnailList = ({ posts, isThumbnail, isRelated }) => (
   <ul className="posts__list">
     { posts.map((edge, index) => (
       <PostThumbnail
-        key={nanoid()}
+        key={isRelated ? edge.slug : edge.node.slug}
         node={isRelated ? edge : edge.node}
         index={index}
         isThumbnail={isThumbnail}

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 import moment from 'moment';
 import { Link } from 'gatsby';
 import Toolboxes from './Toolboxes';
@@ -30,7 +29,7 @@ const HeaderLanding = ({ latestPosts, toolboxItems }) => (
         </div>
         <div className="header__posts__container">
           <ul className="header__posts__list">
-            {latestPosts.slice(1).map(edge => <BlogPost key={nanoid()} node={edge.node} />)}
+            {latestPosts.slice(1).map(edge => <BlogPost key={edge.node.slug} node={edge.node} />)}
           </ul>
         </div>
       </div>

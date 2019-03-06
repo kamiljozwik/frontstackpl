@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import nanoid from 'nanoid';
 import { uniq } from 'lodash';
 import TweenMax from 'gsap/TweenMax';
 import Layout from '../layout';
@@ -51,7 +50,7 @@ const ToolsList = ({ type, printType, tools }) => (
     </span>
     <ul className="toolbox__list--content">
       {
-        tools.map(tool => tool.node.type === type && <ToolItem key={nanoid()} tool={tool} />)
+        tools.map(tool => tool.node.type === type && <ToolItem key={tool.node.name} tool={tool} />)
       }
     </ul>
   </div>
@@ -79,7 +78,7 @@ function Toolbox({ data }) {
         <div className="toolbox__types--left">
           {left.map(type => (
             <ToolsList
-              key={nanoid()}
+              key={type}
               type={type}
               printType={headerData.tools[type]}
               tools={tools}
@@ -89,7 +88,7 @@ function Toolbox({ data }) {
         <div className="toolbox__types--right">
           {right.map(type => (
             <ToolsList
-              key={nanoid()}
+              key={type}
               type={type}
               printType={headerData.tools[type]}
               tools={tools}
