@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import nanoid from 'nanoid';
@@ -57,23 +57,20 @@ const ToolsList = ({ type, printType, tools }) => (
   </div>
 );
 
-class Toolbox extends Component {
-  constructor(props) {
-    super(props);
-    this.tools = props.data.Tools.edges;
-    this.pageCategory = props.data.Tools.edges[0].node.category;
-    this.headerData = headerFactory(this.pageCategory);
-    this.types = uniq(this.tools.map(tool => tool.node.type));
-  }
+function Toolbox({ data }) {
+  const tools = data.Tools.edges;
+  const pageCategory = data.Tools.edges[0].node.category;
+  const headerData = headerFactory(pageCategory);
+  const types = uniq(tools.map(tool => tool.node.type));
 
-  componentDidMount() {
+  useEffect(() => {
     TweenMax.to('.toolbox__list', 0, { height: '60px', overflow: 'hidden' });
-  }
+  }, []);
 
-  generateTable = () => {
+  const generateTable = () => {
     const left = [];
     const right = [];
-    this.types.map((type, index) => {
+    types.map((type, index) => {
       index % 2 === 0 ? left.push(type) : right.push(type);
       return null;
     });
@@ -84,8 +81,8 @@ class Toolbox extends Component {
             <ToolsList
               key={nanoid()}
               type={type}
-              printType={this.headerData.tools[type]}
-              tools={this.tools}
+              printType={headerData.tools[type]}
+              tools={tools}
             />
           ))}
         </div>
@@ -94,33 +91,30 @@ class Toolbox extends Component {
             <ToolsList
               key={nanoid()}
               type={type}
-              printType={this.headerData.tools[type]}
-              tools={this.tools}
+              printType={headerData.tools[type]}
+              tools={tools}
             />
           ))}
         </div>
       </>
     );
-  }
-
-  render() {
-    return (
-      <>
-        <Layout type="category-page category-page__subcategories">
-          <SEO
-            title={`${this.headerData.title} Toolbox - Frontstack.pl`}
-            url={`https://frontstack.pl/${this.category}/toolbox`}
-          />
-          <Header isToolBox />
-          <section className="toolbox">
-            <div className="toolbox__types">
-              { this.generateTable() }
-            </div>
-          </section>
-        </Layout>
-        </>
-    );
-  }
+  };
+  return (
+  <>
+    <Layout type="category-page category-page__subcategories">
+      <SEO
+        title={`${headerData.title} Toolbox - Frontstack.pl`}
+        url={`https://frontstack.pl/${pageCategory}/toolbox`}
+      />
+      <Header isToolBox />
+      <section className="toolbox">
+        <div className="toolbox__types">
+          { generateTable() }
+        </div>
+      </section>
+    </Layout>
+    </>
+  );
 }
 
 export default Toolbox;

@@ -1,39 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const HeaderContext = React.createContext('default');
 const { Provider, Consumer } = HeaderContext;
 
-class HeaderProvider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentCategory: '',  // eslint-disable-line
-      currentSubcategory: '',  // eslint-disable-line
-    };
-  }
+function HeaderProvider({ children }) {
+  const [currentCategory, setCurrentCategory] = useState('');
+  const [currentSubcategory, setcurrentSubcategory] = useState('');
 
-  componentDidMount() {
-    this.getCategory();
-    this.getSubcategory();
-  }
+  useEffect(() => {
+    setCurrentCategory(typeof document !== 'undefined' ? document.location.pathname.split('/')[1] : '');
+    setcurrentSubcategory(typeof document !== 'undefined' ? document.location.pathname.split('/')[2] : '');
+  }, []);
 
-  getCategory = () => {
-    const category = typeof document !== 'undefined' ? document.location.pathname.split('/')[1] : '';
-    this.setState({currentCategory: category});  // eslint-disable-line
-  }
-
-  getSubcategory = () => {
-    const subCategory = typeof document !== 'undefined' ? document.location.pathname.split('/')[2] : '';
-    this.setState({currentSubcategory: subCategory}); // eslint-disable-line
-  }
-
-  render() {
-    return (
-      <Provider value={this.state}>
-        {this.props.children}
-      </Provider>
-    );
-  }
+  return (
+    <Provider value={{ currentCategory, currentSubcategory }}>
+      {children}
+    </Provider>
+  );
 }
 
 export { HeaderProvider, Consumer as HeaderConsumer, HeaderContext };

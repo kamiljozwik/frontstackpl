@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
@@ -7,33 +7,28 @@ import ThumbnailList from '../ThumbnailList';
 import Header from '../header';
 import headerFactory from '../../utils/headerFactory';
 
-class Subcategory extends Component {
-  constructor(props) {
-    super(props);
-    this.category = props.data.allPosts.edges[0].node.tags[0];
-    this.subcategory = props.data.allPosts.edges[0].node.tags[1];
-    this.headerData = headerFactory(this.category);
-    this.printSubcategory = this.headerData.subcategories.filter(item => Object.keys(item)[0] === this.subcategory)[0][this.subcategory];
-  }
+function Subcategory({ data }) {
+  const category = data.allPosts.edges[0].node.tags[0];
+  const subcategory = data.allPosts.edges[0].node.tags[1];
+  const headerData = headerFactory(category);
+  const printSubcategory = headerData.subcategories.filter(item => Object.keys(item)[0] === subcategory)[0][subcategory];
 
-  render() {
-    return (
-      <>
-        <Layout type="category-page category-page__subcategories">
-          <SEO
-            title={`${this.headerData.title} - Frontstack.pl`}
-            url={`https://frontstack.pl/${this.category}/${this.subcategory}`}
-            isBlogPost={false}
-          />
-          <Header post={this.props.data.allPosts.edges[0]} />
-          <section className="older-posts">
-            <span className="label-small">{ this.printSubcategory }</span>
-            <ThumbnailList posts={this.props.data.allPosts.edges.slice(1)} type="older-posts" />
-          </section>
-        </Layout>
-      </>
-    );
-  }
+  return (
+    <>
+      <Layout type="category-page category-page__subcategories">
+        <SEO
+          title={`${headerData.title} - Frontstack.pl`}
+          url={`https://frontstack.pl/${category}/${subcategory}`}
+          isBlogPost={false}
+        />
+        <Header post={data.allPosts.edges[0]} />
+        <section className="older-posts">
+          <span className="label-small">{ printSubcategory }</span>
+          <ThumbnailList posts={data.allPosts.edges.slice(1)} type="older-posts" />
+        </section>
+      </Layout>
+    </>
+  );
 }
 
 export default Subcategory;
