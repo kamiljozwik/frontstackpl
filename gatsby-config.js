@@ -6,13 +6,15 @@ module.exports = {
   siteMetadata: {
     title: 'Frontstack.pl - Front-End po polsku',
     description: 'Pisany po polsku blog poświęcony technologiom Fron-Endowym takim jak JavaScript, React, Gatsby, HTML-CSS, JAM Stack, PWA, AWS i wiele więcej!',
-    author: '@jozwikk'
+    author: '@jozwikk',
+    siteUrl: `https://www.frontstack.pl`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
     'gatsby-plugin-favicon',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-contentful`,
       options: {
