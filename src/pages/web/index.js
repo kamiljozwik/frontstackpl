@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/SEO';
-import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 import Header from '../../components/header';
+import { RecentPosts, SecondLevelPosts, OlderPosts } from '../../components/sections';
 
 const WEBPage = ({ data }) => (
   <React.Fragment>

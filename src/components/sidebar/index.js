@@ -10,12 +10,6 @@ function SidebarItem({ active, link, to, name }) {
   );
 }
 
-function areEqual(prevProps, nextProps) {
-  return prevProps.active === nextProps.active;
-}
-
-const MemoItem = React.memo(SidebarItem, areEqual);
-
 function Sidebar() {
   const context = useContext(HeaderContext);
   const sidebarMenu = useRef(null);
@@ -23,9 +17,9 @@ function Sidebar() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
+    setWindowWidth(document.documentElement.clientWidth);
     // window.addEventListener('resize', debounce(setWindowWidth(window.innerWidth), 300));
-    window.addEventListener('resize', setWindowWidth(window.innerWidth));
+    window.addEventListener('resize', setWindowWidth(document.documentElement.clientWidth));
   }, []);
 
   function switchMenu(event) {
@@ -46,6 +40,7 @@ function Sidebar() {
       menuClassName="sidebar__wrapper"
       itemListClassName="sidebar__items"
     >
+      {console.log('po', menuOpen)}
       <a
         data-link="Open"
         className="sidebar__burger"
@@ -56,14 +51,14 @@ function Sidebar() {
       >
         {''}
       </a>
-      <MemoItem active={context.currentCategory === ''} link="Main" to="/" name="" />
-      <MemoItem active={context.currentCategory === 'show'} link="Show" to="/show/" name="Show" />
-      <MemoItem active={context.currentCategory === 'js'} link="JS" to="/js/" name="JavaScript" />
-      <MemoItem active={context.currentCategory === 'web'} link="Web" to="/web/" name="WEB" />
-      <MemoItem active={context.currentCategory === 'voice'} link="Voice" to="/voice/" name="Głos" />
-      <MemoItem active={context.currentCategory === 'frontops'} link="FrontOps" to="/frontops/" name="FrontOps" />
-      <MemoItem active={context.currentCategory === 'api'} link="API" to="/api/" name="API" />
-      <MemoItem active={context.currentCategory === 'prod'} link="Prod" to="/prod/" name="Prod" />
+      <SidebarItem active={context.currentCategory === ''} link="Main" to="/" name="" />
+      <SidebarItem active={context.currentCategory === 'show'} link="Show" to="/show/" name="Show" />
+      <SidebarItem active={context.currentCategory === 'js'} link="JS" to="/js/" name="JavaScript" />
+      <SidebarItem active={context.currentCategory === 'web'} link="Web" to="/web/" name="WEB" />
+      <SidebarItem active={context.currentCategory === 'voice'} link="Voice" to="/voice/" name="Głos" />
+      <SidebarItem active={context.currentCategory === 'frontops'} link="FrontOps" to="/frontops/" name="FrontOps" />
+      <SidebarItem active={context.currentCategory === 'api'} link="API" to="/api/" name="API" />
+      <SidebarItem active={context.currentCategory === 'prod'} link="Prod" to="/prod/" name="Prod" />
 
     </Menu>
   );
