@@ -1,9 +1,3 @@
-const commonTools = {
-  must: 'Bardzo ważne',
-  important: 'Ważne',
-  other: 'Inne'
-};
-
 const headerData = {
   main: {
     title: 'Start',
@@ -12,41 +6,18 @@ const headerData = {
   js: {
     title: 'JavaScript',
     subcategories: [
-      { toolbox: 'Toolbox' },
       { general: 'Ogólne' },
       { tests: 'Testy' },
     ],
-    tools:
-      {
-        tests: 'Testowanie',
-        ...commonTools,
-      },
   },
   web: {
     title: 'Web',
     subcategories: [
-      { toolbox: 'Toolbox' },
       { css: 'CSS' },
       { mobile: 'Mobile' },
       { browser: 'Przeglądarka' },
       { react: 'React' }
     ],
-    tools:
-      {
-        bundler: 'Bundlers',
-        auth: 'Autoryzacja',
-        charts: 'Wykresy',
-        animation: 'Animacja',
-        ui: 'UI',
-        notifications: 'Notyfikacje',
-        scroll: 'Scroll',
-        chats: 'Chats',
-        performance: 'Wydajność',
-        ecommerce: 'eCommerce',
-        search: 'Wyszukiwanie',
-        tests: 'Testowanie',
-        ...commonTools,
-      },
   },
   show: {
     title: 'Show room',

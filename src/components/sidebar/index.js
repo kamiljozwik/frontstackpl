@@ -40,7 +40,6 @@ function Sidebar() {
       menuClassName="sidebar__wrapper"
       itemListClassName="sidebar__items"
     >
-      {console.log('po', menuOpen)}
       <a
         data-link="Open"
         className="sidebar__burger"

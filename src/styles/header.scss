@@ -201,24 +201,6 @@
                         font-size: 14px;
                     }
                 }
-                &.toolbox-link {
-                    width: 45%;
-                    border-radius: 0;
-                    &::before {
-                        content: '';
-                        width: 17px;
-                        height: 17px;
-                        margin-right: 3px;
-                        background: url(./img/icons/tools.svg);
-                        @include background;
-                    }
-                    @include mQ($portrait) {
-                        width: 100%;
-                    }
-                    @include mQ($phone) {
-                        width: 45%;
-                    }
-                }
                 &:hover, &.active {
                     .subcategories-title {
                         color: black;

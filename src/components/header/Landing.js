@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { Link } from 'gatsby';
-import Toolboxes from './Toolboxes';
 
 const BlogPost = ({ node }) => (
   <li className="header__posts__item">
@@ -14,7 +13,7 @@ const BlogPost = ({ node }) => (
   </li>
 );
 
-const HeaderLanding = ({ latestPosts, toolboxItems }) => (
+const HeaderLanding = ({ latestPosts }) => (
   <React.Fragment>
     <section className="landing-page__header">
       <div className="header__posts--label label-small">Najnowszy wpis</div>
@@ -33,7 +32,6 @@ const HeaderLanding = ({ latestPosts, toolboxItems }) => (
           </ul>
         </div>
       </div>
-      <Toolboxes toolboxItems={toolboxItems} categories={['js', 'web']} />
     </section>
   </React.Fragment>
 );

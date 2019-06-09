@@ -36,7 +36,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "npm run cc && npx gatsby develop",
+    "start": "npx gatsby develop",
     "cc": "rm -rf .cache",
     "build": "gatsby build",
     "develop": "gatsby develop",

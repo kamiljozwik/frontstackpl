@@ -52,7 +52,6 @@ function IndexPage({ data }) {
   const latestPosts = data.allContentfulBlogEntry.edges;
   const Codeless = data.Codeless ? data.Codeless.edges : [];
   const JSPosts = data.JSPosts ? data.JSPosts.edges : [];
-  const ToolboxItems = data.Toolbox ? data.Toolbox.edges : [];
   const WebPosts = data.WebPosts ? data.WebPosts.edges : [];
   const VoicePosts = data.VoicePosts ? data.VoicePosts.edges : [];
   const FrontOps = data.FrontOps ? data.FrontOps.edges : [];
@@ -67,7 +66,7 @@ function IndexPage({ data }) {
         url="https://frontstack.pl"
         isBlogPost={false}
       />
-      <HeaderLanding latestPosts={latestPosts} toolboxItems={ToolboxItems} />
+      <HeaderLanding latestPosts={latestPosts} />
       <section className="landing-page__tags codeless">
         {Codeless.length > 0
               && (
@@ -162,13 +161,6 @@ export const pageQuery = graphql`
       edges {
         node {
         ...LandingBlogPostFields
-        }
-      }
-    }
-    Toolbox: allContentfulToolEntry {
-      edges {
-        node {
-          category
         }
       }
     }

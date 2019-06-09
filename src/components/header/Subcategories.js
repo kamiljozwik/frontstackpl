@@ -9,11 +9,11 @@ const Subcategory = ({ category, subcategory, currentSubcategory }) => {
   const printName = subcategory[Object.keys(subcategory)[0]];
   return (
     <React.Fragment>
-      <li className={`header__subcategories__list--item ${(urlName === 'toolbox' || urlName === 'cheatsheets') ? 'toolbox-link' : ''} ${currentSubcategory === urlName ? 'active' : ''}`}>
+      <li className={`header__subcategories__list--item  ${currentSubcategory === urlName ? 'active' : ''}`}>
         <div className="subcategories-title">
           <Link to={`/${category}/${urlName}`}>{ printName }</Link>
         </div>
-        { /* TO DO: Wyświetlanie liczby wiadomości */ }
+        { /* TODO: Wyświetlanie liczby wiadomości */ }
         <div className="subcategories-number" />
       </li>
     </React.Fragment>
