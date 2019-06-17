@@ -15,7 +15,7 @@ const Contact = () => (
           <div className="contact__links">
             <div className="contact__links--social">
               <div className="social--fb"><OutboundLink href="https://www.facebook.com/frontstackpl/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></OutboundLink></div>
-              <div className="social--twitter"><OutboundLink href="https://twitter.com/frontstackpl" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
+              <div className="social--twitter"><OutboundLink href="https://twitter.com/jozwikk" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></OutboundLink></div>
               <div className="email"><a href="mailto: kontakt@frontstack.pl"><img className="mail-ico" src={mail} alt="mail" /></a></div>
             </div>
           </div>
