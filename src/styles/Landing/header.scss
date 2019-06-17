@@ -145,13 +145,36 @@
                 }
             }
         }
-        @include mQ($portrait) {
-            width: 75%;
+        @include mQ($landscape) {
+            width: 100%;
         }
         @include mQ($phone) {
             width: 100%;
             padding: 0;
             min-height: 50vh;
+        }
+    }
+    .header__links {
+        background: $lighten-grey;
+        width: 25%;
+        text-align: center;
+        color: white;
+        div:first-child {
+            display: inline-block;
+            font-size: 30px;
+            margin: 30% 0 5% 0;
+            padding: 10px;
+            background: $black;
+        }
+        div:nth-child(2) {
+            display: inline-block;
+            width: 51%;
+            font-size: 20px;
+            padding: 10px;
+            background: $black;
+        }
+        @include mQ($landscape) {
+            display: none;
         }
     }
     @include mQ($landscape) {

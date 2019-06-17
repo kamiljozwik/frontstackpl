@@ -32,6 +32,10 @@ const HeaderLanding = ({ latestPosts }) => (
           </ul>
         </div>
       </div>
+      <div className="header__links">
+        <div>Front-end tools!</div>
+        <div>Coming soon!</div>
+      </div>
     </section>
   </React.Fragment>
 );

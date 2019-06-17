@@ -31,7 +31,6 @@ const Header = ({ post, isBlogPost }) => (
             </div>
           )}
         </div>
-
         {currentCategory !== 'codeless' && <Subcategories />}
       </section>
     )}
